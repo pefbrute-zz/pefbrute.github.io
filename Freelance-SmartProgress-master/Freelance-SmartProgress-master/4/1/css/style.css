@@ -1,0 +1,15 @@
+header{
+  width: 100%;
+  background-color: #7FFFD4;
+  position: fixed;
+  top: 0%
+}
+
+nav a{
+  color: black;
+  display: inline-block;
+}
+
+article{
+  margin-top: 5%;
+}

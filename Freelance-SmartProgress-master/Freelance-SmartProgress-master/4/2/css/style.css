@@ -1,0 +1,11 @@
+.block{
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  background-color: #1E90FF;
+  border: 5px solid #7FFFD4;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 30%;
+  padding-right: 30%;
+}

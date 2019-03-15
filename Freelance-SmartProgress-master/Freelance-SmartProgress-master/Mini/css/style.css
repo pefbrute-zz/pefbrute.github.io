@@ -1,0 +1,25 @@
+body{
+  background-color: black;
+  color: white;
+}
+h1,h3{
+  text-align: center;
+}
+h3{
+  border: 0.1rem dashed white;
+}
+h1{
+  color: blue;
+  border: 0.1rem dashed blue;  
+}
+nav{
+  width: 50%;
+  border: 0.1rem dashed yellow;
+}
+.italic{
+  font-style:italic;
+  text-decoration: underline;
+}
+.strong{
+  font-weight: bold;
+}
