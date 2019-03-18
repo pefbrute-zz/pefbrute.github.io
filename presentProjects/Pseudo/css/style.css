@@ -2,6 +2,7 @@ figure {
   position: relative;
   display: inline-block;
   overflow: hidden;
+  margin-top: 20px;
 }
 figure:hover:after {
   content: "";
