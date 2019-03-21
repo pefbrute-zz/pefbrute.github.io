@@ -13,41 +13,41 @@
 <div class="container">
   <div class="row text-left">
     <div class="col-12">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <ul class="nav nav-tabs" id="my-tab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="LogIn-tab" data-toggle="tab" href="#SignUp" role="tab" aria-controls="SignUp" aria-selected="true">Зарегистрироваться</a>
+          <a class="nav-link active" id="log-in-tab" data-toggle="tab" href="#sign-up" role="tab" aria-controls="sign-up" aria-selected="true">Зарегистрироваться</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="SignUp-tab" data-toggle="tab" href="#LogIn" role="tab" aria-controls="LogIn" aria-selected="false">Войти</a>
+          <a class="nav-link" id="sign-up-tab" data-toggle="tab" href="#log-in" role="tab" aria-controls="log-in" aria-selected="false">Войти</a>
         </li>
       </ul>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="SignUp" role="tabpanel" aria-labelledby="SignUp-tab">
+      <div class="tab-content" id="my-tab-content">
+        <div class="tab-pane fade show active" id="sign-up" role="tabpanel" aria-labelledby="sign-up-tab">
           <form>
             <div class="row">
               <div class="form-group col-6">
-                <label for="exampleInputEmail1">Имя</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи своё имя" aria-describedby="emailHelp">
+                <label for="input-name">Имя</label>
+                <input type="text" class="form-control" id="input-name" placeholder="Введи своё имя" aria-describedby="first-name-help">
               </div>
               <div class="form-group col-6">
-                <label for="exampleInputEmail1">Фамилия</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи свою фамилию" aria-describedby="emailHelp">
+                <label for="input-email">Фамилия</label>
+                <input type="text" class="form-control" id="input-last-name" placeholder="Введи свою фамилию" aria-describedby="last-name-help">
               </div>
               <div class="form-group col-12">
-                <label for="exampleInputEmail1">Логин</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи свой ник" aria-describedby="emailHelp">
+                <label for="input-login">Логин</label>
+                <input type="text" class="form-control" id="input-login" placeholder="Введи свой ник" aria-describedby="log-in-help">
               </div>
               <div class="form-group col-12">
-                <label for="exampleInputEmail1">Электронная почта</label>
-                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи свою электронную почту" aria-describedby="emailHelp">
+                <label for="input-email1">Электронная почта</label>
+                <input type="email" class="form-control" id="input-email1" placeholder="Введи свою электронную почту" aria-describedby="email-help">
               </div>
               <div class="form-group col-12">
-                <label for="exampleInputPassword1">Пароль</label>
-                <input type="password" class="form-control" id="InputPassword1" placeholder="Введи свой пароль"s>
+                <label for="input-password1">Пароль</label>
+                <input type="password" class="form-control" id="input-password1" placeholder="Введи свой пароль">
               </div>
               <div class="form-group form-check col-12">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">I Agree to the terms of use.</label>
+                <input type="checkbox" class="form-check-input" id="check">
+                <label class="form-check-label" for="check">I Agree to the terms of use.</label>
               </div>
               <div class="button col-12">
                 <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
@@ -55,16 +55,15 @@
             </div>
           </form>
         </div>
-
-        <div class="tab-pane fade" id="LogIn" role="tabpanel" aria-labelledby="LogIn-tab">
+        <div class="tab-pane fade" id="log-in" role="tabpanel" aria-labelledby="log-in-tab">
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input type="email" class="form-control" id="InputEmail2" aria-describedby="emailHelp" placeholder="Введи свой электронный адрес">
+              <label for="input-email2">Электронная почта</label>
+              <input type="email" class="form-control" id="input-email2" aria-describedby="email-help" placeholder="Введи свою электронную почту">
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="InputPassword2" placeholder="Введи свой пароль">
+              <label for="input-password2">Пароль</label>
+              <input type="password" class="form-control" id="input-password2" placeholder="Введи свой пароль">
             </div>
             <button type="submit" class="btn btn-primary">Войти</button>
           </form>
