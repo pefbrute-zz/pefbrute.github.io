@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pefbrute Experience</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <h1 class="header">Какой-то аккордеон</h1>
+        <hr>
+        <div class="accordion" id="accordionExample">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-1">
+                <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#TabOne" aria-expanded="true" aria-controls="collapseOne">
+                  Какой-то вопрос?
+                </button>
+              </h2>
+            </div>
+            <div id="TabOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                Всегда обращайся;3
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-1">
+                <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#TabTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Как приготовить жарёную картошку?
+                </button>
+              </h2>
+            </div>
+            <div id="TabTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body">
+                Для начала помой её, а дальше всё и сам поймёшь;)
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-1">
+                <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#TabThree" aria-expanded="false" aria-controls="collapseThree">
+                  Как получить зачёт?
+                </button>
+              </h2>
+            </div>
+            <div id="TabThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                Да расслабься, никак;D
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+</body>
+</html>

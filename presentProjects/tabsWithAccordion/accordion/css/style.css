@@ -1,0 +1,12 @@
+.container {
+  margin-top: 20px;
+}
+body {
+  background-image: url(../img/background.png);
+}
+.header {
+  color: #ffffff;
+}
+hr {
+  background-color: #ffffff;
+}
