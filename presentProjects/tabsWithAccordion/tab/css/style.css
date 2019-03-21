@@ -7,3 +7,6 @@ body {
 form {
   color: white;
 }
+form .form-check {
+  margin-left: 15px;
+}
