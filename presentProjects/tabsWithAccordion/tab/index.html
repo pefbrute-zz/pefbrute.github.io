@@ -17,23 +17,40 @@
           <a class="nav-link active" id="LogIn-tab" data-toggle="tab" href="#SignUp" role="tab" aria-controls="SignUp" aria-selected="true">Зарегистрироваться</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="LogIn-tab" data-toggle="tab" href="#LogIn" role="tab" aria-controls="SignUp" aria-selected="false">Войти</a>
+          <a class="nav-link" id="SignUp-tab" data-toggle="tab" href="#LogIn" role="tab" aria-controls="LogIn" aria-selected="false">Войти</a>
         </li>
       </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="SignUp" role="tabpanel" aria-labelledby="SignUp-tab">
           <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input type="email" class="form-control" id="InputEmail1" placeholder="Введи свой электронный адрес" aria-describedby="emailHelp">
+            <div class="row">
+              <div class="form-group col-6">
+                <label for="exampleInputEmail1">Имя</label>
+                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи своё имя" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group col-6">
+                <label for="exampleInputEmail1">Фамилия</label>
+                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи свою фамилию" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleInputEmail1">Ник</label>
+                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи свой ник" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleInputEmail1">Электронная почта</label>
+                <input type="email" class="form-control" id="InputEmail1" placeholder="Введи свою электронную почту" aria-describedby="emailHelp">
+              </div>
+              <div class="form-group col-12">
+                <label for="exampleInputPassword1">Пароль</label>
+                <input type="password" class="form-control" id="InputPassword1" placeholder="Введи свой пароль">
+              </div>
+              <div class="button col-12">
+                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="InputPassword1" placeholder="Введи свой пароль">
-            </div>
-            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
           </form>
         </div>
+
         <div class="tab-pane fade" id="LogIn" role="tabpanel" aria-labelledby="LogIn-tab">
           <form>
             <div class="form-group">
@@ -46,7 +63,7 @@
             </div>
             <button type="submit" class="btn btn-primary">Войти</button>
           </form>
-      </div>
+        </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
