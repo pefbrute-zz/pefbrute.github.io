@@ -6,9 +6,23 @@ body{
   background-image: url(../img/background.png);
 }
 
-form{
+@keyframes shadow {
+  from,to {text-shadow: 0 0 0px white;}
+  50% {text-shadow: 0px -20px 30px white;}
+}
+
+@keyframes move {
+  from,to {
+    margin-top: 0px;
+  }
+  50%{
+    margin-top: 50px;
+  }
+}
+
+h1{
   color: white;
-  .form-check{
-    margin-left: 15px;
+  &:hover{
+    animation: shadow 1s infinite ease-in-out, move 2s infinite ease-in-out;
   }
 }
