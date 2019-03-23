@@ -1,6 +1,6 @@
 body {
-  width: 100vw;
-  min-height: 100vh;
+  min-width: 100%;
+  min-height: 100vmax;
 }
 h1 {
   margin-top: 45vh;
