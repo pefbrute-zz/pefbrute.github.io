@@ -1,8 +1,19 @@
+@font-face {
+  font-family: 'Righteous';
+  src: url("../fonts/righteous-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 body {
   background-image: url(../img/background.png);
   color: white;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Righteous', cursive;
 }
 .container-fluid {
   margin-top: 40px;
+}
+p,
+ul,
+li {
+  font-size: 20px;
 }
