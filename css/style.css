@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
 body {
   background-image: url(../img/background.png);
   color: white;
-  font-family: 'Righteous', cursive;
+  font-family: 'Baloo Chettan', cursive;
 }
 .container-fluid {
   margin-top: 40px;
