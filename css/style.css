@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei');
 body {
   background-image: url(../img/background.png);
   color: white;
-  font-family: 'Baloo Chettan', cursive;
+  font-family: 'ZCOOL XiaoWei', serif;
 }
 .container-fluid {
   margin-top: 40px;
