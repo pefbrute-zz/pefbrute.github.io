@@ -38,34 +38,34 @@
       </ul>
       <div class="tab-content" id="my-tab-content">
         <div class="tab-pane fade show active" id="sign-up" role="tabpanel" aria-labelledby="sign-up-tab">
-          <form>
+          <form action="smart.php" method="post">
             <div class="row">
               <div class="form-group col-6">
                 <label for="input-name">Имя</label>
-                <input type="text" class="form-control" id="input-name" placeholder="Введи своё имя" aria-describedby="first-name-help">
+                <input name="user_firstname" type="text" class="form-control" id="input-name" placeholder="Введи своё имя" aria-describedby="first-name-help">
               </div>
               <div class="form-group col-6">
                 <label for="input-email">Фамилия</label>
-                <input type="text" class="form-control" id="input-last-name" placeholder="Введи свою фамилию" aria-describedby="last-name-help">
+                <input name="user_surname" type="text" class="form-control" id="input-last-name" placeholder="Введи свою фамилию" aria-describedby="last-name-help">
               </div>
               <div class="form-group col-12">
                 <label for="input-login">Логин</label>
-                <input type="text" class="form-control" id="input-login" placeholder="Введи свой ник" aria-describedby="log-in-help">
+                <input name="user_login" type="text" class="form-control" id="input-login" placeholder="Введи свой ник" aria-describedby="log-in-help">
               </div>
               <div class="form-group col-12">
                 <label for="input-email1">Электронная почта</label>
-                <input type="email" class="form-control" id="input-email1" placeholder="Введи свою электронную почту" aria-describedby="email-help">
+                <input name="user_email" type="email" class="form-control" id="input-email1" placeholder="Введи свою электронную почту" aria-describedby="email-help">
               </div>
               <div class="form-group col-12">
                 <label for="input-password1">Пароль</label>
-                <input type="password" class="form-control" id="input-password1" placeholder="Введи свой пароль">
+                <input name="user_password" type="password" class="form-control" id="input-password1" placeholder="Введи свой пароль">
               </div>
               <div class="form-group form-check col-12">
                 <input type="checkbox" class="form-check-input" id="check">
                 <label class="form-check-label" for="check">I Agree to the terms of use.</label>
               </div>
               <div class="button col-12">
-                <button type="button" class="btn btn-primary" onclick="window.location.href = 'thanks.html'; ym(52996123, 'reachGoal', 'sign-up-btn'); return true;">Зарегистрироваться</button>
+                <button type="submit" class="btn btn-primary" onclick="window.location.href = 'thanks.html'; ym(52996123, 'reachGoal', 'sign-up-btn'); return true;">Зарегистрироваться</button>
               </div>
             </div>
           </form>
