@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Iceberg');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 body {
   background-image: url(../img/background.png);
   color: white;
-  font-family: 'Iceberg', cursive;
+  font-family: 'Alfa Slab One', cursive;
 }
 .container-fluid {
   margin-top: 40px;
