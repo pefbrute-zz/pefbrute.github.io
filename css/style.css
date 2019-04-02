@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil');
 body {
   background-image: url(../img/background.png);
   color: white;
-  font-family: 'Major Mono Display', monospace;
+  font-family: 'Allerta Stencil', sans-serif;
 }
 .container-fluid {
   margin-top: 40px;
