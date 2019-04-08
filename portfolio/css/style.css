@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Gugi');
+@import url('https://fonts.googleapis.com/css?family=Jua');
 body {
   background-image: url(../img/background.png);
   color: white;
-  font-family: 'Gugi', cursive;
+  font-family: 'Jua', sans-serif;
 }
 .container-fluid {
   margin-top: 40px;
