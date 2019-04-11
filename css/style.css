@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Coiny');
+@import url('https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text');
 body {
   background-image: url(../img/background.png);
   color: white;
-  font-family: 'Coiny', cursive;
+  font-family: 'Libre Barcode 128 Text', cursive;
 }
 .container-fluid {
   margin-top: 40px;
