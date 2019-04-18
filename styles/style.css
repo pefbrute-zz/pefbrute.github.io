@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Staatliches");
+@import url("https://fonts.googleapis.com/css?family=Faster+One");
 body {
   background: url(../img/background.png);
   color: white;
-  font-family: "Staatliches", cursive;
+  font-family: "Faster One", cursive;
 }
 
 .container-fluid {
