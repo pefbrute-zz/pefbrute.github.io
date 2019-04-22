@@ -1,7 +1,5 @@
 body {
-  font-family: "Droid Serif" sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Open Sans', sans-serif;
 }
 
 header {
@@ -21,9 +19,14 @@ header .navbar-nav {
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 3.7em;
+  font-weight: 900;
+  font-size: 4.9em;
   line-height: 1.01em;
   letter-spacing: 0.01em;
+}
+
+.btn {
+  border-radius: 0px;
+  background-color: aquamarine;
 }
 /*# sourceMappingURL=main.css.map */
