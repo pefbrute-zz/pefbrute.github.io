@@ -27,6 +27,18 @@ h1 {
 
 .btn {
   border-radius: 0px;
-  background-color: aquamarine;
+  background-color: #3FBBC0;
+}
+
+.counter {
+  background: rgba(124, 123, 127, 0.4);
+}
+
+.counter .days, .counter .hours, .counter .minutes, .counter .seconds {
+  background: rgba(124, 123, 127, 0.6);
+}
+
+.counter .minutes, .counter .seconds {
+  margin-top: 4px;
 }
 /*# sourceMappingURL=main.css.map */
