@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Amarante");
+@import url("https://fonts.googleapis.com/css?family=Amita");
 body {
   background: url(../img/background.png);
   color: white;
-  font-family: "Amarante", cursive;
+  font-family: "Amita", cursive;
 }
 
 .container-fluid {

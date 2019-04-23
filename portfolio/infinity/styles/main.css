@@ -6,7 +6,6 @@ header {
   background: url("../img/header-bg.jpg") center center no-repeat fixed;
   background-size: cover;
   height: 100vh;
-  font-weight: 700;
 }
 
 header .navbar-toggler {
@@ -18,11 +17,12 @@ header .navbar-nav {
   color: white;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 4.9em;
-  line-height: 1.01em;
-  letter-spacing: 0.01em;
+header .header-heading {
+  line-height: 55px;
+}
+
+header .lorem {
+  line-height: 28px;
 }
 
 .btn {
@@ -38,7 +38,7 @@ h1 {
   background: rgba(124, 123, 127, 0.6);
 }
 
-.counter .minutes, .counter .seconds {
-  margin-top: 4px;
+.counter .days h2, .counter .hours h2, .counter .minutes h2, .counter .seconds h2 {
+  letter-spacing: 2px;
 }
 /*# sourceMappingURL=main.css.map */
