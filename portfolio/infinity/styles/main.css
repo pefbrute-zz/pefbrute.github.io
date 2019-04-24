@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'font-name';
+  src: url("webfont.eot");
+  src: url("webfont.eot?#iprefix") format("embedded-opentype");
+  src: url("webfont.woff2") format("woff2");
+  src: url("webfont.woff") format("woff");
+  src: url("webfont.ttf") format("truetype");
+  src: url("webfont.svg#font-name") format("svg");
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
