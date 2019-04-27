@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Expletus+Sans");
+@import url("https://fonts.googleapis.com/css?family=Supermercado+One");
 body {
   background: url(../img/background.png);
   color: white;
-  font-family: "Expletus Sans", cursive;
+  font-family: "Supermercado One", sans-serif;
 }
 
 .container-fluid {
