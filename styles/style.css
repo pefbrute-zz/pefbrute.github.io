@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Supermercado+One");
+@import url("https://fonts.googleapis.com/css?family=Kelly+Slab");
 body {
   background: url(../img/background.png);
   color: white;
-  font-family: "Supermercado One", sans-serif;
+  font-family: "Kelly Slab", cursive;
 }
 
 .container-fluid {

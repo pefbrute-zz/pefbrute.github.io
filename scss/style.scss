@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Supermercado+One');
-$font-stack: 'Supermercado One', sans-serif;
-body{
-  background: url(../img/background.png);
-  color: white;
-  font-family: $font-stack;
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
+$font-stack: 'Kelly Slab', cursive;
+
+body {
+    background: url(../img/background.png);
+    color: white;
+    font-family: $font-stack;
 }
-.container-fluid{
-  margin-top: 40px;
+
+.container-fluid {
+    margin-top: 40px;
 }
+
 p,
 ul,
-li{ 
-  font-size: 20px;
+li {
+    font-size: 20px;
 }

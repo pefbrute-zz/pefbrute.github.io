@@ -1,0 +1,21 @@
+$orange: #fe8000;
+$white: #fff;
+$blue: #2f88fb;
+$black: #000;
+$radius: 30px;
+$padding: 200px;
+.owl-carousel {
+    .item {
+        padding-top: $padding;
+        color: $black;
+        // font-size: ;
+        .text-blue{
+            color: $blue;
+        }
+        button {
+            background-color: $orange ;
+            color: $white;
+            border-radius: $radius;
+        }
+    }
+}

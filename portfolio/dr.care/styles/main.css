@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+.owl-carousel .item {
+  padding-top: 200px;
+  color: #000;
+}
+
+.owl-carousel .item .text-blue {
+  color: #2f88fb;
+}
+
+.owl-carousel .item button {
+  background-color: #fe8000;
+  color: #fff;
+  border-radius: 30px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACMA,AACI,aADS,CACT,KAAK,CAAC;EACF,WAAW,EAHT,KAAK;EAIP,KAAK,EANL,IAAI;CAgBP;;AAbL,AAKQ,aALK,CACT,KAAK,CAID,UAAU,CAAA;EACN,KAAK,EAVV,OAAO;CAWL;;AAPT,AAQQ,aARK,CACT,KAAK,CAOD,MAAM,CAAC;EACH,gBAAgB,EAfnB,OAAO;EAgBJ,KAAK,EAfT,IAAI;EAgBA,aAAa,EAbhB,IAAI;CAcJ",
     "sources": [
-        "../scss/main.scss"
+        "../scss/main.scss",
+        "../scss/_slider.scss"
     ],
     "names": [],
     "file": "main.css"
