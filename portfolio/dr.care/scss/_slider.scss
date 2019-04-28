@@ -1,19 +1,41 @@
 $orange: #fe8000;
 $white: #fff;
-$blue: #2f88fb;
+$blue: #2f89fc;
 $black: #000;
 $radius: 30px;
 $padding: 200px;
+$font-set: 'Work Sans',sans-serif;
+$breakpoint-xs: 0px;
+$breakpoin-md:1000px;
+
+@media screen and (min-width: $breakpoint-xs) {
+    .header {
+        font-weight: 900;
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: $breakpoint-md) {
+    .header{
+        font-size: 60px;
+    }
+}
+
+body{
+    font-family: $font-set;
+}
+
 .owl-carousel {
     .item {
+        // .header {
+        //     font-weight: 900;
+        // }
         padding-top: $padding;
         color: $black;
-        // font-size: ;
-        .text-blue{
+        .text-blue {
             color: $blue;
         }
         button {
-            background-color: $orange ;
+            background-color: $orange;
             color: $white;
             border-radius: $radius;
         }
