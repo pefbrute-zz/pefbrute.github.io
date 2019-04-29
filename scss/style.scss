@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Kelly+Slab');
-$font-stack: 'Kelly Slab', cursive;
+$white: #fff;
+$margin-top: 40px;
+$font-size: 20px;
+@import url('https://fonts.googleapis.com/css?family=Geo');
+$font-stack: 'Geo', sans-serif;
 
 body {
     background: url(../img/background.png);
-    color: white;
+    color: $white;
     font-family: $font-stack;
 }
 
 .container-fluid {
-    margin-top: 40px;
+    margin-top: $margin-top;
 }
 
 p,
 ul,
 li {
-    font-size: 20px;
+    font-size: $font-size;
 }

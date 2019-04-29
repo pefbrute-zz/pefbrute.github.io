@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "dr.care"
+		},
+		{
+			"path": "E:\\Downloads\\drcare-master\\drcare-master"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dr.care"
+	}
+}
