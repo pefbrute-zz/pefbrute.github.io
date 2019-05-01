@@ -1,7 +1,53 @@
-// .hero-img{
-//     background-position:center top;
-//     background-size:cover;
-//     background-repeat: no-repeat;
-//     width: 100%;
-//     height: 1000px;
-// }
+$height:100vh;
+$blue: #0d0cb5;
+body{
+    font-family: 'Quicksand',sans-serif;
+    ::selection{
+      background: black;  
+    }
+}
+.hero-img{
+    background-position:center top;
+    background-size:cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height:$height;
+    .header{
+        @include media-breakpoint-up(md){
+            font-size:48px;
+        }
+        @include media-breakpoint-down(md){
+            font-size:32px;
+        }
+    }
+    .row {
+        background-color: rgba(0, 0, 0, 0.5);
+        height:$height;
+        .btn {
+            background-color: $blue;
+            border: none;
+            border-radius: 30px;
+            font-size: 12px;
+            padding: 15px 35px;
+            &:hover{
+                background-color: darken($color: $blue, $amount: 10)
+            }
+        }
+    }
+    .typed-cursor{
+        animation: blink 20s infinite;
+    }
+}
+@-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
