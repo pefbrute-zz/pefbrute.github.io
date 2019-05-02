@@ -6,14 +6,18 @@ $(document).ready(function () {
        backSpeed: 100,
        startDelay: 100,
        backDelay: 4900,
-       loop: true
+       loop: true,
+       showCursor: true
    });
-   $.stellar({
-       responsive: true,
-       parallaxBackgrounds: true,
-       parallaxElements: true,
-       horizontalScrolling: false,
-       hideDistantElements: false,
-       scrollProperty: 'scroll'
-   });
+   	var siteStellar = function () {
+   	    $(window).stellar({
+   	        responsive: false,
+   	        parallaxBackgrounds: true,
+   	        parallaxElements: true,
+   	        horizontalScrolling: false,
+   	        hideDistantElements: false,
+   	        scrollProperty: 'scroll'
+   	    });
+   	};
+   	siteStellar();
 });
