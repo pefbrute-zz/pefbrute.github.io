@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,4BAA4B;AAC5B,OAAO,CAAC,+CAAI;AAEZ,OAAO,CAAP,6EAAO;AACP,OAAO,CAAP,yEAAO;AACP,OAAO,CAAP,8FAAO;AACP,OAAO,CAAP,mFAAO;AACP,OAAO,CAAP,mFAAO;AACP,OAAO,CAAP,2FAAO;AACP,OAAO,CAAP,oFAAO;AACP,OAAO,CAAP,4FAAO;AACP,OAAO,CAAP,iFAAO;AACP,OAAO,CAAP,sFAAO;AACP,OAAO,CAAP,2FAAO",
     "sources": [
         "../scss/main.scss",
         "../scss/bootstrap/_functions.scss",
@@ -37,7 +37,12 @@
         "../scss/bootstrap/mixins/_clearfix.scss",
         "../scss/bootstrap/mixins/_grid-framework.scss",
         "../scss/bootstrap/mixins/_grid.scss",
-        "../scss/bootstrap/mixins/_float.scss"
+        "../scss/bootstrap/mixins/_float.scss",
+        "../scss/_header.scss",
+        "../scss/_heading.scss",
+        "../scss/_about.scss",
+        "../scss/_buttons.scss",
+        "../scss/_footer.scss"
     ],
     "names": [],
     "file": "main.css"

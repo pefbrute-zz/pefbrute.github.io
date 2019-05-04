@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+@import url("https://fonts.googleapis.com/css?family=Akronim");
 body {
   background: url(../img/background.png);
   color: #fff;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Akronim", cursive;
 }
 
 .container-fluid {
