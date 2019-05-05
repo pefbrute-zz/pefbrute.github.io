@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'font-name';
+  src: url("webfont.eot");
+  src: url("webfont.eot?#iprefix") format("embedded-opentype");
+  src: url("webfont.woff2") format("woff2");
+  src: url("webfont.woff") format("woff");
+  src: url("webfont.ttf") format("truetype");
+  src: url("webfont.svg#font-name") format("svg");
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background: url("../img/header-bg.jpg") center center no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+header .navbar-toggler {
+  border-radius: 0px;
+  background-color: white;
+}
+
+header .navbar-nav {
+  color: white;
+}
+
+header .header-heading {
+  line-height: 55px;
+}
+
+header .lorem {
+  line-height: 28px;
+}
+
+.btn {
+  border-radius: 0px;
+  background-color: #3FBBC0;
+}
+
+.counter {
+  background: rgba(124, 123, 127, 0.4);
+}
+
+.counter .days, .counter .hours, .counter .minutes, .counter .seconds {
+  background: rgba(124, 123, 127, 0.6);
+}
+
+.counter .days h2, .counter .hours h2, .counter .minutes h2, .counter .seconds h2 {
+  letter-spacing: 2px;
+}
+/*# sourceMappingURL=main.css.map */
