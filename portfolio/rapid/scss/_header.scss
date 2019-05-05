@@ -1,0 +1,46 @@
+$blue: #1BB1DC;
+$violet: #413E66;
+$font-stack: 'Montserrat', sans-serif;
+header{
+    .background-img{
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        height: 100vh;
+    }
+    nav {
+        .navbar-brand {
+            font-family: $font-stack;
+            font-weight: 400;
+            font-size: 36px;
+            letter-spacing: 3px;
+            color: $violet;
+        }
+        .nav-link, .dropdown-item{
+            color: $violet;
+            font-weight: 600;
+            font-size: 14px;
+            &:hover{
+                color: $blue;
+            }
+        }
+    }
+    .intro{
+        font-family: $font-stack;
+        .heading{
+            font-size:48px;
+            font-weight: bold;
+            color: $violet;
+        }
+        .blue{
+            color: $blue;
+        }
+        .btn{
+            font-size:13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            background-color: $blue;
+            border-color: $blue;
+        }
+    }
+}
