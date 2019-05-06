@@ -26,7 +26,7 @@
     });
 
     // Initiate the wowjs animation library
-    new WOW().init();
+    // new WOW().init();
 
     // Header scroll class
     $(window).scroll(function () {
