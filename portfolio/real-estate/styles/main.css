@@ -1,0 +1,50 @@
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+nav {
+  font-weight: 600;
+}
+
+nav .nav-link:active {
+  color: #000;
+}
+
+.intro {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.intro h1, .intro p {
+  font-weight: 200;
+  color: #fff;
+}
+
+.intro .btn {
+  font-weight: 400;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.about .header {
+  font-weight: 400;
+  letter-spacing: 4px;
+}
+
+.about p {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.about .img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+}
+
+.about .img h6 {
+  font-size: 12px;
+}
+/*# sourceMappingURL=main.css.map */
