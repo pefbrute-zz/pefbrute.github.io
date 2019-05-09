@@ -26,16 +26,12 @@
 // });
 $(document).ready(function () {
 
-    "use strict"
-
-    var pefbrute_window = $(window);
-
-    pefbrute_window.scroll(function(){
-        if $(this).scrollTop() > 100{
-            $('navbar').addClass('navbar-scrolled');
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100){
+            $('.navbar').addClass('navbar-scrolled');
         }
         else{
-            $('navbar').removeClass('navbar-scrolled');
+            $('.navbar').removeClass('navbar-scrolled');
         }
     })
 

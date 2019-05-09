@@ -3,7 +3,7 @@ $black: #000;
 $gradient:linear-gradient(to right, #244cfd, #15e4fd);
 $blue: #244cfd;
 
-@mixin btn {
+.btn {
     background-image: $gradient;
     border: none;
     border-radius: 0px;
@@ -16,12 +16,17 @@ h4,
 h5,
 h6 {
     font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
 }
 
 p,
 a,
 .btn {
     font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+    font-size: 12px;
 }
 
 ul li {
@@ -37,15 +42,20 @@ header {
     height: 100vh;
     background-position: center top;
     background-repeat: no-repeat;
-    .nav{
-        background-color: rgba($white,0.5);
+
+    .nav {
+        background-color: rgba($white, 0.5);
     }
+
     .navbar-scrolled {
         background-color: $white;
-
-        .nav-link {
-            color: $white;
-        }
+        color: $black;
+        // .navbar-collapse {
+        //     background-color:rgba($black, 0.5);
+        //     .nav-link {
+        //         color: $white;
+        //     }
+        // }
     }
 
     .nav-link {
@@ -55,23 +65,26 @@ header {
     .fa-bars {
         color: $blue;
     }
-
-    .btn {
-        @include btn;
-        font-family: 'Roboto',
-            sans-serif;
-        font-size: 12px;
-    }
 }
 
 @media (max-width:990px) {
     .contacts {
         display: none;
     }
+
 }
 
 @media (min-width:990px) {
     .navbar {
         margin-top: 50px;
+    }
+    .navbar-scrolled{
+        margin-top: 0px;
+    }
+}
+
+.intro {
+    h6 {
+        font-weight: regular;
     }
 }

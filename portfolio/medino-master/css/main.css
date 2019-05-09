@@ -1,3 +1,10 @@
+.btn {
+  background-image: -webkit-gradient(linear, left top, right top, from(#244cfd), to(#15e4fd));
+  background-image: linear-gradient(to right, #244cfd, #15e4fd);
+  border: none;
+  border-radius: 0px;
+}
+
 h1,
 h2,
 h3,
@@ -5,12 +12,17 @@ h4,
 h5,
 h6 {
   font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
 }
 
 p,
 a,
 .btn {
   font-family: 'Roboto', sans-serif;
+}
+
+.btn {
+  font-size: 12px;
 }
 
 ul li {
@@ -34,10 +46,7 @@ header .nav {
 
 header .navbar-scrolled {
   background-color: #fff;
-}
-
-header .navbar-scrolled .nav-link {
-  color: #fff;
+  color: #000;
 }
 
 header .nav-link {
@@ -46,15 +55,6 @@ header .nav-link {
 
 header .fa-bars {
   color: #244cfd;
-}
-
-header .btn {
-  background-image: -webkit-gradient(linear, left top, right top, from(#244cfd), to(#15e4fd));
-  background-image: linear-gradient(to right, #244cfd, #15e4fd);
-  border: none;
-  border-radius: 0px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
 }
 
 @media (max-width: 990px) {
@@ -67,5 +67,12 @@ header .btn {
   .navbar {
     margin-top: 50px;
   }
+  .navbar-scrolled {
+    margin-top: 0px;
+  }
+}
+
+.intro h6 {
+  font-weight: regular;
 }
 /*# sourceMappingURL=main.css.map */
