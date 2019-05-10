@@ -1,0 +1,10 @@
+.social-links ul {
+  float: right;
+  margin-top: 5px;
+}
+
+.social-links ul li {
+  display: inline;
+  margin-left: 15px;
+}
+/*# sourceMappingURL=main.css.map */
