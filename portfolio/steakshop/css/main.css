@@ -1,0 +1,121 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.header-area nav {
+  z-index: 100;
+  background-color: #fff;
+  height: 100vh;
+  -webkit-box-shadow: -2px 50px 30px -3px rgba(0, 0, 0, 0.2);
+          box-shadow: -2px 50px 30px -3px rgba(0, 0, 0, 0.2);
+}
+
+.header-area nav .nav-logo {
+  margin-top: 30px;
+}
+
+.header-area nav .nav-items .nav-item {
+  height: 50px;
+  width: 150px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding-left: 20px;
+  color: #000;
+  text-decoration: none;
+  transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -ms-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+}
+
+.header-area nav .nav-items .nav-item:hover {
+  color: #fff;
+  background-color: #F42F2C;
+  -webkit-box-shadow: 0px 10px 60px rgba(244, 47, 44, 0.2);
+          box-shadow: 0px 10px 60px rgba(244, 47, 44, 0.2);
+}
+
+.header-area nav .nav-items .nav-item img {
+  margin-right: 15px;
+}
+
+.header-area nav .nav-items .active {
+  color: #fff;
+  background-color: #F42F2C;
+  -webkit-box-shadow: 0px 10px 60px 5px rgba(244, 47, 44, 0.2);
+          box-shadow: 0px 10px 60px 5px rgba(244, 47, 44, 0.2);
+}
+
+.intro {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  height: 100vh;
+}
+
+.intro .video .btn {
+  background-color: #fff;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.intro .video p {
+  font-size: 14px;
+  line-height: 28px;
+}
+
+.intro .offer {
+  background-color: #fff;
+}
+
+.intro .offer h6 {
+  font-size: 14px;
+}
+
+.intro .offer .pacifico {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 42px;
+}
+
+.intro .offer .btn-explore {
+  color: #000;
+  border: #F42F2C solid 1px;
+  background-color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 50px;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  transition: 0.1s linear;
+  -webkit-transition: 0.1s linear;
+  -moz-transition: 0.1s linear;
+  -ms-transition: 0.1s linear;
+  -o-transition: 0.1s linear;
+}
+
+.intro .offer .btn-explore:hover {
+  color: #fff;
+  background-color: #F42F2C;
+}
+/*# sourceMappingURL=main.css.map */
