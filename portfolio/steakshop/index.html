@@ -20,7 +20,7 @@
 
   <header class="header-area d-flex justify-content-end">
     <nav class="position-fixed">
-      <div class="d-flex flex-column">
+      <div class="d-flex flex-column float-right">
         <div class="text-center nav-logo"><img class="" src="img/logo.png" alt=""></div>
         <div class="nav-items mt-4">
           <div class=""><a class="nav-item active" href="#"><img src="img/header/nav-icon1.png" alt="">Home</a></div>
@@ -36,60 +36,70 @@
     </nav>
   </header>
   <section class="intro d-flex align-items-end" style="background-image:url('img/banner/home-banner.jpg')">
-    <div class="d-flex">
-      <div class="video d-flex align-items-center text-white">
-        <div class="ml-5 mr-3">
-          <button class="btn">
-            <img class="" src="img/banner/play-icon.png" alt="">
-          </button>
-        </div>
-        <div class="">
-          <h5>Watch Video</h5>
-          <p>You will love our execution</p>
-        </div>
-      </div>
-      <div class="offer d-flex">
-        <div class="container">
-          <div class="py-5 px-5 mr-5">
-            <p>STEAK SHOP OFFERS BEST STEAK IN TOWN</p>
-            <h3 class="pacifico">Steak Shop offers best steak in town</h3>
-            <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards
-              especially in
-              the workplace. That’s why it’s crucial that, as women.</p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="video col-4 d-flex align-items-center text-white">
+          <div class="ml-5 mr-3">
+            <button class="btn">
+              <img class="" src="img/banner/play-icon.png" alt="">
+            </button>
           </div>
-          <div>
-            <a class="btn btn-explore" href="#">Explore Menu</a>
+          <div class="container">
+            <h5>Watch Video</h5>
+            <p class="text-white">You will love our execution</p>
+          </div>
+        </div>
+        <div class="offer col-8">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="py-5 my-5 col-8">
+                <p>STEAK SHOP OFFERS BEST STEAK IN TOWN</p>
+                <h3 class="pacifico">Steak Shop offers best steak in town</h3>
+                <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct
+                  standards
+                  especially in
+                  the workplace. That’s why it’s crucial that, as women.</p>
+              </div>
+              <div class="col-4">
+                <a class="btn btn-template" href="#">Explore Menu</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="features">
+  <section class="mt-5 pt-5 px-3 mr-5 mb-5" id="features">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 pt-5 pt-lg-0">
-          <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-          </p>
-          <button>See Full Menu</button>
-        </div>
-        <div class="row feature-item">
-          <div class="col-lg-6">
-            <img src="img/.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1">
-            <h4>Daily Food Courses with Drinks
-            </h4>
+        <div class="row align-items-center">
+          <div class="col-lg-5 pt-5 pt-lg-0 mr-4">
+            <h2>Daily Food Courses with Drinks</h2>
+            <p class="mt-3">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
+            </p>
             <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+            </p>
+            <a class="btn btn-template" href="#">See Full Menu</a>
+          </div>
+          <div class="ml-5 col-lg-5">
+            <img src="img/food/food1.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+        <div class="row feature-item mt-5 align-items-center">
+          <div class="col-lg-5">
+            <img class="img-fluid" src="img/food/food3.jpg" alt="">
+          </div>
+          <div class="col-lg-5 pt-4 pt-lg-0">
+            <h2>Daily Food Courses with Drinks
+            </h2>
+            <p class="mt-3">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -101,17 +111,12 @@
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
             </p>
             <div class="row">
-              <div class="col-2">
-                <img src="img/about-author.png" alt=""></div>
-              <div class="col-10">
-                <h4>Marvel Maison</h4>
+              <div class="col-3">
+                <img class="img-fluid" src="img/about-author.png" alt=""></div>
+              <div class="col-9">
+                <h6 class="CHIEF">Marvel Maison</h6>
                 <p>CHIEF EXECUTIVE, AMAZON</p>
               </div>
-            </div>
-          </div>
-          <div class="row feature-item mt-5 pt-5">
-            <div class="col-lg-6 order-1 order-lg-2">
-              <img src="img/" class="img-fluid" alt="">
             </div>
           </div>
         </div>

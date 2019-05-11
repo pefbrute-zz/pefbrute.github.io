@@ -1,6 +1,13 @@
-body {
+body p, body a {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #777;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: 'Pacifico', cursive;
 }
 
 .header-area nav {
@@ -61,7 +68,7 @@ body {
 .intro {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   height: 100vh;
 }
 
@@ -81,21 +88,21 @@ body {
   line-height: 28px;
 }
 
+.intro .video h5 {
+  font-family: 'Roboto',sans-serif;
+}
+
 .intro .offer {
   background-color: #fff;
 }
 
-.intro .offer h6 {
-  font-size: 14px;
-}
-
 .intro .offer .pacifico {
-  font-family: "Pacifico", cursive;
   font-weight: 400;
   font-size: 42px;
 }
 
-.intro .offer .btn-explore {
+.btn-template {
+  letter-spacing: 1px;
   color: #000;
   border: #F42F2C solid 1px;
   background-color: #fff;
@@ -114,7 +121,7 @@ body {
   -o-transition: 0.1s linear;
 }
 
-.intro .offer .btn-explore:hover {
+.btn-template:hover {
   color: #fff;
   background-color: #F42F2C;
 }
