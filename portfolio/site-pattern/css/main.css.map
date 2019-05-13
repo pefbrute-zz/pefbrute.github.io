@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AoCAA,AACI,aADS,CACT,EAAE,CAAC;EACC,KAAK,EAAE,KAAK;EACZ,UAAU,EAAE,GAAG;CAclB;;AAjBL,AAKQ,aALK,CACT,EAAE,CAIE,EAAE,CAAC;EACC,OAAO,EAAE,MAAM;EACf,WAAW,EAAE,IAAI;CASpB",
+    "mappings": "AACA,wDAAwD;AAExD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD;AAGzD,wDAAwD;AoCZxD,AAAA,SAAS,CAAC;EACV,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,YAAY;CAQpB;;AAVD,AAIA,SAJS,CAIT,IAAI,AAAA,OAAO,CAAC;EACZ,WAAW,EAAE,qBAAqB;EAClC,WAAW,EAAE,GAAG;EAChB,SAAS,EAAE,IAAI;EACf,OAAO,EAAE,QAAQ;CAChB;;AAGD,AAAA,iBAAiB,CAAC;EAClB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,IAAI;EACjB,gBAAgB,EAAE,IAAI;EACtB,SAAS,EAAE,IAAI;EACf,UAAU,EAAE,GAAG,CAAC,GAAG,CAAC,IAAI,CAAC,GAAG,CAAC,kBAAkB;EAC/C,OAAO,EAAE,QAAQ;EACjB,OAAO,EAAE,CAAC;CACT;;AAED,AAAA,SAAS,AAAA,MAAM,CAAC,iBAAiB,CAAC;EAClC,OAAO,EAAE,KAAK;CACb;;ApCVD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD;AACzD,wDAAwD;AAExD,yDAAyD",
     "sources": [
         "../scss/main.scss",
         "../scss/bootstrap/_functions.scss",
@@ -38,11 +38,13 @@
         "../scss/bootstrap/mixins/_grid-framework.scss",
         "../scss/bootstrap/mixins/_grid.scss",
         "../scss/bootstrap/mixins/_float.scss",
+        "../scss/module/_about.scss",
+        "../scss/module/_base.scss",
+        "../scss/module/_buttons.scss",
+        "../scss/module/_footer.scss",
         "../scss/module/_header.scss",
         "../scss/module/_heading.scss",
-        "../scss/module/_about.scss",
-        "../scss/module/_buttons.scss",
-        "../scss/module/_footer.scss"
+        "../scss/module/_variables.scss"
     ],
     "names": [],
     "file": "main.css"
