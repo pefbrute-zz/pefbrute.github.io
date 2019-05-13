@@ -1,0 +1,23 @@
+.links{
+    background-color: #040919;
+    h5,p,a,pre{
+        color: white;
+    }
+    .social-icons{
+        a{
+            color: white;
+            background-color: grey;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+}
+    }
+}
+.copyright{
+    background-color: #101522;
+    a{
+        color: $primary-color-red;
+    }
+}

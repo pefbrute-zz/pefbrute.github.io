@@ -1,5 +1,14 @@
-.phone{
-    &:after,&:before{
-        content: '';
+.form-group {
+    .form-control {
+        border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        -ms-border-radius: 0px;
+        -o-border-radius: 0px;
+        padding: 9px 10px;
+    }
+
+    textarea {
+        height: 130px;
     }
 }
