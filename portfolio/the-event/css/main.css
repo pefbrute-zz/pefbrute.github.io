@@ -84,7 +84,7 @@ body a:hover {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-.form-group .form-control {
+.contact .form-group .form-control {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -93,8 +93,25 @@ body a:hover {
   padding: 9px 10px;
 }
 
-.form-group textarea {
+.contact .form-group textarea {
   height: 130px;
+}
+
+.contact .header::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 25px);
+  height: 5px;
+  width: 60px;
+  background-color: #E10830;
+}
+
+@media (min-width: 995px) {
+  .your-class {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
 }
 
 /*---------------------------------------------------- */
