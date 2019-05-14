@@ -1,0 +1,41 @@
+$primary-color-red: #E10830;
+$primary-color-blue: #112363;
+
+body {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    address {
+        color: $primary-color-blue;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-weight: 900;
+    }
+
+    address {
+        font-weight: 400;
+    }
+
+    a {
+        color: #112363;
+        transition: color 0.2s linear;
+        -webkit-transition: color 0.2s linear;
+        -moz-transition: color 0.2s linear;
+        -ms-transition: color 0.2s linear;
+        -o-transition: color 0.2s linear;
+
+        &:hover {
+            color: $primary-color-red;
+        }
+    }
+}
