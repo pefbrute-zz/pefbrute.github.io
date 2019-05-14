@@ -1,10 +1,30 @@
-.links{
+.links {
     background-color: #040919;
-    h5,p,a,pre{
+
+    li {
+        list-style: none;
+
+        a {
+            padding-left: 10px;
+        }
+    }
+
+    li::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f054";
+        color: $primary-color-red;
+    }
+
+    h5,
+    p,
+    a,
+    pre {
         color: white;
     }
-    .social-icons{
-        a{
+
+    .social-icons {
+        a {
             color: white;
             background-color: grey;
             border-radius: 30px;
@@ -12,12 +32,19 @@
             -moz-border-radius: 30px;
             -ms-border-radius: 30px;
             -o-border-radius: 30px;
-}
+        }
     }
-}
-.copyright{
-    background-color: #101522;
-    a{
-        color: $primary-color-red;
+
+    .copyright {
+        background-color: #101522;
+
+        a {
+            color: $primary-color-red;
+        }
+    }
+
+    .header {
+        border-bottom: 2px solid $primary-color-red;
+        padding-bottom: 15px;
     }
 }

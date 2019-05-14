@@ -84,7 +84,7 @@ body a:hover {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-.form-group .form-control {
+.contact .form-group .form-control {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -93,8 +93,15 @@ body a:hover {
   padding: 9px 10px;
 }
 
-.form-group textarea {
+.contact .form-group textarea {
   height: 130px;
+}
+
+@media (min-width: 768px) {
+  .contact .border-block {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+  }
 }
 
 /*---------------------------------------------------- */
@@ -103,7 +110,25 @@ body a:hover {
   background-color: #040919;
 }
 
-.links h5, .links p, .links a, .links pre {
+.links li {
+  list-style: none;
+}
+
+.links li a {
+  padding-left: 10px;
+}
+
+.links li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
+  color: #E10830;
+}
+
+.links h5,
+.links p,
+.links a,
+.links pre {
   color: white;
 }
 
@@ -117,12 +142,17 @@ body a:hover {
   -o-border-radius: 30px;
 }
 
-.copyright {
+.links .copyright {
   background-color: #101522;
 }
 
-.copyright a {
+.links .copyright a {
   color: #E10830;
+}
+
+.links .header {
+  border-bottom: 2px solid #E10830;
+  padding-bottom: 15px;
 }
 
 /*---------------------------------------------------- */
