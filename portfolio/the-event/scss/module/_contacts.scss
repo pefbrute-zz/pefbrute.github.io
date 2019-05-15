@@ -13,6 +13,7 @@
             height: 130px;
         }
     }
+<<<<<<< HEAD
     .header::before{
         content: '';
         position: absolute;
@@ -27,5 +28,13 @@
     .your-class {
         border-left: 1px solid grey;
         border-right: 1px solid grey;
+=======
+
+    .border-block {
+        @media (min-width: 768px) {
+            border-right:2px solid black;
+            border-left:2px solid black;
+        }
+>>>>>>> 12194721165387902f2a1ee5aded5c43da0fa8eb
     }
 }

@@ -80,6 +80,7 @@ body a:hover {
   -o-border-radius: 30px;
   color: white;
   background-color: #E10830;
+<<<<<<< HEAD
 }
 
 /*---------------------------------------------------- */
@@ -112,15 +113,64 @@ body a:hover {
     border-left: 1px solid grey;
     border-right: 1px solid grey;
   }
+=======
+>>>>>>> 12194721165387902f2a1ee5aded5c43da0fa8eb
 }
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+<<<<<<< HEAD
+=======
+.contact .form-group .form-control {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  padding: 9px 10px;
+}
+
+.contact .form-group textarea {
+  height: 130px;
+}
+
+@media (min-width: 768px) {
+  .contact .border-block {
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+  }
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+>>>>>>> 12194721165387902f2a1ee5aded5c43da0fa8eb
 .links {
   background-color: #040919;
 }
 
+<<<<<<< HEAD
 .links h5, .links p, .links a, .links pre {
+=======
+.links li {
+  list-style: none;
+}
+
+.links li a {
+  padding-left: 10px;
+}
+
+.links li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f054";
+  color: #E10830;
+}
+
+.links h5,
+.links p,
+.links a,
+.links pre {
+>>>>>>> 12194721165387902f2a1ee5aded5c43da0fa8eb
   color: white;
 }
 
@@ -134,6 +184,7 @@ body a:hover {
   -o-border-radius: 30px;
 }
 
+<<<<<<< HEAD
 .copyright {
   background-color: #101522;
 }
@@ -142,6 +193,21 @@ body a:hover {
   color: #E10830;
 }
 
+=======
+.links .copyright {
+  background-color: #101522;
+}
+
+.links .copyright a {
+  color: #E10830;
+}
+
+.links .header {
+  border-bottom: 2px solid #E10830;
+  padding-bottom: 15px;
+}
+
+>>>>>>> 12194721165387902f2a1ee5aded5c43da0fa8eb
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */

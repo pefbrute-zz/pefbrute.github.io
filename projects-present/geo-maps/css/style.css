@@ -1,9 +1,0 @@
-body {
-  background-image: url(../img/background.png);
-  color: white;
-  font-family: 'Anton', sans-serif;
-}
-.container-fluid,
-.maps {
-  margin-top: 40px;
-}
