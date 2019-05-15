@@ -1,0 +1,23 @@
+.provide{
+    background-color: #F8F9FA;
+    .feature{
+        background-color: #fff;
+        padding: 25px 25px;
+        box-shadow: 10px 5px 18px rgba(black, 0.1);
+        .fa-bandcamp {
+            color: #ff4f81;
+        }
+
+        .fa-codepen {
+            color: #00aeff;
+        }
+
+        .fa-btc {
+            color: #2DDE98;
+        }
+
+        .fa-cloud {
+            color: #FE5000;
+        }
+    }
+}

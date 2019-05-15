@@ -1,4 +1,7 @@
 header {
+    p{
+        color: #DDD;
+    }
     background-color: #6a67ce;
     .navbar-brand {
         font-size: 32px;
@@ -9,14 +12,12 @@ header {
     .nav-link {
         color: white;
     }
-
-    .nav-btn {
-        color: #6a67ce;
-        background-color: #fff;
-        border-radius: 0px;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        -ms-border-radius: 0px;
-        -o-border-radius: 0px;
-}
+    .intro{
+        .btn-template{
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 10px 25px;
+        }
+    }
 }
