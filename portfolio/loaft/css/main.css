@@ -34,6 +34,53 @@
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+body p,
+body a {
+  font-family: 'Roboto', sans-serif;
+}
+
+body p {
+  color: #777777;
+}
+
+body .yellow {
+  color: #F5CA56;
+}
+
+body a {
+  color: black;
+  transition: color 0.2s ease;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+}
+
+body a:hover {
+  text-decoration: none;
+  color: #F5CA56;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.btn-template {
+  background-color: #F5CA56;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -44,5 +91,23 @@
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.intro .btn-template {
+  font-size: 18px;
+  width: 23em;
+  margin-top: 8px;
+  position: absolute;
+  left: -60px;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.works .description {
+  background-color: #fff;
+  position: absolute;
+  margin-top: -188px;
+  width: 61%;
+  z-index: 9999;
+}
+
 /*---------------------------------------------------- */
 /*# sourceMappingURL=main.css.map */
