@@ -1,10 +1,26 @@
 header {
+    *{
+        z-index: 9999;
+    }
+    width: 100%;
+    position: absolute;
     nav {
         background-color: rgba(black, 0.5);
+        .navbar-brand{
+            font-weight: bold;
+            font-size: 36px;
+        }
+        .green {
+            color: #3ec1d5;
+        }
+        .nav-item{
+            margin-right: 5px;
+        }
     }
 
-    a {
+    .nav-link {
         color: white;
+        letter-spacing: 1px;
         transition: color 0.2s ease;
         -webkit-transition: color 0.2s ease;
         -moz-transition: color 0.2s ease;
@@ -25,7 +41,7 @@ header {
         -ms-border-radius: 0px;
         -o-border-radius: 0px;
 
-        .dropdown-item{
+        .dropdown-item {
             padding: 10px 0px 10px 10px;
 
             &:nth-child(1) {
@@ -38,6 +54,13 @@ header {
                 background-color: black;
             }
         }
-
+    }
+}
+.nav-scrolled{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    .fa-bars{
+        color: white;
     }
 }

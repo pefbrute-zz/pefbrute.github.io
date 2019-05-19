@@ -1,5 +1,22 @@
 
 $(document).ready(function () {
+    'use strict';
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $('#nav').addClass('nav-scrolled');
+        } else {
+            $('#nav').removeClass('nav-scrolled');
+        }
+    });
+
+    if ($(window).scrollTop() > 100) {
+        $('#nav').addClass('nav-scrolled');
+    }
+    $('.owl-carousel').owlCarousel({
+        items:1,
+    })
+
     AOS.init({
         // Global settings:
         disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -20,7 +37,5 @@ $(document).ready(function () {
         once: false, // whether animation should happen only once - while scrolling down
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
     });
-    
 });

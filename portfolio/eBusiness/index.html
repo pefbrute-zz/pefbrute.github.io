@@ -26,138 +26,160 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <a class="navbar-brand"><img src="" alt=""></a>
-      <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fas fa-bars"></span>
-      </button>
-      <div id="my-nav" class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Team</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Portfolio</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Drop Down
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Drop Down 1</a>
-              <a class="dropdown-item" href="#">Drop Down 2</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
-          </li>
-        </ul>
+  <header id="header">
+    <nav id="nav" class="navbar navbar-expand-lg py-1">
+      <div class="container">
+        <a href="#" class="navbar-brand header text-white"><span class="green">e</span>Business</a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#header" tabindex="-1" aria-disabled="true">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" tabindex="-1" aria-disabled="true">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services" tabindex="-1" aria-disabled="true">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Portfolio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Drop Down
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Drop Down 1</a>
+                <a class="dropdown-item" href="#">Drop Down 2</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   </header>
-  <section class="intro my-5 py-5 text-center">
-    <h4>The Best Business Information</h4>
-    <h1>We're In The Business Of Helping You Start Your Business</h1>
-    <a href="" class="btn">SEE SERVICES</a>
-    <a href="" class="btn">LEARN MORE</a>
+  <section class="intro owl-carousel owl-theme text-center">
+        <div class="first-item d-flex align-items-center flex-column justify-content-center px-5">
+          <h4>The Best Business Information</h4>
+          <h1>We're In The Business Of Helping You Start Your Business</h1>
+          <div class="d-flex justify-content-center mt-3">
+            <a href="" class="btn btn-template btn-services">SEE SERVICES</a>
+            <a href="" class="btn btn-template btn-learn">LEARN MORE</a>
+          </div>
+        </div>
+        <div class="second-item d-flex align-items-center flex-column justify-content-center px-5">
+          <h4>The Best Business Information</h4>
+          <h1>We're In The Business Of Helping You Start Your Business</h1>
+          <div class="d-flex justify-content-center mt-3">
+            <a href="" class="btn btn-template btn-services">SEE SERVICES</a>
+            <a href="" class="btn btn-template btn-learn">LEARN MORE</a>
+          </div>
+        </div>
+        <div class="third-item d-flex align-items-center flex-column justify-content-center px-5">
+          <h4>The Best Business Information</h4>
+          <h1>We're In The Business Of Helping You Start Your Business</h1>
+          <div class="d-flex justify-content-center mt-3">
+            <a href="" class="btn btn-template btn-services">SEE SERVICES</a>
+            <a href="" class="btn btn-template btn-learn">LEARN MORE</a>
+          </div>
+        </div>
   </section>
-  <section class="about">
-    <div class="container">
+  <section class="about pt-4" id="about">
+    <div class="container pb-5">
       <div class="row">
-        <h1 class="col-12 text-center">About EBusiness</h1>
-        <img class="col-6" src="" alt="">
+        <h1 class="col-12 text-center header my-5">About EBusiness</h1>
         <div class="col-6">
+          <img class="img-fluid" src="img/about/1.jpg" alt="">
+        </div>
+        <div class="col-6 project">
           <h3>PROJECT MAINTENANCE</h3>
           <p>Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci
             quaerat unde
             at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure</p>
-          <ul>
             <li>Interior design Package</li>
             <li>Building House</li>
             <li>Reparing of Residentail Roof</li>
             <li>Renovaion of Commercial Office</li>
             <li>Make Quality Products</li>
-          </ul>
         </div>
       </div>
     </div>
   </section>
-  <section class="services">
+  <section class="services" id="services">
     <section class="choose py-5" id="services">
       <div class="container py-md-3 text-center">
-        <h1 class="heading mb-5">Our Services</h1>
+        <h1 class="heading col-12">Our Services</h1>
         <div class="feature-grids row">
-          <div class="col-lg-4 col-sm-12">
-            <div class="f1 icon1 p-4">
+          <div class="service col-lg-4 col-sm-12">
+            <div class="py-4">
               <div class="icon">
-                <span class="fa "></span>
+                <span class="fa fa-code fa-3x"></span>
+                <h4 class="my-3">Expert Coder</h4>
               </div>
-              <h3 class="my-3">Expert Coder</h3>
               <p>will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype
                 looks finished by.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12 mt-sm-0 mt-4">
-            <div class="f1 icon2 p-4">
+          <div class="service col-lg-4 col-sm-12 mt-sm-0 mt-4">
+            <div class="py-4">
               <div class="icon">
-                <span class="fa "></span>
+                <span class="fa fa-camera-retro fa-3x"></span>
+                <h4 class="my-3">Creative Designer</h4>
               </div>
-              <h3 class="my-3">Creative Designer</h3>
               <p>will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype
                 looks finished by.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12 mt-lg-0 mt-4">
-            <div class="f1 icon3 p-4">
+          <div class="service col-lg-4 col-sm-12 mt-lg-0 mt-4">
+            <div class="py-4">
               <div class="icon">
-                <span class="fa "></span>
+                <span class="fab fa-wordpress fa-3x "></span>
+                <h4 class="my-3">Wordpress Developer</h4>
               </div>
-              <h3 class="my-3">Wordpress Developer</h3>
               <p>will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype
                 looks finished by.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12 mt-lg-0 mt-4">
-            <div class="f1 icon4 p-4">
+          <div class="service col-lg-4 col-sm-12 mt-lg-0 mt-4">
+            <div class="py-4">
               <div class="icon">
-                <span class="fa "></span>
+                <span class="fa fa-camera-retro fa-3x "></span>
+                <h4 class="my-3">Social Marketer</h4>
               </div>
-              <h3 class="my-3">Social Marketer</h3>
               <p>will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype
                 looks finished by.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12 mt-lg-0 mt-4">
-            <div class="f1 icon4 p-4">
+          <div class="service col-lg-4 col-sm-12 mt-lg-0 mt-4">
+            <div class="py-4">
               <div class="icon">
-                <span class="fa "></span>
+                <span class="fa fa-chart-bar fa-3x "></span>
+                <h4 class="my-3">Seo Expart</h4>
               </div>
-              <h3 class="my-3">Seo Expart</h3>
               <p>will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype
                 looks finished by.</p>
             </div>
           </div>
-          <div class="col-lg-4 col-sm-12 mt-lg-0 mt-4">
-            <div class="f1 icon4 p-4">
+          <div class="service col-lg-4 col-sm-12 mt-lg-0 mt-4">
+            <div class="py-4">
               <div class="icon">
-                <span class="fa "></span>
+                <span class="fa fa-money-bill fa-3x "></span>
+                <h4 class="my-3">24/7 Support</h4>
               </div>
-              <h3 class="my-3">24/7 Support</h3>
               <p>will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype
                 looks finished by.</p>
             </div>

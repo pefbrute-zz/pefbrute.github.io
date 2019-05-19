@@ -6,8 +6,12 @@ body{
     h5,
     h6 {
         font-family: 'Raleway', sans-serif;
+        color: #444444;
     }
-    a,p{
+    a,p,li{
         font-family: 'Open Sans', sans-serif;
+    }
+    ::selection{
+        background: $blue;
     }
 }
