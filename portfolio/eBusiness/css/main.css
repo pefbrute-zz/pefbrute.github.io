@@ -84,6 +84,10 @@ header .nav-link:hover {
   color: #3dBDD1;
 }
 
+header .active {
+  text-decoration: underline;
+}
+
 header .dropdown-menu {
   background-color: black;
   border-radius: 0px;

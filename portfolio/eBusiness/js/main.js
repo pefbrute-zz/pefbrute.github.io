@@ -1,6 +1,11 @@
-
 $(document).ready(function () {
     'use strict';
+
+    var nav = $(".navbar-nav .nav-item .nav-link");
+    nav.click(function () {
+        nav.removeClass("active");
+        $(this).addClass("active");
+    })
 
     $(window).scroll(function () {
         if ($(this).scrollTop() > 500) {
@@ -13,9 +18,11 @@ $(document).ready(function () {
     if ($(window).scrollTop() > 100) {
         $('#nav').addClass('nav-scrolled');
     }
+
     $('.owl-carousel').owlCarousel({
-        items:1,
+        items: 1,
     })
+
 
     AOS.init({
         // Global settings:
