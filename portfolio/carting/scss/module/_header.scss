@@ -1,0 +1,37 @@
+header {
+    *{
+        z-index:999;
+    }
+    height: 90vh;
+    background: url('../../img/bg.jpg') no-repeat scroll center center;
+    background-size: cover;
+    &::before{
+        content: "";
+        height: 90vh;
+        width: 100%;
+        background-color: rgba(black,0.3);
+        position: absolute;
+    }
+
+    nav {
+        .navbar-brand {
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 48px;
+        }
+
+        .nav-item {
+            .nav-link{
+                color:white;
+            }
+            .active {
+                color: white;
+            }
+
+            .fa-phone {
+                color: orange;
+            }
+        }
+
+    }
+}
