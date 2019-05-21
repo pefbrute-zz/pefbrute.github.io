@@ -1,19 +1,29 @@
 header {
-    *{
-        z-index:999;
+    * {
+        z-index: 999;
     }
-    height: 90vh;
+
+    height: 55vw;
     background: url('../../img/bg.jpg') no-repeat scroll center center;
     background-size: cover;
-    &::before{
+
+    &::before {
         content: "";
-        height: 90vh;
+        height: 55vw;
         width: 100%;
-        background-color: rgba(black,0.3);
+        background-color: rgba(black, 0.5);
         position: absolute;
     }
 
     nav {
+        .nav-item {
+            margin-right: 5px;
+
+            .nav-link {
+                letter-spacing: 1px;
+            }
+        }
+
         .navbar-brand {
             font-size: 40px;
             font-weight: 600;
@@ -21,17 +31,29 @@ header {
         }
 
         .nav-item {
-            .nav-link{
-                color:white;
+            .icon {
+                font-weight: 600;
+
+                .fa-phone {
+                    color: $orange;
+                    margin-right: 8px;
+                    transform: rotate(90deg);
+                    -webkit-transform: rotate(90deg);
+                    -moz-transform: rotate(90deg);
+                    -ms-transform: rotate(90deg);
+                    -o-transform: rotate(90deg);
+                }
             }
+
+            .nav-link {
+                color: #DDD;
+
+            }
+
             .active {
                 color: white;
             }
-
-            .fa-phone {
-                color: orange;
-            }
         }
-
     }
+
 }

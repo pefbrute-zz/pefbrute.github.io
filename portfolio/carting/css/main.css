@@ -1,4 +1,6 @@
 /*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
 .dropdown {
   position: relative;
   display: inline-block;
@@ -48,7 +50,7 @@ h6 {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 header {
-  height: 90vh;
+  height: 55vw;
   background: url("../../img/bg.jpg") no-repeat scroll center center;
   background-size: cover;
 }
@@ -59,10 +61,18 @@ header * {
 
 header::before {
   content: "";
-  height: 90vh;
+  height: 55vw;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
+}
+
+header nav .nav-item {
+  margin-right: 5px;
+}
+
+header nav .nav-item .nav-link {
+  letter-spacing: 1px;
 }
 
 header nav .navbar-brand {
@@ -71,20 +81,66 @@ header nav .navbar-brand {
   line-height: 48px;
 }
 
+header nav .nav-item .icon {
+  font-weight: 600;
+}
+
+header nav .nav-item .icon .fa-phone {
+  color: #FF4E00;
+  margin-right: 8px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+}
+
 header nav .nav-item .nav-link {
-  color: white;
+  color: #DDD;
 }
 
 header nav .nav-item .active {
   color: white;
 }
 
-header nav .nav-item .fa-phone {
-  color: orange;
-}
-
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.intro .text .header {
+  font-size: 48px;
+  font-weight: 700;
+  width: 700px;
+  letter-spacing: 2px;
+}
+
+.intro .text p {
+  font-size: 17px;
+  line-height: 34px;
+  letter-spacing: 1px;
+}
+
+.intro .input {
+  margin-top: 35px;
+}
+
+.intro .input input {
+  width: 360px;
+  height: 60px;
+  padding: 20px 20px;
+  margin-right: 5px;
+}
+
+.intro .input .btn {
+  background-color: #FF4E00;
+  height: 60px;
+  width: 80px;
+  padding: 20px 20px;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */

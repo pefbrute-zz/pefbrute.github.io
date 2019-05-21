@@ -1,0 +1,39 @@
+.intro {
+    .text {
+        .header {
+            font-size: 48px;
+            font-weight: 700;
+            width: 700px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 34px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .input {
+        margin-top: 35px;
+        input {
+            width: 360px;
+            height: 60px;
+            padding: 20px 20px;
+            margin-right: 5px;
+        }
+
+        .btn {
+            background-color: $orange;
+            height: 60px;
+            width: 80px;
+            padding: 20px 20px;
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -o-border-radius: 0px;
+        }
+    }
+
+}
