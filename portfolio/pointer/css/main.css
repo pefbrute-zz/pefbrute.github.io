@@ -29,6 +29,17 @@ li {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.btn-primary {
+  background-color: #E81050;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -319,9 +330,50 @@ li > a:only-child:after {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .intro {
-  background: no-repeat scroll center center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position: center center;
+}
+
+.intro.wrapper {
+  position: relative;
+}
+
+.intro.wrapper:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.intro,
+.intro > .container > .row {
+  min-height: 600px;
   height: 100vh;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: white;
+  font-weight: 900;
+}
+
+@media (max-width: 991.98px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+}
+
+.intro p {
+  color: white;
+  font-size: font-size-base;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 /*---------------------------------------------------- */
