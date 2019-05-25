@@ -1,0 +1,49 @@
+.about {
+    background-color: #F2F2F2;
+
+    h1 {
+        line-height: 50px;
+        font-size: 46px;
+        letter-spacing: -1px;
+    }
+
+    h1,
+    .bold {
+        font-weight: 900;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 33px;
+    }
+
+    h1,
+    h3 {
+        color: #312f2b;
+    }
+
+    p {
+        color: #444;
+        font-weight: 200;
+        line-height: 25px;
+    }
+
+    .workers {
+        .img-worker {
+            img {
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+            }
+        }
+        a{
+            color: #312f2b;
+            line-height: 28px;
+            letter-spacing: -1px;
+            font-size: 26px;
+            font-weight: 900;
+        }
+    }
+}

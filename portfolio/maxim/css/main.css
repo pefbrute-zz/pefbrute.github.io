@@ -31,14 +31,63 @@ li {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.about {
+  background-color: #F2F2F2;
+}
+
+.about h1 {
+  line-height: 50px;
+  font-size: 46px;
+  letter-spacing: -1px;
+}
+
+.about h1,
+.about .bold {
+  font-weight: 900;
+}
+
+.about h3 {
+  font-size: 30px;
+  line-height: 33px;
+}
+
+.about h1,
+.about h3 {
+  color: #312f2b;
+}
+
+.about p {
+  color: #444;
+  font-weight: 200;
+  line-height: 25px;
+}
+
+.about .workers .img-worker img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.about .workers a {
+  color: #312f2b;
+  line-height: 28px;
+  letter-spacing: -1px;
+  font-size: 26px;
+  font-weight: 900;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 header {
+  background-color: #161616;
   position: absolute;
   z-index: 9;
   width: 100%;
+  position: fixed;
 }
 
 .toggle,
@@ -97,14 +146,14 @@ nav ul li {
 
 /* Styling the links */
 nav a {
-  color: #ddd;
-  text-transform: capitalize;
+  color: #fff;
+  text-transform: uppercase;
   letter-spacing: 1px;
   padding-left: 0;
   padding-right: 0;
   padding: 10px 13px;
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 nav ul li ul li:hover {
@@ -145,7 +194,7 @@ nav ul ul li {
 }
 
 nav ul ul li a {
-  color: #333;
+  color: #fff;
   padding: 5px 10px;
   display: block;
 }
@@ -334,7 +383,7 @@ li > a:only-child:after {
 .intro,
 .intro > .container > .row {
   min-height: 600px;
-  height: 80vh;
+  height: 75vh;
 }
 
 .intro h1 {
@@ -361,6 +410,29 @@ li > a:only-child:after {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.banner {
+  background-color: #1BAC91;
+}
+
+.banner h2,
+.banner h5 {
+  line-height: 39px;
+  font-weight: 900;
+}
+
+.banner h2 {
+  font-size: 36px;
+}
+
+.banner h2 .fa-quote-left {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.banner h5 {
+  color: #555;
+  font-size: 12px;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -371,6 +443,30 @@ li > a:only-child:after {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.services {
+  background-color: #F36F36;
+}
+
+.services h1 {
+  font-weight: bold;
+}
+
+.services h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+}
+
+.services p {
+  font-weight: 200;
+  line-height: 25px;
+}
+
+.services h3,
+.services p {
+  color: #f7f7f7;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */

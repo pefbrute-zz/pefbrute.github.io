@@ -1,7 +1,9 @@
 header {
+    background-color: #161616;
     position: absolute;
     z-index: 9;
     width: 100%;
+    position: fixed;
 }
 
 .toggle,
@@ -63,14 +65,14 @@ nav ul li {
 
 /* Styling the links */
 nav a {
-    color: #ddd;
-    text-transform: capitalize;
+    color: #fff;
+    text-transform: uppercase;
     letter-spacing: 1px;
     padding-left: 0;
     padding-right: 0;
     padding: 10px 13px;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 14px;
 }
 
 
@@ -112,7 +114,7 @@ nav ul ul li {
 }
 
 nav ul ul li a {
-    color: #333;
+    color: #fff;
     padding: 5px 10px;
     display: block;
 }
