@@ -44,6 +44,55 @@ li {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.intro {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position: center center;
+}
+
+.intro.wrapper {
+  position: relative;
+}
+
+.intro.wrapper:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.intro,
+.intro > .container > .row {
+  min-height: 600px;
+  height: 100vh;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #fff;
+  font-weight: 900;
+}
+
+@media (max-width: 991.98px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+}
+
+.intro p {
+  color: #fff;
+  font-size: font-size-base;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
