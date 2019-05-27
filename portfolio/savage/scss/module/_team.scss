@@ -1,9 +1,17 @@
-.team{
-    img{
-        margin-top: 10px;
+.team {
+    img {
+        margin-top: 15px;
         border-radius: 4px;
     }
-    // ul li{
-    //     list-style: 
-    // }
+
+    li {
+        &:before {
+            font-family: "Font Awesome 5 Free";
+            color: #0099E5;
+            font-weight: 900;
+            content: "\f00c";
+            margin-right: 10px;
+        }
+    }
+
 }

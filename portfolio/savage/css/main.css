@@ -40,7 +40,7 @@ li {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .btn-primary {
-  background-color: #E81050;
+  background-color: #EC4846;
   padding: 10px 30px;
   border: none;
   border-radius: 3px;
@@ -51,7 +51,7 @@ li {
 }
 
 .btn-primary:hover {
-  background-color: #E81050;
+  background-color: #EC4846;
   color: black;
 }
 
@@ -363,7 +363,7 @@ li > a:only-child:after {
   bottom: 0;
   right: 0;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .intro,
@@ -403,6 +403,32 @@ li > a:only-child:after {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.banner-2 {
+  background: no-repeat scroll center center;
+  background-size: cover;
+  position: relative;
+}
+
+.banner-2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.banner-2 .btn {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.banner-2 .btn:hover {
+  color: white;
+  opacity: .8;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -416,8 +442,16 @@ li > a:only-child:after {
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .team img {
-  margin-top: 10px;
+  margin-top: 15px;
   border-radius: 4px;
+}
+
+.team li:before {
+  font-family: "Font Awesome 5 Free";
+  color: #0099E5;
+  font-weight: 900;
+  content: "\f00c";
+  margin-right: 10px;
 }
 
 /*---------------------------------------------------- */
