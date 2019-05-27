@@ -1,0 +1,15 @@
+   .btn-primary {
+       background-color: #E81050;
+       padding: 10px 30px;
+       border: none;
+       border-radius: 3px;
+       -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+       -ms-border-radius: 3px;
+       -o-border-radius: 3px;
+
+       &:hover{
+           background-color: #E81050;
+           color: black;
+       }
+   }

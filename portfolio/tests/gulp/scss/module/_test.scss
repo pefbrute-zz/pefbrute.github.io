@@ -1,0 +1,11 @@
+div::after{
+    background: rgba(0, 0, 0, 0.70);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+    opacity: 0;
+}
