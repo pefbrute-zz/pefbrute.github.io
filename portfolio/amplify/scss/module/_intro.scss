@@ -1,9 +1,24 @@
 .intro {
-    $white: #000;
+    $white: #fff;
+    background-color: #007BFF;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     background-position: center center;
+
+    &.wrapper {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            background: rgba(black, .2);
+        }
+    }
 
     &,
     &>.container>.row {
