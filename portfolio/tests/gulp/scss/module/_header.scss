@@ -1,385 +1,500 @@
-/* Variables ↓ */
-$bg-clr: #fff;
-$dd-color:#fff;
-$hover-active-color:#FF5722;
-$logo-color:#0099e5;
-$text-color:#000;
-$tgl-bg-color:#444343;
-$tgl-bg-hover-color:#AFAAFA;
-$tgl-color: #fff;
-$transition: .3s all;
-$white: #fff;
-/* Variables ↑ */
+$logo-color: black;
 
-header {
-ul {
-margin: 0;
-padding: 0;
-}
+
+.site-logo {
+    position: relative;
+    // left: 0;
+    font-weight: 900;
+    font-size: 1.3rem;
+
+    a {
+        color: $logo-color;
+    }
 }
 
-/* navigation */
-.nav_pf {
-width: 100%;
+.site-navbar {
+
+    margin-bottom: 0px;
+    z-index: 1999;
+    position: absolute;
+    width: 100%;
+
+    .container-fluid {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+
+
+    .site-navigation {
+        &.border-bottom {
+            border-bottom: 1px solid lighten(black, 80%) !important;
+        }
+
+        .site-menu {
+
+            margin-bottom: 0;
+
+            .active {
+                >a {
+                    color: black;
+                    display: inline-block;
+                    padding: 5px 20px;
+                }
+            }
+
+            a {
+                text-decoration: none !important;
+                display: inline-block;
+            }
+
+            >li {
+                display: inline-block;
+
+                >a {
+                    padding: 5px 20px;
+                    color: black;
+                    display: inline-block;
+                    text-decoration: none !important;
+
+                    &:hover {
+                        color: white;
+
+                    }
+                }
+            }
+
+            .has-children {
+                position: relative;
+
+                >a {
+                    position: relative;
+                    padding-right: 20px;
+
+                    &:before {
+                        position: absolute;
+                        content: "\e313";
+                        font-size: 16px;
+                        top: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        font-family: 'icomoon';
+                    }
+                }
+
+                .dropdown {
+                    visibility: hidden;
+                    opacity: 0;
+                    top: 100%;
+                    position: absolute;
+                    text-align: left;
+                    border-top: 2px solid primary;
+                    box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .1);
+                    border-left: 1px solid black;
+                    border-right: 1px solid black;
+                    border-bottom: 1px solid black;
+                    padding: 0px 0;
+                    margin-top: 20px;
+                    margin-left: 0px;
+                    background: white;
+                    transition: 0.2s 0s;
+
+                    &.arrow-top {
+                        position: absolute;
+
+                        &:before {
+                            bottom: 100%;
+                            left: 20%;
+                            border: solid transparent;
+                            content: " ";
+                            height: 0;
+                            width: 0;
+                            position: absolute;
+                            pointer-events: none;
+                        }
+
+                        &:before {
+                            border-color: rgba(136, 183, 213, 0);
+                            border-bottom-color: white;
+                            border-width: 10px;
+                            margin-left: -10px;
+                        }
+                    }
+
+
+                    a {
+                        font-size: 16px;
+                        text-transform: none;
+                        letter-spacing: normal;
+                        transition: 0s all;
+                        color: gray-800;
+                    }
+
+                    .active {
+                        >a {
+                            color: primary !important;
+                        }
+                    }
+
+                    >li {
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        min-width: 200px;
+
+                        >a {
+                            padding: 9px 20px;
+                            display: block;
+
+                            &:hover {
+                                background: lighten(black, 2%);
+                                color: black;
+                            }
+                        }
+
+                        &.has-children {
+                            >a {
+                                &:before {
+                                    content: "\e315";
+                                    right: 20px;
+                                }
+                            }
+
+                            >.dropdown,
+                            >ul {
+                                left: 100%;
+                                top: 0;
+                            }
+
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                >a {
+                                    background: lighten(black, 2%);
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    >a {
+                        color: primary;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                    cursor: pointer;
+
+                    >.dropdown {
+                        transition-delay: 0s;
+                        margin-top: 0px;
+                        visibility: visible;
+                        opacity: 1;
+
+
+                    }
+                }
+            }
+
+            &.site-menu-dark {
+                >li {
+                    >a {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
 }
 
-/* CSS Document */
-.toggle-2,
-.toggle,
-[id^=drop] {
-display: none;
-}
 
-/* Giving a background-color to the nav container. */
-nav {
-margin: 0;
-padding: 0;
-}
+// mobile menu
 
-.header-pf {
-background: $bg-clr;
-padding: 1.6em 0;
--webkit-transition: $transition;
--moz-transition: $transition;
-transition: $transition;
-z-index: 99;
-}
+.site-mobile-menu {
+    width: 300px;
+    position: fixed;
+    right: 0;
+    z-index: 2000;
+    padding-top: 20px;
+    background: white;
+    height: calc(100vh);
 
-/* logo */
-h1.logo {
-position: absolute;
-left: 45%;
-}
+    transform: translateX(110%);
+    box-shadow: -10px 0 20px -10px rgba(0, 0, 0, .1);
+    transition: .3s all ease-in-out;
 
-.logo a {
-font-size: 0.9em;
-color: $logo-color;
-font-family: 'Josefin Sans', sans-serif;
-letter-spacing: 1px;
-text-transform: uppercase;
-font-weight: 700;
-}
+    .offcanvas-menu & {
+        transform: translateX(0%);
+    }
 
+    .site-mobile-menu-header {
+        width: 100%;
+        float: left;
+        padding-left: 20px;
+        padding-right: 20px;
 
-/* //logo */
+        .site-mobile-menu-close {
+            float: right;
+            margin-top: 8px;
 
-/* Since we'll have the "ul li" "float:left"
-* we need to add a clear after the container. */
+            span {
+                font-size: 30px;
+                display: inline-block;
+                padding-left: 10px;
+                padding-right: 0px;
+                line-height: 1;
+                cursor: pointer;
+                transition: .3s all ease;
 
-nav:after {
-content: "";
-display: table;
-clear: both;
-}
+                &:hover {
+                    color: black;
+                }
+            }
+        }
 
-/* Positioning the navigation items inline */
-nav ul li {
-margin: 0px;
-display: inline-block;
-float: left;
-}
+        .site-mobile-menu-logo {
+            float: left;
+            margin-top: 10px;
+            margin-left: 0px;
 
-/* Styling the links */
-nav a {
-color: $text-color;
-font-size: 16px;
-letter-spacing: 1px;
-font-weight: 400;
-text-align: center;
-display: inline-block;
-transition: $transition;
--webkit-transition: $transition;
--moz-transition: $transition;
--o-transition: $transition;
--ms-transition: $transition;
-}
+            a {
+                display: inline-block;
+                text-transform: uppercase;
 
-ul.menu li {
-width: 10%;
-text-align: center;
-}
+                img {
+                    max-width: 70px;
+                }
 
-ul.menu li:nth-child(3) {
-margin-right: 40%;
-}
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
 
-nav ul li ul li a:hover {
-background: #f8f9fa;
-color: $hover-active-color;
-}
+    .site-mobile-menu-body {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+        padding: 0 20px 20px 20px;
 
+        height: calc(100vh - 52px);
+        padding-bottom: 150px;
 
-/* Background color change on Hover */
+    }
 
-.menu li.active a,
-.menu li a:hover {
-color: $hover-active-color;
-transition: $transition;
--webkit-transition: $transition;
--moz-transition: $transition;
--o-transition: $transition;
--ms-transition: $transition;
-}
+    .site-nav-wrap {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        // float: left;
 
-/* Hide Dropdowns by Default
-* and giving it a position of absolute */
-nav ul ul {
-display: none;
-top: 50px;
-z-index: 9;
-position: absolute;
-min-width: 10rem;
-padding: 0.5rem 0;
-margin: 0.125rem 0 0;
-font-size: 1rem;
-color: $text-color;
-text-align: left;
-list-style: none;
-background-color: $dd-color;
-background-clip: padding-box;
-border: 1px solid rgba($text-color, 0.1);
-border-radius: 0.25rem;
-}
+        // width: 100%;
+        // height: 100%;
+        position: relative;
 
-/* Display Dropdowns on Hover */
-nav ul li:hover>ul {
-display: inherit;
-}
+        a {
+            padding: 10px 20px;
+            display: block;
+            position: relative;
+            color: gray-900;
 
-/* Fisrt Tier Dropdown */
-ul.menu li ul li {
-width: 100%;
-float: none;
-display: list-item;
-position: relative;
-margin: 0.125rem 0 0;
-}
+            &:hover {
+                color: primary;
+            }
+        }
 
-nav ul ul li a {
-color: $text-color;
-padding: 5px 10px;
-display: block;
-font-size: 14px;
-}
+        li {
+            position: relative;
+            display: block;
 
-/* Second, Third and more Tiers	
-* We move the 2nd and 3rd etc tier dropdowns to the left
-* by the amount of the width of the first tier.
-*/
-nav ul ul ul li {
-position: relative;
-top: -60px;
-/* has to be the same number as the "width" of "nav ul ul li" */
-left: 170px;
-}
+            .active {
+                // > a {
+                color: primary;
+                // }
+            }
+        }
 
-/* Media Queries
---------------------------------------------- */
-@media all and (max-width : 992px) {
-.header-style {
-padding: 10px 0;
-}
+        .arrow-collapse {
+            position: absolute;
+            right: 0px;
+            top: 10px;
+            z-index: 20;
+            width: 36px;
+            height: 36px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 50%;
 
-.logo a {
-font-size: 45px;
-}
+            &:hover {
+                background: black00;
+            }
 
-nav {
-margin: 0;
-}
+            &:before {
+                font-size: 12px;
+                z-index: 20;
+                font-family: "icomoon";
+                content: "\f078";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(-180deg);
+                transition: .3s all ease;
+            }
 
-nav ul {
-float: right;
-}
+            &.collapsed {
+                &:before {
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
 
-/* Hide the navigation menu by default */
-/* Also hide the  */
-.toggle+a,
-.menu {
-display: none;
-}
+        >li {
+            display: block;
+            position: relative;
+            float: left;
+            width: 100%;
 
-/* Stylinf the toggle lable */
-.toggle.toogle-2 {
-display: block;
-padding: 0.5em 1.2em;
-font-size: 16px;
-text-decoration: none;
-border: none;
-float: right;
-background-color: $tgl-bg-color;
-color: $tgl-color;
-border-radius: 0;
-letter-spacing: 1px;
-cursor: pointer;
-transition: $transition;
--webkit-transition: $transition;
--moz-transition: $transition;
--o-transition: $transition;
--ms-transition: $transition;
-text-transform: uppercase;
-margin: 0;
-}
+            >a {
+                padding-left: 20px;
+                font-size: 20px;
+            }
 
-.toggle.toogle-2:hover {
-background: $tgl-bg-hover-color;
-transition: $transition;
--webkit-transition: $transition;
--moz-transition: $transition;
--o-transition: $transition;
--ms-transition: $transition;
-}
+            >ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
 
-.toggle.toggle-drop {
-float: none;
-text-align: center;
-margin: auto;
-max-width: 400px;
-padding: 5px;
-color: $text-color;
-font-weight: normal;
-font-size: 15px;
-letter-spacing: 1px;
-display: block;
-font-weight: 600;
-cursor: pointer;
-transition: $transition;
--webkit-transition: $transition;
--moz-transition: $transition;
--o-transition: $transition;
--ms-transition: $transition;
-}
+                >li {
+                    display: block;
 
-.toggle.toggle-drop:hover {
-color: $hover-active-color;
-transition: $transition;
--webkit-transition: $transition;
--moz-transition: $transition;
--o-transition: $transition;
--ms-transition: $transition;
-}
+                    >a {
+                        padding-left: 40px;
+                        font-size: 16px;
+                    }
 
-ul.menu li {
-margin: 0 !important;
-}
+                    >ul {
+                        padding: 0;
+                        margin: 0;
 
-ul.menu li:nth-child(4) {
-margin-right: 0;
-}
+                        >li {
+                            display: block;
 
-/* Display Dropdown when clicked on Parent Lable */
-[id^=drop]:checked+ul {
-display: block;
-background: #f7f7f7;
-padding: 15px 0;
-text-align: center;
-width: 100%;
-}
+                            >a {
+                                font-size: 16px;
+                                padding-left: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-/* Change menu item's width to 100% */
-nav ul li {
-display: block;
-width: 100%;
-padding: 5px 0;
-}
+        &[data-class="social"] {
+            float: left;
+            width: 100%;
+            margin-top: 30px;
+            padding-bottom: 5em;
 
-nav ul ul .toggle,
-nav ul ul a {
-padding: 0 40px;
-}
+            >li {
+                width: auto;
 
-nav ul ul ul a {
-padding: 0 80px;
-}
+                &:first-child {
+                    a {
+                        padding-left: 15px !important;
+                    }
+                }
+            }
+        }
 
-// nav a:hover,
-// nav ul ul ul a {
-// background-color: transparent;
-// }
+    }
 
-nav ul li ul li .toggle,
-nav ul ul a,
-nav ul ul ul a {
-padding: 14px 20px;
-color: red;
-font-size: 17px;
-}
-
-/* Hide Dropdowns by Default */
-nav ul ul {
-float: none;
-position: static;
-color: $white;
-/* has to be the same number as the "line-height" of "nav a" */
-}
-
-/* Hide menus on hover */
-nav ul ul li:hover>ul,
-nav ul li:hover>ul {
-display: none;
-}
-
-/* Fisrt Tier Dropdown */
-nav ul ul li {
-display: block;
-width: 100%;
-padding: 0;
-}
-
-nav ul ul ul li {
-position: static;
-/* has to be the same number as the "width" of "nav ul ul li" */
 
 }
 
-.menu li.active a,
-.menu li a:hover {
-color: $text-color;
-}
+.sticky-wrapper {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
 
-nav a {
-color: $text-color;
-font-size: 15px;
-}
+    &+.site-blocks-cover {
+        // margin-top: 140px;
+        margin-top: 96px;
+    }
 
-.menu li.active a,
-.menu li a:hover {
-color: $hover-active-color;
-}
+    .site-navbar {
+        transition: .3s all ease;
 
-nav ul ul li a {
-color: $text-color;
-}
+        .site-menu {
+            >li {
+                display: inline-block;
 
-}
+                >a {
+                    &.active {
+                        color: white;
+                        position: relative;
 
-/* //dropdown */
-/* //navigation */
+                        &:after {
+                            height: 2px;
+                            background: white;
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 20px;
+                            right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
-//Queries//
+    &.is-sticky {
+        .site-navbar {
+            box-shadow: 4px 0 20px -5px rgba(0, 0, 0, .2);
+            background: white;
 
-@media(max-width:992px) {
+            .site-logo {
+                a {
+                    color: black;
+                }
+            }
 
-h1.logo {
-position: static;
-left: 0;
-float: left;
-}
+            .site-menu {
+                >li {
+                    display: inline-block;
 
-.logo a {
-font-size: 40px;
-}
+                    >a {
+                        padding: 5px 20px;
+                        color: black;
+                        display: inline-block;
+                        text-decoration: none !important;
 
-nav ul li {
-margin: 0px;
-display: block;
-float: none;
-text-align: center;
-}
+                        &:hover {
+                            color: primary;
 
-ul.menu li {
-width: 100%;
-text-align: center;
-}
+                        }
+
+                        &.active {
+                            &:after {
+                                background: primary;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .shrink {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
 
 }
