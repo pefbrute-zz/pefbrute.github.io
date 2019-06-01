@@ -1,20 +1,26 @@
 .btn-primary {
-    color: white;
-    background-color: #E81050;
-    padding: 10px 30px;
-    border: 2px solid #E81050;
-    transition: all 2s;
-    $border-radius: 30px;
-    border-radius: $border-radius;
-    -webkit-border-radius: $border-radius;
-    -moz-border-radius: $border-radius;
-    -ms-border-radius: $border-radius;
-    -o-border-radius: $border-radius;
+$btn-color:#E81050;
+$border-radius: 30px;
 
-    &:hover {
-        $bg-color: grey;
-        color: black;
-        background-color: $bg-color;
-        border: 2px solid $bg-color;
-    }
+background-color: $btn-color;
+border-color: $btn-color;
+
+color: white;
+padding: 10px 30px;
+transition: all 2s;
+
+border-radius: $border-radius;
+-webkit-border-radius: $border-radius;
+-moz-border-radius: $border-radius;
+-ms-border-radius: $border-radius;
+-o-border-radius: $border-radius;
+
+&:hover {
+$btn-color-hover: grey;
+
+background-color: $btn-color-hover;
+border-color: $btn-color-hover;
+
+color: black;
+}
 }
