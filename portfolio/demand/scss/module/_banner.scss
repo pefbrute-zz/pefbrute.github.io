@@ -8,7 +8,7 @@
 }
 
 .banner-features {
-    span {
+    .line {
         position: relative;
         display: inline-block;
         background-color: #fff;
@@ -19,11 +19,28 @@
             content: '';
             position: absolute;
             height: 8px;
-            width: 90%;
             border-top-left-radius: 30px;
             border-bottom-left-radius: 30px;
-
-            background-color: #007BFF;
         }
+    }
+    .line-marketing:after{
+        width: 40%;
+        background-color: #007BFF;
+    }
+    .line-consulting:after {
+        width: 55%;
+        background-color: #DC3545;
+    }
+    .line-projects:after {
+        width: 50%;
+        background-color: #17A2B8;
+    }
+    .line-enhancement:after {
+        width: 70%;
+        background-color: #FFC107;
+    }
+    .line-support:after {
+        width: 90%;
+        background-color: #28A745;
     }
 }

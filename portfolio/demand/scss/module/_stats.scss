@@ -9,7 +9,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        background: rgba(black,0.6);
+        background: rgba(black,0.5);
     }
     *{
         z-index: 999;
@@ -19,5 +19,14 @@
     }
     p{
         color: #ddd;
+    }
+    .block{
+        box-sizing: border-box;
+        border: 5px solid #aaa;
+        padding: 10px 35px;
+        p{
+            font-size: 20px;
+            line-height: 35px;
+        }
     }
 }

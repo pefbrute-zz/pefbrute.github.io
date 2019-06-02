@@ -26,24 +26,43 @@
     }
 
     h1 {
-        font-size: 3rem;
-        font-weight: 400;
-        color: $white;
         font-weight: 900;
+        color: $white;
+        text-shadow: black 0.5px 0.5px;
 
-        @include media-breakpoint-down(md) {
-            font-size: 2rem;
+        @include media-breakpoint-down(sm) {
+            font-size: 2.5rem;
+        }
+
+        @include media-breakpoint-up(sm) {
+            font-size: 2.8rem;
         }
     }
 
+    h3 {
+        @include media-breakpoint-down(sm) {
+            font-size: 2rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 2.3rem;
+        }
+    }
+
+
     p {
-        color: $white;
+        color: #ccc;
         font-size: $font-size-base;
-        line-height: 1.5;
+        line-height: 32px;
         font-weight: 300;
 
     }
-    .btn-get{
+
+    .blue {
+        color: #00AEFF;
+    }
+
+    .btn-get {
         background-color: #00AEFF;
         border-color: #00AEFF;
     }

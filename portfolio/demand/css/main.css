@@ -390,23 +390,44 @@ li > a:only-child:after {
 }
 
 .intro h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  color: #fff;
   font-weight: 900;
+  color: #fff;
+  text-shadow: black 0.5px 0.5px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .intro h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .intro h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .intro h3 {
     font-size: 2rem;
   }
 }
 
+@media (min-width: 992px) {
+  .intro h3 {
+    font-size: 2.3rem;
+  }
+}
+
 .intro p {
-  color: #fff;
+  color: #ccc;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 32px;
   font-weight: 300;
+}
+
+.intro .blue {
+  color: #00AEFF;
 }
 
 .intro .btn-get {
@@ -429,7 +450,7 @@ li > a:only-child:after {
   color: #aaa;
 }
 
-.banner-features span {
+.banner-features .line {
   position: relative;
   display: inline-block;
   background-color: #fff;
@@ -438,14 +459,37 @@ li > a:only-child:after {
   border-radius: 30px;
 }
 
-.banner-features span:after {
+.banner-features .line:after {
   content: '';
   position: absolute;
   height: 8px;
-  width: 90%;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+
+.banner-features .line-marketing:after {
+  width: 40%;
   background-color: #007BFF;
+}
+
+.banner-features .line-consulting:after {
+  width: 55%;
+  background-color: #DC3545;
+}
+
+.banner-features .line-projects:after {
+  width: 50%;
+  background-color: #17A2B8;
+}
+
+.banner-features .line-enhancement:after {
+  width: 70%;
+  background-color: #FFC107;
+}
+
+.banner-features .line-support:after {
+  width: 90%;
+  background-color: #28A745;
 }
 
 /*---------------------------------------------------- */
@@ -498,7 +542,7 @@ li > a:only-child:after {
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .stats * {
@@ -511,6 +555,18 @@ li > a:only-child:after {
 
 .stats p {
   color: #ddd;
+}
+
+.stats .block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid #aaa;
+  padding: 10px 35px;
+}
+
+.stats .block p {
+  font-size: 20px;
+  line-height: 35px;
 }
 
 /*---------------------------------------------------- */
