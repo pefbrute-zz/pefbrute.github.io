@@ -15,6 +15,25 @@ body {
   font-family: 'Catamaran', sans-serif;
 }
 
+p, a {
+  font-size: 16px;
+  color: #777;
+}
+
+p {
+  line-height: 28px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 1px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -33,15 +52,19 @@ li {
   background-color: transparent;
   color: white;
   padding: 10px 30px;
-  -webkit-transition: all 2s;
-  transition: all 2s;
   border-color: white;
   border-width: 2px;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: white;
+  color: white;
 }
 
 /*---------------------------------------------------- */
@@ -201,7 +224,11 @@ li > a:only-child:after {
     float: none;
   }
   .menu li.active a {
-    color: #da9d40;
+    color: #00AEFF;
+  }
+  .menu .btn-primary {
+    border-color: #00AEFF;
+    color: #00AEFF;
   }
   nav ul li span {
     color: #333;
@@ -226,7 +253,7 @@ li > a:only-child:after {
     text-decoration: none;
     border: none;
     float: right;
-    background-color: #da9d40;
+    background-color: #00AEFF;
     color: #fff;
     margin-bottom: 0;
     margin-top: 0.2em;
@@ -358,8 +385,8 @@ li > a:only-child:after {
 
 .intro,
 .intro > .container > .row {
-  min-height: 600px;
-  height: 100vh;
+  min-height: 495px;
+  height: 50vw;
 }
 
 .intro h1 {
@@ -393,6 +420,34 @@ li > a:only-child:after {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.banner {
+  background-color: #222222;
+}
+
+.banner h6,
+.banner p {
+  color: #aaa;
+}
+
+.banner-features span {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  height: 8px;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.banner-features span:after {
+  content: '';
+  position: absolute;
+  height: 8px;
+  width: 90%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  background-color: #007BFF;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -403,15 +458,84 @@ li > a:only-child:after {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.services .f1 {
+  background-color: #F6F6F6;
+  -webkit-box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services .f1 h5 {
+  font-size: 18px;
+  line-height: 35px;
+  color: #343a40;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.features p {
+  color: #666;
+  letter-spacing: 0px;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.stats {
+  background: no-repeat scroll center center;
+  background-size: cover;
+  position: relative;
+}
+
+.stats:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.stats * {
+  z-index: 999;
+}
+
+.stats h1 {
+  color: white;
+}
+
+.stats p {
+  color: #ddd;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.footer {
+  background-color: #161616;
+}
+
+.footer h5 {
+  color: white;
+}
+
+.footer ul li {
+  margin-top: -5px;
+}
+
+.footer a:hover {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: #AAA;
+}
+
+.footer-info-list, .footer-address {
+  padding-top: 5px;
+}
+
 /*---------------------------------------------------- */
 /*# sourceMappingURL=main.css.map */

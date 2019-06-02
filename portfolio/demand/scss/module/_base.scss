@@ -5,11 +5,25 @@ body {
     background: #fff;
     font-family: 'Catamaran', sans-serif;
 }
-
+p,a{
+    font-size: 16px;
+    color: #777;
+}
+p{
+    line-height: 28px;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    letter-spacing: 1px;
+}
 html {
     scroll-behavior: smooth;
 }
-
 a:hover {
     text-decoration: none;
 }

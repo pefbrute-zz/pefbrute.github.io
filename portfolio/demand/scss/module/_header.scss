@@ -161,7 +161,11 @@ li>a:only-child:after {
     }
 
     .menu li.active a {
-        color: #da9d40;
+        color: #00AEFF;
+    }
+    .menu .btn-primary{
+        border-color: #00AEFF;
+        color: #00AEFF;
     }
 
     nav ul li span {
@@ -191,7 +195,7 @@ li>a:only-child:after {
         text-decoration: none;
         border: none;
         float: right;
-        background-color: #da9d40;
+        background-color: #00AEFF;
         color: #fff;
         margin-bottom: 0;
         margin-top: 0.2em;
