@@ -375,51 +375,52 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-.intro {
+.stats {
+  background: no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-position: center center;
-}
-
-.intro.wrapper {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
   position: relative;
 }
 
-.intro.wrapper:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  top: 0;
-  background: rgba(0, 0, 0, 0.5);
+.stats .layer {
+  background: rgba(0, 0, 0, 0.45);
 }
 
-.intro,
-.intro > .container > .row {
-  min-height: 600px;
-  height: 100vh;
-}
-
-.intro h1 {
-  font-size: 3rem;
-  font-weight: 400;
+.stats h3.heading {
   color: #fff;
-  font-weight: 900;
 }
 
-@media (max-width: 991.98px) {
-  .intro h1 {
-    font-size: 2rem;
-  }
-}
-
-.intro p {
+p.counter {
   color: #fff;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 300;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.text-stat p {
+  color: #eee;
+  font-size: 15px;
+  letter-spacing: .5px;
+}
+
+p.p-text {
+  color: #ddd;
+  font-size: 15px;
+}
+
+.stats-left span.fa {
+  font-size: 35px;
+  color: #00aeff;
+}
+
+.stat-text h4 {
+  font-size: 22px;
+  color: #d5d5d5;
+  line-height: 35px;
+  padding: 1em;
+  border: 8px solid #aaa;
 }
 
 /*---------------------------------------------------- */
