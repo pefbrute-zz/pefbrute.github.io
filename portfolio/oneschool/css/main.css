@@ -68,7 +68,7 @@ li {
 }
 
 .site-logo a {
-  color: #000;
+  color: #fff;
 }
 
 .site-navbar {
@@ -92,7 +92,7 @@ li {
 }
 
 .site-navbar .site-navigation .site-menu .active {
-  color: black;
+  color: white;
   display: inline-block;
   padding: 5px 20px;
 }
@@ -108,7 +108,7 @@ li {
 
 .site-navbar .site-navigation .site-menu > li > a {
   padding: 5px 20px;
-  color: #000;
+  color: #fff;
   display: inline-block;
   text-decoration: none !important;
 }
@@ -241,7 +241,7 @@ li {
 }
 
 .site-navbar .site-navigation .site-menu.site-menu-dark > li > a {
-  color: #000;
+  color: #fff;
 }
 
 .site-mobile-menu {
@@ -585,5 +585,39 @@ li {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+footer {
+  background: #161616;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer h4 {
+  font-size: 23px;
+  font-weight: 400;
+  color: #fff;
+}
+
+ul.list li a,
+ul.list li {
+  color: #777;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+ul.list li a:hover {
+  color: #aaa;
+}
+
+ul.list li {
+  list-style-type: none;
+}
+
+ul.list i {
+  width: 25px;
+  color: #888;
+}
+
 /*---------------------------------------------------- */
 /*# sourceMappingURL=main.css.map */
