@@ -8,7 +8,7 @@ border-color: $btn-color;
 color: white;
 padding: 10px 30px;
 
-$transition: all 2s;
+$transition: all .6s;
 transition: $transition;
 -webkit-transition: $transition;
 
@@ -19,11 +19,16 @@ border-radius: $border-radius;
 -o-border-radius: $border-radius;
 
 &:hover {
-$btn-color-hover: grey;
+$btn-color-hover: white;
 
 background-color: $btn-color-hover;
 border-color: $btn-color-hover;
 
 color: black;
 }
+
+&:focus {
+    box-shadow: none;
+}
+
 }

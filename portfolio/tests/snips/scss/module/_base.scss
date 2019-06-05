@@ -4,14 +4,17 @@ body {
     font-size: 100%;
     background: #fff;
     font-family: '', sans-serif;
+    transition: all 1s;
 }
 
 html {
     scroll-behavior: smooth;
 }
-
-a:hover {
-    text-decoration: none;
+a{
+    color: black;
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 h1,
