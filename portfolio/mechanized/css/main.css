@@ -551,7 +551,6 @@ nav ul ul ul li {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .bg-image.overlay {
@@ -567,7 +566,7 @@ nav ul ul ul li {
   bottom: 0;
   z-index: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .bg-image > .container {
