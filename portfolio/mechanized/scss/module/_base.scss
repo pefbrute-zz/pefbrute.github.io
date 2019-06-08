@@ -1,0 +1,37 @@
+html,
+body {
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: #33353A;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+p{
+    color: #5e5e5e;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+li {
+    list-style-type: none;
+}
