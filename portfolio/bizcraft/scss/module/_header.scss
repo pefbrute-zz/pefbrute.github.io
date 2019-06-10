@@ -32,7 +32,7 @@ nav {
 }
 
 #logo a span {
-    color: #fa8383;
+    color: #ee3b24;
 }
 
 
@@ -61,38 +61,36 @@ nav ul {
 nav ul li {
     margin: 0px 0.3em;
     display: inline-block;
-    float: left;
 }
 
 /* Styling the links */
 
 nav ul.menu li a {
     // text-align: ;
-    color: #000;
+    color: white;
     text-transform: capitalize;
     font-size: 0.95em;
-    letter-spacing: 2px;
     padding-left: 0;
     padding-right: 0;
-    padding: 0.5em 1.5em;
+    padding: 0.5em 0.3em;
     background: transparent;
     font-weight: 400;
 }
 
 nav ul li ul li:hover {
-    background: #fa8383;
+    background: #ee3b24;
 }
 
 /* Background color change on Hover */
 
 nav ul.menu li a:hover {
-    color: #fa8383;
+    color: #ee3b24;
     background: #fff;
     transition: all .3s ease-in-out;
 }
 
 .menu li.active a {
-    color: #fa8383;
+    color: #ee3b24;
     background: #fff;
 }
 
@@ -125,7 +123,7 @@ nav ul ul li {
 }
 
 nav ul.menu li ul li a {
-    color: #333;
+    color: white;
     padding: 5px 10px;
     display: block;
 }
@@ -168,7 +166,7 @@ li>a:only-child:after {
     }
 
     nav a {
-        color: #333;
+        color: white;
     }
 
     /* Hide the navigation menu by default */
@@ -233,7 +231,7 @@ li>a:only-child:after {
     }
 
     nav ul.menu li a {
-        color: #312f2f;
+        color: white;
     }
 
     nav a:hover,

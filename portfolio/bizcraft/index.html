@@ -49,11 +49,11 @@
       <label for="drop" class="toggle"><span class="fas fa-bars text-white"></span></label>
       <input type="checkbox" id="drop" />
       <ul class="menu mt-2 ml-auto">
-        <li>
+        <li class="">
           <!-- First Tier Drop Down -->
           <label for="drop-2" class="toggle">Home <span class="fa fa-angle-down" aria-hidden="true"></span>
           </label>
-          <a href="#">Home <span class="fa fa-angle-down" aria-hidden="true"></span></a>
+          <a class="active" href="#">Home <span class="fa fa-angle-down" aria-hidden="true"></span></a>
           <input type="checkbox" id="drop-2" />
           <ul class="inner-ul">
             <li><a class="scroll" href="#gallery">Home 1</a></li>
@@ -419,7 +419,7 @@
   </div>
 </section>
 <section>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row banner-grids mt-lg-5">
       <div class="col-lg-4 banner-grid">
         <div class="content-grid-info">
@@ -427,7 +427,7 @@
             <div class="col-2">
               <span class="fa fa-trophy" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">CLEAN & MODERN DESIGN</h4>
               <p>Bras urna felis accumsan at ultrde cesid posuere masa socis nautoque penat</p>
             </div>
@@ -441,7 +441,7 @@
             <div class="col-2">
               <span class="fa fa-thumbs-up" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">USEFUL SHORTCODES</h4>
               <p>High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua</p>
             </div>
@@ -455,7 +455,7 @@
             <div class="col-2">
               <span class="fa fa-tv" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">PARALLAX SECTION</h4>
               <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
             </div>
@@ -469,7 +469,7 @@
             <div class="col-2">
               <span class="fa fa-trophy" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">
                 MULTIPURPOSE CONCEPT</h4>
               <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
@@ -484,7 +484,7 @@
             <div class="col-2">
               <span class="fa fa-thumbs-up" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">RESPONSIVE LAYOUT</h4>
               <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
             </div>
@@ -498,7 +498,7 @@
             <div class="col-2">
               <span class="fa fa-tv" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">LIGHT WIGHT PERFORMANCE
               </h4>
               <p>High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua</p>
@@ -513,7 +513,7 @@
             <div class="col-2">
               <span class="fa fa-trophy" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">FREE LIFETIME UPDATES
               </h4>
               <p>Bras urna felis accumsan at ultrde cesid posuere masa socis nautoque penat</p>
@@ -528,7 +528,7 @@
             <div class="col-2">
               <span class="fa fa-thumbs-up" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
+            <div class="col-10 pl-4">
               <h4 class="mb-3">ENDLESS POSSIBILITES
               </h4>
               <p>High Life narwhal, banh mi PBR single-origin coffee Odd Future actually aliqua</p>
@@ -543,9 +543,8 @@
             <div class="col-2">
               <span class="fa fa-tv" aria-hidden="true"></span>
             </div>
-            <div class="col-10">
-              <h4 class="mb-3">24/7 LIVE SUPPORT
-              </h4>
+            <div class="col-10 pl-4">
+              <h4 class="mb-3">24/7 LIVE SUPPORT</h4>
               <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut</p>
             </div>
           </div>
@@ -625,9 +624,7 @@
     <div class="row no-gutters col-12">
       <span class="fas fa-comment-dots fa-2x"></span>
       <div class="ml-3">
-        <h3>
-          MEET WITH OUR TEAM
-        </h3>
+        <h3>MEET WITH OUR TEAM</h3>
         <p>A Quality Experience Team With 4 Years Experience</p>
       </div>
     </div>
@@ -679,8 +676,10 @@
         <div class="col-md-8 text-center testimony">
           <h3 class="mb-4">ARE YOU READY TO BUY THIS TEMPLATE!</h3>
           <h2>JUST CLICK BUTTON AND USE YOUR OWN</h2>
-          <a href="#" class="btn btn-template">PURCHASE NOW</a>
-          <a href="#" class="btn btn-template">GET IN TOUCH</a>
+          <div class="mt-5">
+            <a href="#" class="btn btn-template mr-3">PURCHASE NOW</a>
+            <a href="#" class="btn btn-template">GET IN TOUCH</a>
+          </div>
         </div>
       </div>
     </div>
@@ -689,15 +688,15 @@
 
 <section class="pricing-table">
   <div id="pricing" class="pricing-area area-padding">
-    <div class="container">
+    <div class="container py-5">
       <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-          <div class="section-headline text-center">
-            <h2>Pricing Table</h2>
+          <div class=""><span class="fas fa-cogs fa-2x"></span></div>
+          <div class="ml-1">
+            <h1>PRICING TABLE</h1>
+            <p>We love to work with passion</p>
           </div>
         </div>
-      </div>
-      <div class="row">
+      <div class="row py-5">
         <div class="col-md-3 col-sm-3 col-xs-12">
           <div class="pri_table_list">
             <h3>basic <br /> <span>Monthly plan</span></h3>
@@ -774,12 +773,12 @@
 
       <div class="testimonial-item">
         <img src="img/team/testimonial2.jpg" class="testimonial-img" alt="">
-          <p>
-            <span class="fas fa-quote-left"></span>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, amet! Quae itaque nam quam nemo, tempore
-            recusandae sint eligendi quidem culpa nostrum, suscipit officiis! Impedit.
-            <span class="fas fa-quote-right"></span>
-          </p>
+        <p>
+          <span class="fas fa-quote-left"></span>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, amet! Quae itaque nam quam nemo, tempore
+          recusandae sint eligendi quidem culpa nostrum, suscipit officiis! Impedit.
+          <span class="fas fa-quote-right"></span>
+        </p>
         <h3>Saul Goodman</h3>
         <h4>Designer</h4>
       </div>
@@ -790,7 +789,7 @@
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero, amet! Quae itaque nam quam nemo, tempore
         recusandae sint eligendi quidem culpa nostrum, suscipit officiis! Impedit.
         <span class="fas fa-quote-right"></span>
-      </p>
+        </p>
         <h3>Saul Goodman</h3>
         <h4>Designer</h4>
         <d>
@@ -801,23 +800,40 @@
   </div>
 </section>
 
-<footer class="footer-section bg-white">
+<footer class="footer-section" style="background-image: url(img/gallery/1.jpg)">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h3>About OneSchool</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro consectetur ut hic ipsum et veritatis
-          corrupti. Itaque eius soluta optio dolorum temporibus in, atque, quos fugit sunt sit quaerat dicta.</p>
+        <h3>RECENT PHOTOS</h3>
+        <div class="row">
+          <div class="col-12 mb-3">
+            <h6><a href="#">BULGARIA CLAIMS TO FIND EUROPE'S 'OLDEST TOWN'</a></h6>
+            <p>Posted by John Doe <a href="#" class="ml-2 mt-3">in Blog</a></p>
+          </div>
+          <div class="col-12 mb-3">
+            <h6><a href="#">FEW ANSWERS IN CASE OF MURDERED LAW PROFESSOR</a></h6>
+            <p>Mar 15, 2015 <a href="#" class="ml-2 mt-3">03</a></p>
+          </div>
+          <div class="col-12 mb-3">
+            <h6><a href="#">OVER THE YEAR WE HAVE LOTS OF EXPERIENCE IN OUR FIELD</a></h6>
+            <p>Apr 17, 2015 <a href="#" class="ml-2 mt-3">14</a></p>
+          </div>
+        </div>
       </div>
 
-      <div class="col-md-3 ml-auto">
-        <h3>Links</h3>
-        <ul class="list-unstyled footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Courses</a></li>
-          <li><a href="#">Programs</a></li>
-          <li><a href="#">Teachers</a></li>
-        </ul>
+      <div class="col-md-3 mr-auto">
+        <h3>FLICKR PHOTOS</h3>
+        <div class="row">
+          <div class="col-6"><img src="img/gallery/1.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/2.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/3.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/4.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/5.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/6.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/7.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/8.jpg" alt="" class="img-fluid mb-3"></div>
+          <div class="col-6"><img src="img/gallery/9.jpg" alt="" class="img-fluid mb-3"></div>
+        </div>
       </div>
 
       <div class="col-md-4">
