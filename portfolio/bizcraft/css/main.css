@@ -1,0 +1,587 @@
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+@font-face {
+  font-family: "jaapokki-regular";
+  src: url("../fonts/jaapokki/jaapokki-regylar.eot");
+  src: url("../fonts/jaapokki/jaapokki-regular.woff") format("woff"), url("../fonts/jaapokki/jaapokki-regular.svg#filename") format("svg");
+}
+
+html,
+body {
+  margin: 0;
+  font-size: 100%;
+  background: #fff;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #323648;
+  font-family: 'jaapokki-regular', sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.btn-template {
+  background-color: #E81050;
+  border-color: #E81050;
+  color: white;
+  padding: 10px 30px;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.btn-template:hover {
+  background-color: grey;
+  border-color: grey;
+  color: black;
+}
+
+.btn-template:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+header {
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+}
+
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+#logo a {
+  float: left;
+  display: initial;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #000;
+  padding: 0;
+  font-size: 0.9em;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+}
+
+#logo a span {
+  color: #fa8383;
+}
+
+/* Since we'll have the "ul li" "float:left"
+* we need to add a clear after the container. */
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+* and adding "position:reltive" */
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+  margin: 0px 0.3em;
+  display: inline-block;
+  float: left;
+}
+
+/* Styling the links */
+nav ul.menu li a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 0.95em;
+  letter-spacing: 2px;
+  padding-left: 0;
+  padding-right: 0;
+  padding: 0.5em 1.5em;
+  background: transparent;
+  font-weight: 400;
+}
+
+nav ul li ul li:hover {
+  background: #fa8383;
+}
+
+/* Background color change on Hover */
+nav ul.menu li a:hover {
+  color: #fa8383;
+  background: #fff;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.menu li.active a {
+  color: #fa8383;
+  background: #fff;
+}
+
+/* Hide Dropdowns by Default
+* and giving it a position of absolute */
+nav ul ul {
+  display: none;
+  position: absolute;
+  /* has to be the same number as the "line-height" of "nav a" */
+  top: 30px;
+  background: #fff;
+  padding: 10px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+  width: 180px;
+  float: none;
+  display: list-item;
+  position: relative;
+  margin: 0;
+}
+
+nav ul.menu li ul li a {
+  color: #333;
+  padding: 5px 10px;
+  display: block;
+}
+
+/* Second, Third and more Tiers	
+* We move the 2nd and 3rd etc tier dropdowns to the left
+* by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  /* has to be the same number as the "width" of "nav ul ul li" */
+  left: 170px;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:only-child:after {
+  content: '';
+}
+
+/* Media Queries
+--------------------------------------------- */
+@media all and (max-width: 991px) {
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+  nav {
+    margin: 0;
+  }
+  nav a {
+    color: #333;
+  }
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle + a,
+  .menu {
+    display: none;
+  }
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: block;
+    padding: 6px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    border: none;
+    float: right;
+    margin-right: 0em;
+    background-color: #fff;
+    color: #1b1d1d;
+    text-transform: capitalize;
+    font-weight: 400;
+    cursor: pointer !important;
+  }
+  .menu .toggle {
+    float: none;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    padding: 5px;
+    font-weight: normal;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .toggle:hover {
+    color: #333;
+    background-color: #fff;
+  }
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked + ul {
+    display: block;
+    background: #fff;
+    padding: 15px 0;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+  }
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+  nav ul.menu li a {
+    color: #312f2f;
+  }
+  nav a:hover,
+  nav ul ul ul a {
+    background-color: transparent;
+  }
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    padding: 14px 20px;
+    color: #312f2f;
+    font-size: 15px;
+  }
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    background-color: #fff;
+  }
+  nav ul ul li a {
+    font-size: 15px;
+  }
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
+  /* Hide menus on hover */
+  nav ul ul li:hover > ul,
+  nav ul li:hover > ul {
+    display: none;
+  }
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  nav ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+  }
+  .login-icon {
+    text-align: right;
+  }
+  .login-icon span {
+    margin-right: 1em;
+  }
+}
+
+@media all and (max-width: 568px) {
+  [id^=drop]:checked + ul {
+    display: block;
+    background: #fff;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .menu .toggle {
+    float: none;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+  }
+}
+
+.login-icon p {
+  color: #fff;
+}
+
+.login-icon span {
+  color: #fcd000;
+}
+
+@media screen and (max-width: 375px) {
+  #logo a {
+    font-size: 0.7em;
+  }
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+#intro {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+}
+
+#intro .carousel-item {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#intro .carousel-item::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#intro .carousel-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#intro .carousel-background img {
+  max-width: 100%;
+}
+
+#intro .carousel-content {
+  text-align: center;
+}
+
+#intro h2 {
+  color: #fff;
+  margin-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+#intro p {
+  width: 80%;
+  margin: 0 auto 30px auto;
+  color: #fff;
+}
+
+#intro .carousel-fade {
+  overflow: hidden;
+}
+
+#intro .carousel-fade .carousel-inner .carousel-item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+
+#intro .carousel-fade .carousel-inner .carousel-item,
+#intro .carousel-fade .carousel-inner .active.carousel-item-left,
+#intro .carousel-fade .carousel-inner .active.carousel-item-right {
+  opacity: 0;
+}
+
+#intro .carousel-fade .carousel-inner .active,
+#intro .carousel-fade .carousel-inner .carousel-item-next.carousel-item-left,
+#intro .carousel-fade .carousel-inner .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#intro .carousel-fade .carousel-inner .carousel-item-next,
+#intro .carousel-fade .carousel-inner .carousel-item-prev,
+#intro .carousel-fade .carousel-inner .active.carousel-item-left,
+#intro .carousel-fade .carousel-inner .active.carousel-item-right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+#intro .carousel-control-prev,
+#intro .carousel-control-next {
+  width: 10%;
+}
+
+#intro .carousel-control-next-icon,
+#intro .carousel-control-prev-icon {
+  background: none;
+  font-size: 32px;
+  line-height: 1;
+}
+
+#intro .carousel-indicators li {
+  cursor: pointer;
+}
+
+#intro .btn-primary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 32px;
+  border-radius: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  margin: 10px;
+  color: #fff;
+  background: #18d26e;
+  border-color: #18d26e;
+}
+
+#intro .btn-primary:hover {
+  background: #fff;
+  border-color: #fff;
+  color: #18d26e;
+}
+
+.carousel-indicators li {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 3px;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+.advantages-grids p {
+  color: #777;
+}
+
+.advantages-grids span.fa, span.fab {
+  font-size: 30px;
+}
+
+.advantages-grids h3 {
+  font-size: 22px;
+  line-height: 35px;
+  letter-spacing: 1px;
+  color: #343a40;
+  text-transform: capitalize;
+}
+
+.grid4 span.fa {
+  color: #ff4f81;
+}
+
+.grid5 span.fa {
+  color: #2dde98;
+}
+
+.grid6 span.fa {
+  color: #1cc7d0;
+}
+
+.grid7 span.fab {
+  color: #3369e7;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*# sourceMappingURL=main.css.map */
