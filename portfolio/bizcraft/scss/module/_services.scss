@@ -13,18 +13,18 @@ letter-spacing: 1px;
 color: #343a40;
 text-transform: capitalize;
 }
-.grid4 span.fa {
-color: #ff4f81;
-}
-
-.grid5 span.fa {
-color: #2dde98;
-}
-
-.grid6 span.fa {
-color: #1cc7d0;
-}
-
-.grid7 span.fab {
-color: #3369e7;
+.grid4 span.fa,
+.grid5 span.fab,
+.grid6 span.fas,
+.grid7 span.far {
+    padding-top: 15%;
+    color: white;
+    background: #EE3B24;
+    font-size: 35px;
+    height: 90px;
+    width: 90px;
+    border-top: 10px solid;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 10px solid transparent;
 }

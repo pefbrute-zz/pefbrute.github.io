@@ -15,7 +15,6 @@
 
 #portfolio #portfolio-flters li {
     cursor: pointer;
-    margin: 15px 15px 15px 0;
     display: inline-block;
     padding: 10px 20px;
     font-size: 12px;
@@ -56,9 +55,7 @@
 #portfolio .portfolio-item figure {
     background: #000;
     overflow: hidden;
-    height: 240px;
     position: relative;
-    border-radius: 4px 4px 0 0;
     margin: 0;
 }
 
@@ -149,4 +146,58 @@
     font-weight: 500;
     font-size: 14px;
     text-transform: uppercase;
+}
+
+.section-header h3,
+.section-header p {
+    color: #fff;
+}
+
+.card {
+    background: #00458f;
+    border-color: #00458f;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    height: 100%;
+    border-radius: 0;
+}
+
+.card:hover {
+    background: #003b7a;
+    border-color: #003b7a;
+}
+
+.card i {
+    font-size: 48px;
+    padding-top: 15px;
+    color: #bfddfe;
+}
+
+.card h5 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 15px;
+    color: #d8eafe;
+}
+
+.card .readmore {
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+    border-bottom: #00458f solid 2px;
+}
+
+.card .readmore:hover {
+    border-bottom: #fff solid 2px;
+}
+
+@media (max-width: 991px) {
+    .card {
+        margin: 0;
+    }
 }
