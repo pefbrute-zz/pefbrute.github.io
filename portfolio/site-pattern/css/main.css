@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -19,10 +20,7 @@ html {
   scroll-behavior: smooth;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
+a,
 h1,
 h2,
 h3,
@@ -34,10 +32,115 @@ h6 {
   font-family: '', sans-serif;
 }
 
+a {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+a:hover {
+  text-decoration: none;
+  color: aqua;
+}
+
+p {
+  font-size: 1em;
+}
+
 li {
   list-style-type: none;
 }
 
+p {
+  font-family: '';
+  color: blue;
+}
+
+/* ↓--↓ Queries ↓--↓ */
+@media (min-width: 0px) and (max-width: 767.98px) {
+  h1 {
+    font-size: 19px;
+  }
+  h2 {
+    font-size: 17px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 13px;
+  }
+  h5 {
+    font-size: 11px;
+  }
+  h6 {
+    font-size: 9px;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  h1 {
+    font-size: 34px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 26px;
+  }
+  h6 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+  h1 {
+    font-size: 49px;
+  }
+  h2 {
+    font-size: 47px;
+  }
+  h3 {
+    font-size: 45px;
+  }
+  h4 {
+    font-size: 43px;
+  }
+  h5 {
+    font-size: 41px;
+  }
+  h6 {
+    font-size: 39px;
+  }
+}
+
+@media (min-width: 1199.98px) {
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 62px;
+  }
+  h3 {
+    font-size: 60px;
+  }
+  h4 {
+    font-size: 58px;
+  }
+  h5 {
+    font-size: 56px;
+  }
+  h6 {
+    font-size: 54px;
+  }
+}
+
+/* ↑--↑ Queries ↑--↑ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 .btn-template {
@@ -45,21 +148,36 @@ li {
   border-color: #E81050;
   color: white;
   padding: 10px 30px;
-  transition: all 2s;
-  -webkit-transition: all 2s;
+  transition: all 0.9s;
+  -webkit-transition: all 0.9s;
   border-radius: 30px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
+  -webkit-box-shadow: 15px 15px 25px 0px #e81050;
+          box-shadow: 15px 15px 25px 0px #e81050;
 }
 
 .btn-template:hover {
   background-color: grey;
   border-color: grey;
+  -webkit-box-shadow: 15px 15px 25px 0px grey;
+          box-shadow: 15px 15px 25px 0px grey;
   color: black;
 }
 
+.btn-template:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
+/*---------------------------------------------------- */
+/*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */

@@ -8,7 +8,7 @@
     color: white;
     padding: 10px 30px;
 
-    $transition: all 2s;
+    $transition: all .9s;
     transition: $transition;
     -webkit-transition: $transition;
 
@@ -18,11 +18,15 @@
     -ms-border-radius: $border-radius;
     -o-border-radius: $border-radius;
 
+    box-shadow: 15px 15px 25px 0px #e81050;
+
     &:hover {
         $btn-color-hover: grey;
 
         background-color: $btn-color-hover;
         border-color: $btn-color-hover;
+
+        box-shadow: 15px 15px 25px 0px grey;
 
         color: black;
     }
