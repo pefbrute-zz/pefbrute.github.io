@@ -21,12 +21,6 @@ $(document).ready(function () {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     });
     /*AOS END*/
-
-    $(".testimonials-carousel").owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        items: 1
-    });
+    
 
 });

@@ -258,7 +258,7 @@ li > a:only-child:after {
     width: 30%;
     padding: 5px;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 14px;
     letter-spacing: 1px;
   }
   .toggle:hover {
@@ -296,14 +296,14 @@ li > a:only-child:after {
   nav ul ul ul a {
     padding: 14px 20px;
     color: #312f2f;
-    font-size: 15px;
+    font-size: 14px;
   }
   nav ul li ul li .toggle,
   nav ul ul a {
     background-color: #fff;
   }
   nav ul ul li a {
-    font-size: 15px;
+    font-size: 14px;
   }
   /* Hide Dropdowns by Default */
   nav ul ul {
@@ -374,7 +374,7 @@ li > a:only-child:after {
 #intro {
   display: table;
   width: 100%;
-  height: 100vh;
+  height: 100wh;
   background: #000;
 }
 
@@ -426,7 +426,7 @@ li > a:only-child:after {
 #intro h2 {
   color: #fff;
   margin-bottom: 30px;
-  font-size: 48px;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -489,9 +489,7 @@ li > a:only-child:after {
 }
 
 #intro .btn-template {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
+  font-family: 'Lato';
   letter-spacing: 1px;
   display: inline-block;
   padding: 8px 32px;
@@ -500,8 +498,8 @@ li > a:only-child:after {
   transition: 0.5s;
   margin: 10px;
   color: #fff;
-  background: #18d26e;
-  border-color: #18d26e;
+  background: transparent;
+  border-color: white;
 }
 
 #intro .btn-template:hover {

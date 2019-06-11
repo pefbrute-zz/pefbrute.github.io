@@ -9,9 +9,16 @@ body {
 html {
     scroll-behavior: smooth;
 }
+a{
+    color: #ddd;
+    &:hover {
+        text-decoration: none;
+    }
 
-a:hover {
-    text-decoration: none;
+}
+
+p{
+    
 }
 
 h1,
