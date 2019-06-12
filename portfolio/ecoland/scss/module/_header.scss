@@ -175,10 +175,12 @@ li>a:only-child:after {
 
     header {
         background: #000;
+
         #logo {
-            a{
+            a {
                 color: #fff;
             }
+
             display: block;
             padding: 0;
             width: 100%;
@@ -187,8 +189,18 @@ li>a:only-child:after {
         }
     }
 
-    
-    .header-scrolled{
+
+    .header-scrolled {
+        nav ul.menu {
+            li a {
+                color: #000;
+            }
+
+            li.active a {
+                color: #e2c0bb
+            }
+        }
+
         #logo {
             a {
                 color: #000;
@@ -223,7 +235,7 @@ li>a:only-child:after {
         float: right;
         margin-right: 0em;
         // background-color: #fff;
-        color: darken(#fff,60%);
+        color: darken(#fff, 60%);
         text-transform: capitalize;
         font-weight: 400;
         cursor: pointer !important;

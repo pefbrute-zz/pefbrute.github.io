@@ -20,16 +20,6 @@ html {
   scroll-behavior: smooth;
 }
 
-h1 {
-  font-family: 'Cormorant Garamond', sans-serif;
-  font-size: 40px;
-  line-height: 60px;
-}
-
-h2 {
-  font-size: 18px;
-}
-
 h1,
 h2,
 h3,
@@ -47,6 +37,21 @@ h4,
 h5,
 h6 {
   font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+  color: #e2c0bb;
 }
 
 a {
@@ -69,90 +74,6 @@ li {
 }
 
 /* ↓--↓ Queries ↓--↓ */
-@media (min-width: 0px) and (max-width: 767.98px) {
-  h1 {
-    font-size: 19px;
-  }
-  h2 {
-    font-size: 17px;
-  }
-  h3 {
-    font-size: 15px;
-  }
-  h4 {
-    font-size: 13px;
-  }
-  h5 {
-    font-size: 11px;
-  }
-  h6 {
-    font-size: 9px;
-  }
-}
-
-@media (min-width: 767.98px) and (max-width: 991.98px) {
-  h1 {
-    font-size: 34px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  h3 {
-    font-size: 30px;
-  }
-  h4 {
-    font-size: 28px;
-  }
-  h5 {
-    font-size: 26px;
-  }
-  h6 {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 991.98px) and (max-width: 1199.98px) {
-  h1 {
-    font-size: 49px;
-  }
-  h2 {
-    font-size: 47px;
-  }
-  h3 {
-    font-size: 45px;
-  }
-  h4 {
-    font-size: 43px;
-  }
-  h5 {
-    font-size: 41px;
-  }
-  h6 {
-    font-size: 39px;
-  }
-}
-
-@media (min-width: 1199.98px) {
-  h1 {
-    font-size: 64px;
-  }
-  h2 {
-    font-size: 62px;
-  }
-  h3 {
-    font-size: 60px;
-  }
-  h4 {
-    font-size: 58px;
-  }
-  h5 {
-    font-size: 56px;
-  }
-  h6 {
-    font-size: 54px;
-  }
-}
-
 /* ↑--↑ Queries ↑--↑ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -338,6 +259,12 @@ li > a:only-child:after {
   header #logo a {
     color: #fff;
   }
+  .header-scrolled nav ul.menu li a {
+    color: #000;
+  }
+  .header-scrolled nav ul.menu li.active a {
+    color: #e2c0bb;
+  }
   .header-scrolled #logo a {
     color: #000;
   }
@@ -492,7 +419,7 @@ li > a:only-child:after {
 
 #intro .carousel-item {
   width: 100%;
-  height: 100vh;
+  height: 60vw;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -656,7 +583,7 @@ li > a:only-child:after {
   bottom: 0;
   z-index: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .bg-image > .container {
@@ -977,13 +904,8 @@ li > a:only-child:after {
           box-shadow: none;
 }
 
-.form .btn-template, .form input, .form select {
-  height: 50px !important;
-  width: 150px;
-}
-
-.form .btn-template {
-  padding-top: 12px;
+.form .col-12 {
+  margin-bottom: 15px;
 }
 
 /*---------------------------------------------------- */
