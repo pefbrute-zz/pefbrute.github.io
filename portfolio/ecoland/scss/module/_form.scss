@@ -9,4 +9,21 @@
             font-size: 1.5rem;
         }
     }
+    input,select{
+        border-radius: 0px;
+        border-color: $pink;
+        appearance: none;
+        &:focus{
+            border-color: $pink;
+            box-shadow: none;
+        }
+    }
+    .btn-template,input,select{
+        // padding: 15px 70px;
+        height: 50px !important;
+        width: 150px;
+    }
+    .btn-template{
+        padding-top: 12px;
+    }
 }

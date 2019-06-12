@@ -4,9 +4,8 @@
 }
 
 .card {
-    background: #00458f;
-    border-color: #00458f;
-    border-radius: 10px;
+    // background: #00458f;
+    border-color: white;
     margin: 0 15px;
     padding: 15px 0;
     text-align: center;
@@ -15,37 +14,17 @@
     height: 100%;
 }
 
-.card:hover {
-    background: #003b7a;
-    border-color: #003b7a;
-}
-
 .card i {
-    font-size: 48px;
-    padding-top: 15px;
-    color: #bfddfe;
+    padding-top: 40px;
+    height: 110px;
+    color: white;
+    background: url(../img/blob-shape-2.svg) no-repeat scroll center center;
+    background-size: 65%;
 }
 
 .card h5 {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.card p {
-    font-size: 15px;
-    color: #d8eafe;
-}
-
-.card .readmore {
-    color: #fff;
-    font-weight: 600;
-    display: inline-block;
-    transition: 0.3s ease-in-out;
-    border-bottom: #00458f solid 2px;
-}
-
-.card .readmore:hover {
-    border-bottom: #fff solid 2px;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 @media (max-width: 991px) {

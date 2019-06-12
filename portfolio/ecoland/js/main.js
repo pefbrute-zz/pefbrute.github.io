@@ -53,4 +53,11 @@ $(document).ready(function () {
     //     allowPageScroll: "vertical"
     // });
     /*Intro-Carousel End*/
+
+    $(".testimonials-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    items: 3
+    });
 });
