@@ -46,9 +46,9 @@ p {
 
 /* ↓--↓ Queries ↓--↓ */
 
-// Extra small devices (portrait phones, less than 767px)
+// Small devices (portrait phones, less than 767px)
 
-@media (min-width:0px) and (max-width: 767.98px) {
+@media (max-width: 767.98px) {
     $mediaHeading: 9px;
 
     h1 {
@@ -77,8 +77,8 @@ p {
 
 }
 
-// Small devices (landscape phones, less than 991.98px)
-@media (min-width: 767.98px) and (max-width: 991.98px) {
+// Medium devices (landscape phones, less than 991.98px)
+@media (max-width: 991.98px) {
     $mediaHeading: 24px;
 
     h1 {
@@ -106,38 +106,9 @@ p {
     }
 }
 
-// Medium devices (tablets, less than 1200px)
-@media (min-width: 991.98px) and (max-width: 1199.98px) {
+// Large devices (tablets, less than 1200px)
+@media (max-width: 1199.98px) {
     $mediaHeading: 39px;
-
-    h1 {
-        font-size: $mediaHeading + 10px;
-    }
-
-    h2 {
-        font-size: $mediaHeading + 8px;
-    }
-
-    h3 {
-        font-size: $mediaHeading + 6px;
-    }
-
-    h4 {
-        font-size: $mediaHeading + 4px;
-    }
-
-    h5 {
-        font-size: $mediaHeading + 2px;
-    }
-
-    h6 {
-        font-size: $mediaHeading;
-    }
-}
-
-// Large devices (desktops, less than 1200px)
-@media (min-width: 1199.98px) {
-    $mediaHeading: 54px;
 
     h1 {
         font-size: $mediaHeading + 10px;
