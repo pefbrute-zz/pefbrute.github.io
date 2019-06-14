@@ -49,7 +49,7 @@ li {
 p {
   font-family: 'Open sans', sans-serif;
   color: #888888;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* ↓--↓ Queries ↓--↓ */
@@ -113,7 +113,11 @@ nav {
   padding: 1.6em 0;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
-  z-index: 99;
+  z-index: 9999;
+}
+
+.header-scrolled {
+  position: fixed;
 }
 
 /* logo */
@@ -421,7 +425,7 @@ nav ul ul ul li {
 .intro,
 .intro > .container > .row {
   min-height: 600px;
-  height: 100vh;
+  height: 90vw;
 }
 
 .intro h1 {
@@ -443,28 +447,28 @@ nav ul ul ul li {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
-.testimony h3 {
+.banner .testimony h3 {
   color: white;
   font-size: 1.2rem;
 }
 
-.testimony blockquote {
+.banner .testimony blockquote {
   font-size: 1.2rem;
   font-style: italic;
   color: white;
 }
 
-.bg-image {
+.banner .bg-image {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 
-.bg-image.overlay {
+.banner .bg-image.overlay {
   position: relative;
 }
 
-.bg-image.overlay:after {
+.banner .bg-image.overlay:after {
   position: absolute;
   content: "";
   top: 0;
@@ -476,7 +480,7 @@ nav ul ul ul li {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.bg-image > .container {
+.banner .bg-image > .container {
   position: relative;
   z-index: 1;
 }
@@ -758,5 +762,18 @@ nav ul ul ul li {
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+#footer .testimony p {
+  color: #cccccc;
+  line-height: 20px;
+}
+
+#footer .testimony p a {
+  color: #7BC475;
+}
+
+#footer .testimony p a:hover {
+  color: #fff;
+}
+
 /*---------------------------------------------------- */
 /*# sourceMappingURL=main.css.map */

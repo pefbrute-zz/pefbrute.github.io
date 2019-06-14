@@ -22,6 +22,17 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
+    // var s = $('#header-pf');
+    // var pos = s.position();
+    // $(window).scroll(function () {
+    //     var windowpos = $(window).scrollTop() > 100;
+    //     if (windowpos > pos.top) {
+    //         s.addClass('header-scrolled');
+    //     } else {
+    //         s.removeClass('header-scrolled');
+    //     }
+    // });
+
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
