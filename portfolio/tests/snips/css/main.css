@@ -143,6 +143,227 @@
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.banner {
+  padding: 7em 0;
+  position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .banner {
+    padding: 6em 0;
+  }
+}
+
+.banner .heading-section .subheading {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  color: #007bff;
+  letter-spacing: 2px;
+}
+
+.banner .heading-section h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.banner .heading-section h2 span.number {
+  color: #007bff;
+}
+
+@media (max-width: 767.98px) {
+  .banner .heading-section h2 {
+    font-size: 28px;
+  }
+}
+
+.banner .heading-section.heading-section-white .subheading {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.banner .heading-section.heading-section-white h2 {
+  color: #fff;
+}
+
+.banner .heading-section.heading-section-white p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.banner .project {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 0;
+  margin-bottom: 50px;
+}
+
+.banner .project .img {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.banner .project .img div.vr {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-orientation: sideways;
+  text-align: right;
+  text-orientation: sideways;
+  margin: 0rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  z-index: 1;
+  color: #fff;
+}
+
+.banner .project .img div.vr span {
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  background: aqua;
+  padding: 20px 5px;
+}
+
+@media (max-width: 1199.98px) {
+  .banner .project .img div.vr {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.banner .project img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  z-index: -1;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner .project img {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.banner .project .text {
+  padding: 1.5em 0 0 0;
+  position: relative;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.banner .project .text h4.price {
+  position: absolute;
+  top: -25px;
+  left: 10px;
+  padding: .4em .7em;
+  background: #0062cc;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 20px 43px -8px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 20px 43px -8px rgba(0, 0, 0, 0.11);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner .project .text h4.price {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.banner .project .text h4.price span.old-price {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner .project .text {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.banner .project .text span {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.banner .project .text h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+
+.banner .project .text h3 a {
+  color: #000;
+}
+
+.banner .project .text .star span {
+  color: #007bff;
+}
+
+.banner .project .text .star .rate a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.banner .project .icon {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  width: 50px;
+  height: 50px;
+  bordeR: 1px solid #fff;
+  border-radius: 50%;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  opacity: 0;
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner .project .icon {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.banner .project .icon span {
+  color: #fff;
+  font-size: 20px;
+}
+
+.banner .project:hover .text .price, .banner .project:focus .text .price {
+  background: #007bff;
+}
+
+.banner .project:hover .icon, .banner .project:focus .icon {
+  opacity: 1;
+}
+
+.banner .project:hover img, .banner .project:focus img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
@@ -153,6 +374,108 @@
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.ftco-section {
+  padding: 7em 0;
+  position: relative;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  .ftco-section {
+    padding: 6em 0;
+  }
+}
+
+.ftco-section .bg-darken {
+  background: #999999;
+}
+
+.ftco-section .heading-section .subheading {
+  font-size: 16px;
+  display: block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  color: gray;
+  letter-spacing: 2px;
+}
+
+.ftco-section .heading-section h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.ftco-section .heading-section h2 span.number {
+  color: gray;
+}
+
+@media (max-width: 767.98px) {
+  .ftco-section .heading-section h2 {
+    font-size: 28px;
+  }
+}
+
+.ftco-section .heading-section.heading-section-white .subheading {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.ftco-section .heading-section.heading-section-white h2 {
+  color: white;
+}
+
+.ftco-section .heading-section.heading-section-white p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1199.98px) {
+  .ftco-section {
+    background-position: center center !important;
+  }
+}
+
+.ftco-section .heading-section h2 {
+  color: white !important;
+}
+
+.ftco-section .img {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+  .ftco-section .img {
+    height: 350px;
+  }
+}
+
+.ftco-section .text {
+  display: inline-block;
+}
+
+.ftco-section .text p {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.ftco-section .text span.number {
+  font-weight: 400;
+  color: black;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.ftco-section .text span {
+  color: black;
+  margin-bottom: 10px;
+  font-weight: 500;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
