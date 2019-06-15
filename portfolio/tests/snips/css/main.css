@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -135,6 +136,120 @@
 
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
+.intro {
+  text-align: center;
+  background: url(../img/1680x900/1.jpg) left top no-repeat;
+  background-size: cover;
+  padding: 280px 0;
+}
+
+.intro .logo {
+  width: 130px;
+  margin: 0 auto 35px;
+}
+
+.intro h1 {
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: -1px;
+  margin: 0 0 22px 0;
+  color: #fff;
+}
+
+.intro .we-create {
+  padding: 0;
+  margin: 35px 0 55px;
+}
+
+.intro .wp-pic {
+  margin-bottom: 20px;
+}
+
+.intro .we-create li {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: #bcbcbc;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0 5px 0 0;
+  padding: 0 0 0 15px;
+}
+
+.intro .we-create li:first-child {
+  background: none;
+}
+
+.intro .start-button {
+  padding-left: 0px;
+}
+
+.intro .start-button li a {
+  color: #fff;
+}
+
+.intro .link {
+  padding: 15px 35px;
+  background: #7cc576;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  line-height: 25px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.intro .link:hover {
+  text-decoration: none;
+  color: #7cc576 !important;
+  background: #fff;
+}
+
+.intro .link:active,
+.intro .link:focus {
+  background: #7cc576;
+  text-decoration: none;
+  color: #fff !important;
+}
+
+/* --- ↓ QUERIES ↓ --- */
+@media only screen and (max-width: 479px) {
+  .intro {
+    padding: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .intro h1 {
+    font-size: 46px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro h1 {
+    font-size: 28px;
+  }
+  .intro {
+    padding: 60px 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro h1 {
+    font-size: 28px;
+  }
+  .intro {
+    padding: 60px 0;
+  }
+}
+
+/* --- ↑ QUERIES ↑ --- */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
 /*---------------------------------------------------- */
