@@ -1,55 +1,82 @@
-.section-header h3,
-.section-header p {
-    color: #fff;
-}
+.stats {
+    background: center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    padding: 5em 0;
 
-.card {
-    background: #00458f;
-    border-color: #00458f;
-    border-radius: 10px;
-    margin: 0 15px;
-    padding: 15px 0;
-    text-align: center;
-    color: #fff;
-    transition: 0.3s ease-in-out;
-    height: 100%;
-}
+    .counter {
+        background: none;
+        padding: 20px 0;
+        // border-radius: 0;
+        // color: #fff;
+        text-align: left;
+    }
 
-.card:hover {
-    background: #003b7a;
-    border-color: #003b7a;
-}
-
-.card i {
-    font-size: 48px;
-    padding-top: 15px;
-    color: #bfddfe;
-}
-
-.card h5 {
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.card p {
-    font-size: 15px;
-    color: #d8eafe;
-}
-
-.card .readmore {
-    color: #fff;
-    font-weight: 600;
-    display: inline-block;
-    transition: 0.3s ease-in-out;
-    border-bottom: #00458f solid 2px;
-}
-
-.card .readmore:hover {
-    border-bottom: #fff solid 2px;
-}
-
-@media (max-width: 991px) {
-    .card {
+    .counter span {
+        // font-size: 2em;
+        // color: #fff;
         margin: 0;
     }
+
+    // .count-title {
+    //     // font-size: 2em;
+    //     margin-top: 0.5em;
+    //     margin-bottom: 0;
+    //     font-weight: 400;
+    //     // color: #fff;
+    //     // letter-spacing: 3px;
+    //     text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    // 
+    // }
+
+    // .count-text {
+    //     // font-size: 14px;
+    //     margin-top: 10px;
+    //     margin-bottom: 0;
+    //     color: #fa8383;
+    //     font-weight: 600;
+    //     letter-spacing: 2px;
+    //     text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    //     text-align: right;
+    // }
+
+    .fas {
+        margin: 0 auto;
+        float: none;
+        display: table;
+        color: #ffbc3b;
+    }
+
+    // h3.tittle,
+    // h3.tittle.two {
+    //     // font-size: 2.5em;
+    //     font-weight: 600;
+    //     color: #33353a;
+    //     text-shadow: 0 0 0.5px rgba(58, 57, 57, 0.25);
+    //     text-transform: capitalize;
+    // }
+
+    // h3.tittle.two {
+    //     color: #fff;
+    // }
 }
+
+
+// @media screen and (max-width:568px) {
+
+//     h3.tittle,
+//     h3.tittle.two {
+//         font-size: 2em;
+//     }
+// }
+
+// @media screen and (max-width: 384px) {
+
+//     h3.tittle,
+//     h3.tittle.two {
+//         font-size: 1.8em;
+//     }
+// }
