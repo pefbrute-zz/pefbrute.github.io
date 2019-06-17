@@ -3,14 +3,12 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
-
 @mixin media-breakpoint-up($breakpoint) {
     @if $breakpoint {
         @media (min-width: $breakpoint) {
             @content;
         }
     }
-
     @else {
         @content;
     }
@@ -22,69 +20,25 @@ $xl: 1200px;
             @content;
         }
     }
-
     @else {
         @content;
     }
 }
 
 @mixin media-breakpoint-only($breakpoint-from, $breakpoint-to) {
-    @if ($breakpoint-from !=null) and ($breakpoint-to !=null) {
-        @media (min-width: $breakpoint) and (max-width:$breakpoint-to) {
+    @if $breakpoint-from !=null and $breakpoint-to !=null {
+        @media (min-width: $breakpoint) and (max-width: $breakpoint-to) {
             @content;
         }
     }
-
-    @else if($breakpoint-from==null) {
+    @else if$breakpoint-from==null {
         @include media-breakpoint-up($breakpoint-to) {
             @content;
         }
     }
-
-    @else if($breakpoint-from==null) {
+    @else if$breakpoint-from==null {
         @include media-breakpoint-up($breakpoint-to) {
             @content;
         }
     }
-
 }
-
-// @include mediabreakpoint-up($lg){
-//     background-color: white;
-// }
-
-// @mixin device-xs {
-//     @media(max-width:371px) {
-//         @content;
-//     }
-// }
-
-// @mixin mobile {
-//     @media(max-width:576px) {
-//         @content;
-//     }
-// }
-
-// @mixin tablet {
-//     @media(max-width:768px) {
-//         @content;
-//     }
-// }
-
-// @mixin desktop {
-//     @media(max-width:992px) {
-//         @content;
-//     }
-// }
-
-// @mixin desktop-lg {
-//     @media(max-width:1200px) {
-//         @content;
-//     }
-// }
-
-// @mixin desktop-xl {
-//     @media(max-width:1400px) {
-//         @content;
-//     }
-// }

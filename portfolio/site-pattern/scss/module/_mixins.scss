@@ -1,35 +1,45 @@
-@mixin device-xs {
-    @media(max-width:371px) {
+/* --- ↓ Breakpoints-starts ↓ --- */
+@mixin media-breakpoint-up($breakpoint) {
+    @if $breakpoint {
+        @media (min-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else {
         @content;
     }
 }
 
-@mixin device-sm {
-    @media(max-width:576px) {
+@mixin media-breakpoint-down($breakpoint) {
+    @if $breakpoint {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else {
         @content;
     }
 }
 
-@mixin device-md {
-    @media(max-width:768px) {
-        @content;
+@mixin media-breakpoint-only($breakpoint-from, $breakpoint-to) {
+    @if $breakpoint-from !=null and $breakpoint-to !=null {
+        @media (min-width: $breakpoint-from) and (max-width: $breakpoint-to) {
+            @content;
+        }
     }
-}
 
-@mixin device-lg {
-    @media(max-width:992px) {
-        @content;
+    @else if $breakpoint-from==null {
+        @include media-breakpoint-up($breakpoint-to) {
+            @content;
+        }
     }
-}
 
-@mixin device-xl {
-    @media(max-width:1200px) {
-        @content;
+    @else if $breakpoint-from==null {
+        @include media-breakpoint-up($breakpoint-to) {
+            @content;
+        }
     }
 }
-
-@mixin device-xl {
-    @media(max-width:1400px) {
-        @content;
-    }
-}
+/* --- ↑ Breakpoints---ends ↑ --- */

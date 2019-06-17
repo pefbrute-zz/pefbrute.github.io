@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-size: 100%;
     background: #fff;
-    font-family: '', sans-serif;
+    font-family: "", sans-serif;
 }
 
 html {
@@ -19,14 +19,26 @@ h5,
 h6 {
     margin: 0;
     color: #323648;
-    font-family: '', sans-serif;
+    font-family: "", sans-serif;
+}
+
+.fas,.fab,.far{
+    color: blue;
+    font-size: $font-size-base;
+    padding: 20px auto;
+    margin: 20px auto;
+    &:hover{
+        color: white;
+    }
+
 }
 
 a {
-    transition: all .2s;
+    transition: all 0.2s;
+
     &:hover {
         text-decoration: none;
-        color: aqua
+        color: aqua;
     }
 }
 
@@ -39,100 +51,6 @@ li {
 }
 
 p {
-    font-family: '';
+    font-family: "";
     color: blue;
 }
-
-
-/* ↓--↓ Queries ↓--↓ */
-
-// Small devices (portrait phones, less than 767px)
-
-@media (max-width: 767.98px) {
-    $mediaHeading: 9px;
-
-    h1 {
-        font-size: $mediaHeading + 10px;
-    }
-
-    h2 {
-        font-size: $mediaHeading + 8px;
-    }
-
-    h3 {
-        font-size: $mediaHeading + 6px;
-    }
-
-    h4 {
-        font-size: $mediaHeading + 4px;
-    }
-
-    h5 {
-        font-size: $mediaHeading + 2px;
-    }
-
-    h6 {
-        font-size: $mediaHeading;
-    }
-
-}
-
-// Medium devices (landscape phones, less than 991.98px)
-@media (max-width: 991.98px) {
-    $mediaHeading: 24px;
-
-    h1 {
-        font-size: $mediaHeading + 10px;
-    }
-
-    h2 {
-        font-size: $mediaHeading + 8px;
-    }
-
-    h3 {
-        font-size: $mediaHeading + 6px;
-    }
-
-    h4 {
-        font-size: $mediaHeading + 4px;
-    }
-
-    h5 {
-        font-size: $mediaHeading + 2px;
-    }
-
-    h6 {
-        font-size: $mediaHeading;
-    }
-}
-
-// Large devices (tablets, less than 1200px)
-@media (max-width: 1199.98px) {
-    $mediaHeading: 39px;
-
-    h1 {
-        font-size: $mediaHeading + 10px;
-    }
-
-    h2 {
-        font-size: $mediaHeading + 8px;
-    }
-
-    h3 {
-        font-size: $mediaHeading + 6px;
-    }
-
-    h4 {
-        font-size: $mediaHeading + 4px;
-    }
-
-    h5 {
-        font-size: $mediaHeading + 2px;
-    }
-
-    h6 {
-        font-size: $mediaHeading;
-    }
-}
-
-/* ↑--↑ Queries ↑--↑ */
