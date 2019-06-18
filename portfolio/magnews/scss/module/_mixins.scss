@@ -1,0 +1,45 @@
+/* --- ↓ Breakpoints-starts ↓ --- */
+@mixin media-breakpoint-up($breakpoint) {
+    @if $breakpoint {
+        @media (min-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+    @if $breakpoint {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-only($breakpoint-from, $breakpoint-to) {
+    @if $breakpoint-from !=null and $breakpoint-to !=null {
+        @media (min-width: $breakpoint-from) and (max-width: $breakpoint-to) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint-from==null {
+        @include media-breakpoint-up($breakpoint-to) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint-from==null {
+        @include media-breakpoint-up($breakpoint-to) {
+            @content;
+        }
+    }
+}
+/* --- ↑ Breakpoints---ends ↑ --- */
