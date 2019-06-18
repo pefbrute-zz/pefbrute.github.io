@@ -61,6 +61,8 @@ h5,
 h6 {
   margin: 0;
   color: #222222;
+  -webkit-transition: .2s all;
+  transition: .2s all;
 }
 
 h1:hover,
@@ -375,6 +377,102 @@ li {
 
 .navbar-brand span {
   font-weight: 900;
+}
+
+footer {
+  background: #222222;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer hr {
+  background-color: #777;
+}
+
+footer h6 {
+  color: #ccc;
+}
+
+footer h4 {
+  font-size: 23px;
+  font-weight: 400;
+  color: #fff;
+}
+
+ul.list li a,
+ul.list li {
+  color: #777;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+ul.list li a:hover {
+  color: #aaa;
+}
+
+ul.list li {
+  list-style-type: none;
+}
+
+ul.list i {
+  width: 25px;
+  color: #888;
+}
+
+.copy-right {
+  background: #161616;
+  border-top: 1px dashed #636363;
+}
+
+.copy-right a {
+  color: #777;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.copy-right a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.copy-right ul.list {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.copy-right p {
+  color: #777;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+.copy-right p a {
+  color: #999;
+}
+
+.copy-right p a:hover {
+  color: #eee;
+}
+
+@media (max-width: 991px) {
+  .copy-right {
+    text-align: center;
+  }
+  .copy-right ul.list {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 568px) {
+  .copy-right ul.list li {
+    display: inline-block;
+  }
 }
 
 /* --- ↑ Stylesheet---ends ↑ --- */
