@@ -1,16 +1,21 @@
+/* --- ↓ Foundation-starts ↓ --- */
 html,
 body {
     margin: 0;
     font-size: 100%;
     background: #fff;
     font-family: "", sans-serif;
+    transition: .2s all;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-a,
+/* --- ↑ Foundation---ends ↑ --- */
+
+
+/* --- ↓ Typography-starts ↓ --- */
 h1,
 h2,
 h3,
@@ -20,17 +25,41 @@ h6 {
     margin: 0;
     color: #323648;
     font-family: "", sans-serif;
+    transition: .2s all;
+
+    &:hover {
+        color: "";
+    }
 }
 
-.fas,.fab,.far{
-    color: blue;
-    font-size: $font-size-base;
-    padding: 20px auto;
-    margin: 20px auto;
-    &:hover{
-        color: white;
-    }
+h1 {
+    font-weight: "";
+    transition: .2s all;
+}
 
+h2 {
+    font-weight: "";
+    transition: .2s all;
+}
+
+h3 {
+    font-weight: "";
+    transition: .2s all;
+}
+
+h4 {
+    font-weight: "";
+    transition: .2s all;
+}
+
+h5 {
+    font-weight: "";
+    transition: .2s all;
+}
+
+h5 {
+    font-weight: "";
+    transition: .2s all;
 }
 
 a {
@@ -44,13 +73,39 @@ a {
 
 p {
     font-size: 1em;
+    font-family: "";
+    color: blue;
+    transition: "";
+
+    &:hover {
+        color: "";
+    }
 }
 
+/* --- ↑ Typography---ends ↑ --- */
+
+
+/* --- ↓ Icons-starts ↓ --- */
+.fas,
+.fab,
+.far {
+    color: blue;
+    font-size: $font-size-base;
+    padding: 20px auto;
+    margin: 20px auto;
+
+    &:hover {
+        color: white;
+    }
+
+}
+
+/* --- ↑ Icons---ends ↑ --- */
+
+
+/* --- ↓ Lists-starts ↓ --- */
 li {
     list-style-type: none;
 }
 
-p {
-    font-family: "";
-    color: blue;
-}
+/* --- ↑ Lists---ends ↑ --- */

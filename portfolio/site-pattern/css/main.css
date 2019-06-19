@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* --- ↓ Utilities-starts ↓ --- */
-/*          --- ↓ Colors-starts ↓ ---       */
-/*          --- ↑ Colors---ends ↑ ---        */
-/*      --- ↓ Breakpoints-starts ↓ ---      */
-/*      --- ↑ Breakpoints---ends ↑ ---      */
+/*--- ↓ Colors-starts ↓ ---*/
+/*--- ↑ Colors---ends ↑ ---*/
+/*--- ↓ Breakpoints-starts ↓ ---*/
+/*--- ↑ Breakpoints---ends ↑ ---*/
 /*                                  --- ↓ Typography-starts ↓ ---                               */
 /*                                  --- ↑ Typography---ends ↑ ---                               */
 /* --- ↓ Breakpoints-starts ↓ --- */
@@ -41,19 +41,23 @@
           box-shadow: none;
 }
 
+/* --- ↓ Foundation-starts ↓ --- */
 html,
 body {
   margin: 0;
   font-size: 100%;
   background: #fff;
   font-family: "", sans-serif;
+  -webkit-transition: .2s all;
+  transition: .2s all;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-a,
+/* --- ↑ Foundation---ends ↑ --- */
+/* --- ↓ Typography-starts ↓ --- */
 h1,
 h2,
 h3,
@@ -63,17 +67,53 @@ h6 {
   margin: 0;
   color: #323648;
   font-family: "", sans-serif;
+  -webkit-transition: .2s all;
+  transition: .2s all;
 }
 
-.fas, .fab, .far {
-  color: blue;
-  font-size: 1rem;
-  padding: 20px auto;
-  margin: 20px auto;
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  color: "";
 }
 
-.fas:hover, .fab:hover, .far:hover {
-  color: white;
+h1 {
+  font-weight: "";
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+h2 {
+  font-weight: "";
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+h3 {
+  font-weight: "";
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+h4 {
+  font-weight: "";
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+h5 {
+  font-weight: "";
+  -webkit-transition: .2s all;
+  transition: .2s all;
+}
+
+h5 {
+  font-weight: "";
+  -webkit-transition: .2s all;
+  transition: .2s all;
 }
 
 a {
@@ -88,17 +128,40 @@ a:hover {
 
 p {
   font-size: 1em;
+  font-family: "";
+  color: blue;
+  -webkit-transition: "";
+  transition: "";
 }
 
+p:hover {
+  color: "";
+}
+
+/* --- ↑ Typography---ends ↑ --- */
+/* --- ↓ Icons-starts ↓ --- */
+.fas,
+.fab,
+.far {
+  color: blue;
+  font-size: 1rem;
+  padding: 20px auto;
+  margin: 20px auto;
+}
+
+.fas:hover,
+.fab:hover,
+.far:hover {
+  color: white;
+}
+
+/* --- ↑ Icons---ends ↑ --- */
+/* --- ↓ Lists-starts ↓ --- */
 li {
   list-style-type: none;
 }
 
-p {
-  font-family: "";
-  color: blue;
-}
-
+/* --- ↑ Lists---ends ↑ --- */
 /* --- ↑ Utilities---ends ↑ --- */
 /* --- ↓ Stylesheet-starts ↓ --- */
 /* --- ↑ Stylesheet---ends ↑ --- */
