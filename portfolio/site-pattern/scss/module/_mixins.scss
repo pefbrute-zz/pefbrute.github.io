@@ -1,4 +1,4 @@
-/* --- ↓ Breakpoints-starts ↓ --- */
+// --- ↓ Breakpoints-starts ↓ ---
 @mixin media-breakpoint-up($breakpoint) {
     @if $breakpoint {
         @media (min-width: $breakpoint) {
@@ -42,4 +42,4 @@
         }
     }
 }
-/* --- ↑ Breakpoints---ends ↑ --- */
+// --- ↑ Breakpoints---ends ↑ ---

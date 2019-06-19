@@ -1,13 +1,5 @@
 @charset "UTF-8";
-/* --- ↓ Utilities-starts ↓ --- */
-/*--- ↓ Colors-starts ↓ ---*/
-/*--- ↑ Colors---ends ↑ ---*/
-/*--- ↓ Breakpoints-starts ↓ ---*/
-/*--- ↑ Breakpoints---ends ↑ ---*/
-/*                                  --- ↓ Typography-starts ↓ ---                               */
-/*                                  --- ↑ Typography---ends ↑ ---                               */
-/* --- ↓ Breakpoints-starts ↓ --- */
-/* --- ↑ Breakpoints---ends ↑ --- */
+/* --- ↓ Button-Styles-starts ↓ --- */
 .btn-template {
   line-height: 1px;
   letter-spacing: 1px;
@@ -41,6 +33,7 @@
           box-shadow: none;
 }
 
+/* --- ↑ Button-Styles---ends ↑ --- */
 /* --- ↓ Foundation-starts ↓ --- */
 html,
 body {
@@ -162,7 +155,4 @@ li {
 }
 
 /* --- ↑ Lists---ends ↑ --- */
-/* --- ↑ Utilities---ends ↑ --- */
-/* --- ↓ Stylesheet-starts ↓ --- */
-/* --- ↑ Stylesheet---ends ↑ --- */
 /*# sourceMappingURL=main.css.map */
