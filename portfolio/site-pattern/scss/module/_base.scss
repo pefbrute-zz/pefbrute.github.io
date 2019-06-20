@@ -1,11 +1,13 @@
 /* --- ↓ Foundation-starts ↓ --- */
 html,
 body {
-    margin: 0;
-    font-size: 100%;
-    background: #fff;
+    margin     : 0;
+    font-size  : 100%;
+    background : #fff;
     font-family: "", sans-serif;
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 }
 
 html {
@@ -22,10 +24,12 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    color: #323648;
+    margin     : 0;
+    color      : #323648;
     font-family: "", sans-serif;
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 
     &:hover {
         color: "";
@@ -34,48 +38,63 @@ h6 {
 
 h1 {
     font-weight: "";
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 }
 
 h2 {
     font-weight: "";
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 }
 
 h3 {
     font-weight: "";
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 }
 
 h4 {
     font-weight: "";
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 }
 
 h5 {
     font-weight: "";
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 }
 
 h5 {
     font-weight: "";
-    transition: .2s all;
+
+    -webkit-transition: .2s all;
+    transition        : .2s all;
 }
 
 a {
+    -webkit-transition: all 0.2s;
+
     transition: all 0.2s;
 
     &:hover {
         text-decoration: none;
-        color: aqua;
+        color          : aqua;
     }
 }
 
 p {
-    font-size: 1em;
     font-family: "";
-    color: blue;
-    transition: "";
+    color      : blue;
+
+    -webkit-transition: "";
+    transition        : "";
 
     &:hover {
         color: "";
@@ -89,10 +108,10 @@ p {
 .fas,
 .fab,
 .far {
-    color: blue;
+    color    : blue;
     font-size: $font-size-base;
-    padding: 20px auto;
-    margin: 20px auto;
+    padding  : 20px auto;
+    margin   : 20px auto;
 
     &:hover {
         color: white;
