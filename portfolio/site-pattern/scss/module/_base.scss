@@ -1,13 +1,13 @@
 /* --- ↓ Foundation-starts ↓ --- */
 html,
 body {
-    margin: 0;
-    font-size: 100%;
-    background: #fff;
+    margin     : 0;
+    font-size  : 100%;
+    background : #fff;
     font-family: "", sans-serif;
 
     -webkit-transition: .2s all;
-    transition: .2s all;
+    transition        : .2s all;
 }
 
 html {
@@ -24,12 +24,12 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    color: #222222;
+    margin     : 0;
+    color      : #222222;
     font-family: "", sans-serif;
 
     -webkit-transition: .2s all;
-    transition: .2s all;
+    transition        : .2s all;
 
     text-transform: '';
 
@@ -42,67 +42,67 @@ h1 {
     font-weight: "";
 
     -webkit-transition: .2s all;
-    transition: .2s all;
-    text-transform: '';
+    transition        : .2s all;
+    text-transform    : '';
 }
 
 h2 {
     font-weight: "";
 
     -webkit-transition: .2s all;
-    transition: .2s all;
-    text-transform: '';
+    transition        : .2s all;
+    text-transform    : '';
 }
 
 h3 {
     font-weight: "";
 
     -webkit-transition: .2s all;
-    transition: .2s all;
-    text-transform: '';
+    transition        : .2s all;
+    text-transform    : '';
 }
 
 h4 {
     font-weight: "";
 
     -webkit-transition: .2s all;
-    transition: .2s all;
-    text-transform: '';
+    transition        : .2s all;
+    text-transform    : '';
 }
 
 h5 {
     font-weight: "";
 
     -webkit-transition: .2s all;
-    transition: .2s all;
-    text-transform: '';
+    transition        : .2s all;
+    text-transform    : '';
 }
 
 h6 {
     font-weight: "";
 
     -webkit-transition: .2s all;
-    transition: .2s all;
-    text-transform: '';
+    transition        : .2s all;
+    text-transform    : '';
 }
 
 a {
     -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    text-transform: '';
+    transition        : all 0.2s;
+    text-transform    : '';
 
     &:hover {
         text-decoration: none;
-        color: aqua;
+        color          : aqua;
     }
 }
 
 p {
     font-family: "";
-    color: blue;
+    color      : blue;
 
     -webkit-transition: "";
-    transition: "";
+    transition        : "";
 
     text-transform: '';
 
@@ -118,10 +118,10 @@ p {
 .fas,
 .fab,
 .far {
-    color: blue;
+    color    : blue;
     font-size: $font-size-base;
-    padding: 20px auto;
-    margin: 20px auto;
+    padding  : 20px auto;
+    margin   : 20px auto;
 
     &:hover {
         color: white;
