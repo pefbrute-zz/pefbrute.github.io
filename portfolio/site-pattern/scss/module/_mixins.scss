@@ -51,9 +51,9 @@
 
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    border-radius: $radius;
+    -moz-border-radius   : $radius;
+    -ms-border-radius    : $radius;
+    border-radius        : $radius;
 }
 
 // --- ↑ Border-radius---ends ↑ ---
@@ -62,11 +62,17 @@
 // --- ↓ Transition-starts ↓ ---
 
 @mixin transition($transition) {
-    -moz-transition: all $transition ease;
-    -o-transition: all $transition ease;
+    -moz-transition   : all $transition ease;
+    -o-transition     : all $transition ease;
     -webkit-transition: all $transition ease;
-    -ms-transition: all $transition ease;
-    transition: all $transition ease;
+    -ms-transition    : all $transition ease;
+    transition        : all $transition ease;
 }
 
 // --- ↑ Transition---ends ↑ ---
+
+@mixin box-shadow ($horizontal, $vertical, $blur, $spread-radius, $color) {
+    -webkit-box-shadow: $horizontal, $vertical, $blur, $spread-radius, $color;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
+    -moz-box-shadow   : $horizontal, $vertical, $blur, $spread-radius, $color;  /* Firefox 3.5 - 3.6 */
+    box-shadow        : $horizontal, $vertical, $blur, $spread-radius, $color;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+ iOS 5 */
+}

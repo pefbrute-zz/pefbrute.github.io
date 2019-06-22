@@ -1,9 +1,9 @@
 /* --- ↓ Foundation-starts ↓ --- */
 html,
 body {
-    margin     : 0;
-    font-size  : 100%;
-    background : #fff;
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
     font-family: "", sans-serif;
 
     @include transition(.2s)
@@ -23,14 +23,12 @@ h3,
 h4,
 h5,
 h6 {
-    margin     : 0;
-    color      : #222222;
+    margin: 0;
+    color: #222222;
     font-family: "", sans-serif;
+    text-transform: '';
 
     @include transition(.2s);
-
-
-    text-transform: '';
 
     &:hover {
         color: "";
@@ -39,59 +37,63 @@ h6 {
 
 h1 {
     font-weight: "";
-    @include transition(.2s);
     text-transform: '';
+
+    @include transition(.2s);
 }
 
 h2 {
     font-weight: "";
-    @include transition(.2s);
     text-transform: '';
+
+    @include transition(.2s);
 }
 
 h3 {
     font-weight: "";
-    @include transition(.2s);
     text-transform: '';
+
+    @include transition(.2s);
 }
 
 h4 {
     font-weight: "";
-    @include transition(.2s);
     text-transform: '';
+
+    @include transition(.2s);
 }
 
 h5 {
     font-weight: "";
-    @include transition(.2s);
     text-transform: '';
+
+    @include transition(.2s);
 }
 
 h6 {
     font-weight: "";
-    @include transition(.2s);
     text-transform: '';
+
+    @include transition(.2s);
 }
 
 a {
-    -webkit-transition: all 0.2s;
-    transition        : all 0.2s;
-    text-transform    : '';
+    text-transform: '';
+
+    @include transition(.2s);
 
     &:hover {
         text-decoration: none;
-        color          : aqua;
+        color: aqua;
     }
 }
 
 p {
     font-family: "";
-    color      : blue;
-
-    -webkit-transition: "";
-    transition        : "";
-
+    color: blue;
     text-transform: '';
+
+    @include transition(.2s);
 
     &:hover {
         color: "";
@@ -105,10 +107,10 @@ p {
 .fas,
 .fab,
 .far {
-    color    : blue;
+    color: blue;
     font-size: $font-size-base;
-    padding  : 20px auto;
-    margin   : 20px auto;
+    padding: 20px auto;
+    margin: 20px auto;
 
     &:hover {
         color: white;
