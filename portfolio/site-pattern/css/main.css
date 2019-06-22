@@ -41,8 +41,8 @@ body {
   font-size: 100%;
   background: #fff;
   font-family: "", sans-serif;
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 html {
@@ -58,10 +58,11 @@ h4,
 h5,
 h6 {
   margin: 0;
-  color: #323648;
+  color: #222222;
   font-family: "", sans-serif;
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: '';
 }
 
 h1:hover,
@@ -75,43 +76,50 @@ h6:hover {
 
 h1 {
   font-weight: "";
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: '';
 }
 
 h2 {
   font-weight: "";
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: '';
 }
 
 h3 {
   font-weight: "";
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: '';
 }
 
 h4 {
   font-weight: "";
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: '';
 }
 
 h5 {
   font-weight: "";
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: '';
 }
 
-h5 {
+h6 {
   font-weight: "";
-  -webkit-transition: .2s all;
-  transition: .2s all;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-transform: '';
 }
 
 a {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  text-transform: '';
 }
 
 a:hover {
@@ -124,6 +132,7 @@ p {
   color: blue;
   -webkit-transition: "";
   transition: "";
+  text-transform: '';
 }
 
 p:hover {

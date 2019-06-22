@@ -6,8 +6,7 @@ body {
     background : #fff;
     font-family: "", sans-serif;
 
-    -webkit-transition: .2s all;
-    transition        : .2s all;
+    @include transition(.2s)
 }
 
 html {
@@ -28,8 +27,8 @@ h6 {
     color      : #222222;
     font-family: "", sans-serif;
 
-    -webkit-transition: .2s all;
-    transition        : .2s all;
+    @include transition(.2s);
+
 
     text-transform: '';
 
@@ -40,50 +39,38 @@ h6 {
 
 h1 {
     font-weight: "";
-
-    -webkit-transition: .2s all;
-    transition        : .2s all;
-    text-transform    : '';
+    @include transition(.2s);
+    text-transform: '';
 }
 
 h2 {
     font-weight: "";
-
-    -webkit-transition: .2s all;
-    transition        : .2s all;
-    text-transform    : '';
+    @include transition(.2s);
+    text-transform: '';
 }
 
 h3 {
     font-weight: "";
-
-    -webkit-transition: .2s all;
-    transition        : .2s all;
-    text-transform    : '';
+    @include transition(.2s);
+    text-transform: '';
 }
 
 h4 {
     font-weight: "";
-
-    -webkit-transition: .2s all;
-    transition        : .2s all;
-    text-transform    : '';
+    @include transition(.2s);
+    text-transform: '';
 }
 
 h5 {
     font-weight: "";
-
-    -webkit-transition: .2s all;
-    transition        : .2s all;
-    text-transform    : '';
+    @include transition(.2s);
+    text-transform: '';
 }
 
 h6 {
     font-weight: "";
-
-    -webkit-transition: .2s all;
-    transition        : .2s all;
-    text-transform    : '';
+    @include transition(.2s);
+    text-transform: '';
 }
 
 a {
