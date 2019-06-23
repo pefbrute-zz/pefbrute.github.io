@@ -122,8 +122,9 @@ p {
 
 
 /* --- ↓ Lists-starts ↓ --- */
+
 li {
-    list-style-type: none;
+    @include list-unstyled;
 }
 
 /* --- ↑ Lists---ends ↑ --- */

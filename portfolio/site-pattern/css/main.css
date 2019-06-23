@@ -160,7 +160,8 @@ p:hover {
 /* --- ↑ Icons---ends ↑ --- */
 /* --- ↓ Lists-starts ↓ --- */
 li {
-  list-style-type: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 /* --- ↑ Lists---ends ↑ --- */
