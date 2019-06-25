@@ -1,34 +1,7 @@
 /* --- ↓ Button-Styles-starts ↓ --- */
 
 .btn-template {
-    $btn-color: #ffffff;
-
-    line-height   : 1px;
-    font-size     : $font-size-base;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-
-    background-color: $btn-color;
-    border-color    : $btn-color;
-    color           : #000000;
-    padding         : 10px 30px;
-
-    @include transition (.2s);
-    @include border-radius(30px);
-    @include box-shadow(15px, 15px, 25px, 0px, #000000);
-
-    &:hover {
-        $btn-color-hover: #000000;
-
-        background-color: $btn-color-hover;
-        border-color    : $btn-color-hover;
-
-        @include box-shadow(15px, 15px, 25px, 0px, #ffffff);
-    }
-
-    &:focus {
-        box-shadow: none;
-    }
+    @include button;
 }
 
 /* --- ↑ Button-Styles---ends ↑ --- */
