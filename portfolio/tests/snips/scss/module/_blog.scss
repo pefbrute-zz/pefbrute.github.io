@@ -1,0 +1,12 @@
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* Creating columns is as simple as this: */
+
+.container p {
+    -moz-columns: 5;
+    -webkit-columns: 5;
+    columns: 5;
+}
