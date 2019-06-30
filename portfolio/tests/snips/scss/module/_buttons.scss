@@ -1,34 +1,7 @@
+/* --- ↓ Button-Styles-starts ↓ --- */
+
 .btn-template {
-$btn-color:#E81050;
-$border-radius: 30px;
-
-background-color: $btn-color;
-border-color: $btn-color;
-
-color: white;
-padding: 10px 30px;
-
-$transition: all .6s;
-transition: $transition;
--webkit-transition: $transition;
-
-border-radius: $border-radius;
--webkit-border-radius: $border-radius;
--moz-border-radius: $border-radius;
--ms-border-radius: $border-radius;
--o-border-radius: $border-radius;
-
-&:hover {
-$btn-color-hover: white;
-
-background-color: $btn-color-hover;
-border-color: $btn-color-hover;
-
-color: black;
+    @include button;
 }
 
-&:focus {
-    box-shadow: none;
-}
-
-}
+/* --- ↑ Button-Styles---ends ↑ --- */

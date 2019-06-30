@@ -1,98 +1,130 @@
-.pricing {
-    padding-bottom: 80px;
-}
-
-.plan {
-    border: 1px solid #dedede;
-}
-
-.plan-name {
-    display: block;
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 700;
-    padding: 20px 0;
-    color: #959595;
-}
-
-.plan-price {
-    font-size: 48px;
-    padding: 30px 0;
-    margin-bottom: 30px;
-    position: relative;
-    background: #f2f2f2;
-}
-
-.plan-price:after {
-    bottom: -30px;
-    border: solid transparent;
-    content: " ";
-    position: absolute;
-    border-width: 15px;
-    border-top-color: #f2f2f2;
-    left: 50%;
-    margin-left: -16px;
-}
-
-.plan.featured .plan-name {
-    color: #323232;
-}
-
-.plan.featured .plan-price {
-    color: #fff;
-}
-
-.plan-price .currency {
-    top: -0.9em;
-    font-size: 50%;
-    left: -0.01em;
-    font-weight: 700;
-}
-
-.plan-name small {
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: normal;
-}
-
-.plan-price sub {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.plan ul {
+/* --- ↓ Foundation-starts ↓ --- */
+html,
+body {
+    margin: 0;
+    font-size: 100%;
     background: #fff;
-    padding: 0;
-    margin-bottom: 0;
+    font-family: "", sans-serif;
+
+    @include transition(.2s)
 }
 
-.plan ul li {
-    border-top: 1px dashed #dedede;
-    padding: 12px 29px;
-    font-weight: 500;
+html {
+    scroll-behavior: smooth;
 }
 
-.plan ul li:first-child {
-    border-top: 0 !important;
+/* --- ↑ Foundation---ends ↑ --- */
+
+
+/* --- ↓ Typography-starts ↓ --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: #222222;
+    font-family: "", sans-serif;
+    text-transform: '';
+
+    @include transition(.2s);
+
+    &:hover {
+        color: "";
+    }
 }
 
-.plan a.btn {
-    color: #323232;
-    background: #fff;
-    margin-top: 25px;
-    margin-bottom: -20px;
-    padding: 8px 30px;
+h1 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
 }
 
-.plan a.btn:hover {
-    color: #fff;
+h2 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
 }
 
-.plan.featured .plan-price {
-    background: #ee3b24;
+h3 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
 }
 
-.plan.featured .plan-price:after {
-    border-top-color: #ee3b24;
+h4 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
 }
+
+h5 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+h6 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+a {
+    text-transform: '';
+
+    @include transition(.2s);
+
+    &:hover {
+        text-decoration: none;
+        color: aqua;
+    }
+}
+
+p {
+    font-family: "";
+    color: blue;
+    text-transform: '';
+
+    @include transition(.2s);
+
+    &:hover {
+        color: "";
+    }
+}
+
+/* --- ↑ Typography---ends ↑ --- */
+
+
+/* --- ↓ Icons-starts ↓ --- */
+.fas,
+.fab,
+.far {
+    color: blue;
+    font-size: $font-size-base;
+    padding: 20px auto;
+    margin: 20px auto;
+
+    &:hover {
+        color: white;
+    }
+
+}
+
+/* --- ↑ Icons---ends ↑ --- */
+
+
+/* --- ↓ Lists-starts ↓ --- */
+
+li {
+    @include list-unstyled;
+}
+
+/* --- ↑ Lists---ends ↑ --- */

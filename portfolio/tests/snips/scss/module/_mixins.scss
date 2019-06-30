@@ -1,0 +1,155 @@
+// --- ↓ Breakpoints-starts ↓ ---
+
+@mixin media-breakpoint-up($breakpoint) {
+    @if $breakpoint {
+        @media (min-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-down($breakpoint) {
+    @if $breakpoint {
+        @media (max-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-only($breakpoint-from, $breakpoint-to) {
+    @if $breakpoint-from !=null and $breakpoint-to !=null {
+        @media (min-width: $breakpoint-from) and (max-width: $breakpoint-to) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint-from==null {
+        @include media-breakpoint-up($breakpoint-to) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint-from==null {
+        @include media-breakpoint-up($breakpoint-to) {
+            @content;
+        }
+    }
+}
+
+// --- ↑ Breakpoints---ends ↑ ---
+
+
+// --- ↓ Border-radius-starts ↓ ---
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+// --- ↑ Border-radius---ends ↑ ---
+
+
+// --- ↓ Transition-starts ↓ ---
+
+@mixin transition($transition) {
+    -moz-transition: all $transition ease;
+    -o-transition: all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: all $transition ease;
+    transition: all $transition ease;
+}
+
+// --- ↑ Transition---ends ↑ ---
+
+// --- ↓ Box-Shadow-starts ↓ ---
+
+@mixin box-shadow ($horizontal, $vertical, $blur, $spread-radius, $color) {
+    -webkit-box-shadow: $horizontal, $vertical, $blur, $spread-radius, $color;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
+    -moz-box-shadow: $horizontal, $vertical, $blur, $spread-radius, $color;
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: $horizontal, $vertical, $blur, $spread-radius, $color;
+    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+ iOS 5 */
+}
+
+// --- ↑ Box-Shadow---ends ↑ ---
+
+// --- ↓ List-Unstyled-starts ↓ ---
+
+@mixin list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+// --- ↑ List-Unstyled---ends ↑ ---
+
+// --- ↓ Button-starts ↓ ---
+
+@mixin button {
+    $btn-color: #ffffff;
+
+    line-height: 1px;
+    font-size: $font-size-base;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    background-color: $btn-color;
+    border-color: $btn-color;
+    color: #000000;
+    padding: 10px 30px;
+
+    @include transition (.2s);
+    @include border-radius(30px);
+    @include box-shadow(15px, 15px, 25px, 0px, #000000);
+
+    &:hover {
+        $btn-color-hover: #000000;
+
+        background-color: $btn-color-hover;
+        border-color: $btn-color-hover;
+
+        @include box-shadow(15px, 15px, 25px, 0px, #ffffff);
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+// --- ↑ Button---ends ↑ ---
+
+
+// --- ↓ Hover-focus-active-starts ↓ ---
+
+@mixin hover {
+    &:hover {
+        @content;
+    }
+}
+
+@mixin hover-focus {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+@mixin hover-focus-active {
+    &:hover,
+    &:focus,
+    &:active {
+        @content;
+    }
+}
+
+// --- ↑ Hover-focus-active---ends ↑ ---
