@@ -16,8 +16,8 @@
 	<!-- ↑ General_CSS---ends ↑ -->
 
 	<!-- ↓ Main StyleSheets-starts ↓ -->
-  <link href="css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/foundation.css">
+	<link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/foundation.min.css">
 	<!-- ↑ Main StyleSheets---ends ↑ -->
 
 	<!-- ↓ Icons-starts ↓ -->
@@ -63,34 +63,76 @@
 
 <body>
 
-  <p>Do you like me?</p>
-  <div class="switch large">
-    <input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
-    <label class="switch-paddle" for="yes-no">
-      <span class="show-for-sr">Do you like me?</span>
-      <span class="switch-active" aria-hidden="true">No</span>
-      <span class="switch-inactive" aria-hidden="true">No</span>
-    </label>
-  </div>
-  <div class="slider" data-slider data-initial-start="0" data-end="500">
-    <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
-    <span class="slider-fill" data-slider-fill></span>
-    <input type="hidden">
-  </div>
+	<p>Do you like me?</p>
+	<div class="switch large">
+		<input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
+		<label class="switch-paddle" for="yes-no">
+			<span class="show-for-sr">Do you like me?</span>
+			<span class="switch-active" aria-hidden="true">No</span>
+			<span class="switch-inactive" aria-hidden="true">No</span>
+		</label>
+	</div>
+	<div class="slider" data-slider data-initial-start="0" data-end="500">
+		<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+		<span class="slider-fill" data-slider-fill></span>
+		<input type="hidden">
+	</div>
 
-  <div class="success callout" data-closable="slide-out-right">
-    <button class="close-button" aria-label="Close alert" type="button" data-close>
-      <span aria-hidden="true">&times;</span>
-    </button>
-    <p>Look at this close button!</p>
-  </div>
+	<div class="success callout" data-closable="slide-out-right">
+		<button class="close-button" aria-label="Close alert" type="button" data-close>
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<p>Look at this close button!</p>
+	</div>
 
-  <ul class="menu">
-    <li><a href="#">One</a></li>
-    <li><a href="#">Two</a></li>
-    <li><a href="#">Three</a></li>
-    <li><a href="#">Four</a></li>
-  </ul>
+	<ul class="menu icons icon-bottom">
+		<li><a href="#"><i class="fas fa-bars"></i> <span>One</span></a></li>
+		<li><a href="#"><i class="fas fa-bars"></i> <span>Two</span></a></li>
+		<li><a href="#"><i class="fas fa-bars"></i> <span>Three</span></a></li>
+		<li><a href="#"><i class="fas fa-bars"></i> <span>Four</span></a></li>
+	</ul>
+
+	<div class="container">
+		<ul class="vertical menu drilldown" data-drilldown>
+			<li><a href="#">One</a></li>
+			<li>
+				<a href="#">Two</a>
+				<ul class="menu vertical nested">
+					<li><a href="#">Two A</a></li>
+					<li><a href="#">Two B</a></li>
+					<li><a href="#">Two C</a></li>
+					<li><a href="#">Two D</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Three</a></li>
+			<li><a href="#">Four</a></li>
+		</ul>
+	</div>
+
+	<!-- Add a Sticky Menu -->
+	<div data-sticky-container>
+		<div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
+			<div class="top-bar-left">
+				<ul class="menu">
+					<li class="menu-text">Site Title</li>
+				</ul>
+			</div>
+			<div class="top-bar-right">
+				<ul class="menu" data-magellan>
+					<li><a href="#first">One</a></li>
+					<li><a href="#second">Two</a></li>
+					<li><a href="#third">Three</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Add content where magellan will be linked -->
+	<div class="sections">
+		<section id="first" data-magellan-target="first"></section>
+		<section id="second" data-magellan-target="second">Second Section</section>
+		<section id="third" data-magellan-target="third">Third Section</section>
+	</div>
 
 	<!-- ↓ Scripts-starts ↓ -->
 	<!-- ↓ General_Scripts-starts  ↓ -->
@@ -99,13 +141,13 @@
 	<script src="lib/jquery/ui/js/jquery-ui.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="lib/bootstrap/js/popper.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="js/vendor/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-  <!-- ↑ General_Scripts---ends ↑ -->
-  
+	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="js/vendor/foundation.min.js"></script>
+	<script>
+		$(document).foundation();
+	</script>
+	<!-- ↑ General_Scripts---ends ↑ -->
+
 
 	<!-- ↓ Libs-starts ↓  -->
 	<script src="lib/animateNumber/js/jquery.animateNumber.min.js"></script>
@@ -138,7 +180,7 @@
 	<script src="lib/scrollax/js/scrollax.min.js"></script>
 	<script src="lib/scrolllocal/js/jquery.localScroll.min.js"></script>
 	<script src="lib/scrollup/js/jquery.scrollUp.min.js"></script>
-	<script src="lib/slick/js/slick/slick.min.js"></script>
+	<!-- <script src="lib/slick/js/slick/slick.min.js"></script> -->
 	<script src="lib/stellar/js/jquery.stellar.min.js"></script>
 	<script src="lib/sticky/js/jquery.sticky.js"></script>
 	<script src="lib/superfish/js/superfish.min.js"></script>
