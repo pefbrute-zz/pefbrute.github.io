@@ -136,40 +136,32 @@
 
 	<form data-abide novalidate>
 		<div data-abide-error class="alert callout" style="display: none;">
-			<p><i class="fi-alert"></i> There are some errors in your form.</p>
+			<p><i class="fi-alert"></i>You have some problems below</p>
 		</div>
 		<div class="grid-container">
 			<div class="grid-x grid-margin-x">
 				<div class="cell small-12">
-					<label>Number Required
-						<input type="text" placeholder="1234" aria-describedby="example1Hint1"
+						<input type="text" placeholder="Number Required" aria-describedby="example1Hint1"
 							aria-errormessage="example1Error1" required pattern="number">
 						<span class="form-error" id="example1Error1">
-							Yo, you had better fill this out, it's required.
+							So, just fill it.
 						</span>
-					</label>
-					<p class="help-text" id="example1Hint1">Here's how you use this input field!</p>
 				</div>
 				<div class="cell small-12">
-					<label>Password Required
-						<input type="password" id="password" placeholder="yeti4preZ" aria-describedby="example1Hint2"
+						<input type="password" id="password" placeholder="Password Required" aria-describedby="example1Hint2"
 							aria-errormessage="example1Error2" required>
 						<span class="form-error" id="example1Error2">
 							I'm required!
 						</span>
-					</label>
-					<p class="help-text" id="example1Hint2">Enter a password please.</p>
 				</div>
 				<div class="cell small-12">
-					<label>Re-enter Password
-						<input type="password" placeholder="yeti4preZ" aria-describedby="example1Hint3"
+					<label>
+						<input type="password" placeholder="Re-enter Password" aria-describedby="example1Hint3"
 							aria-errormessage="example1Error3" required pattern="alpha_numeric" data-equalto="password">
 						<span class="form-error" id="example1Error3">
 							Hey, passwords are supposed to match!
 						</span>
 					</label>
-					<p class="help-text" id="example1Hint3">This field is using the `data-equalto="password"` attribute,
-						causing it to match the password field above.</p>
 				</div>
 			</div>
 		</div>
