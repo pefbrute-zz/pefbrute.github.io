@@ -130,7 +130,7 @@ a:hover {
 
 p {
   font-family: "";
-  color: blue;
+  color: #000000;
   text-transform: '';
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
