@@ -23,11 +23,6 @@ $(document).ready(function () {
     /*AOS END*/
 
     /*DATE STARTS*/
-    window.onload = startInterval;
-
-    function startInterval() {
-        setTimeout("showTime();", 1000);
-    }
 
     function appendLeadingZeroes(n) {
         if (n <= 9) {
@@ -39,16 +34,17 @@ $(document).ready(function () {
     function showTime() {
         let current_datetime = new Date()
         // console.log(current_datetime.toString());
-        let formatted_date = current_datetime.getFullYear() + "-" +
-            appendLeadingZeroes(current_datetime.getMonth() + 1) + "-" +
-            appendLeadingZeroes(current_datetime.getDate()) + " " +
+        let formatted_date = 
+            appendLeadingZeroes(current_datetime.getMonth() + 1) + "/" +
+            appendLeadingZeroes(current_datetime.getDate()) + "/" +
+            current_datetime.getFullYear() + " " +
             appendLeadingZeroes(current_datetime.getHours()) + ":" +
             appendLeadingZeroes(current_datetime.getMinutes()) + ":" +
             appendLeadingZeroes(current_datetime.getSeconds());
         document.getElementById("date-heading").innerHTML = `Now is: ${formatted_date}`;
     }
 
-    showTime();
+    setInterval(showTime, 950);
     /*DATE ENDS*/
 
 });
