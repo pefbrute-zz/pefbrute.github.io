@@ -22,4 +22,33 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
+    /*DATE STARTS*/
+    window.onload = startInterval;
+
+    function startInterval() {
+        setTimeout("showTime();", 1000);
+    }
+
+    function appendLeadingZeroes(n) {
+        if (n <= 9) {
+            return "0" + n;
+        }
+        return n
+    }
+
+    function showTime() {
+        let current_datetime = new Date()
+        // console.log(current_datetime.toString());
+        let formatted_date = current_datetime.getFullYear() + "-" +
+            appendLeadingZeroes(current_datetime.getMonth() + 1) + "-" +
+            appendLeadingZeroes(current_datetime.getDate()) + " " +
+            appendLeadingZeroes(current_datetime.getHours()) + ":" +
+            appendLeadingZeroes(current_datetime.getMinutes()) + ":" +
+            appendLeadingZeroes(current_datetime.getSeconds());
+        document.getElementById("date-heading").innerHTML = `Now is: ${formatted_date}`;
+    }
+
+    showTime();
+    /*DATE ENDS*/
+
 });
