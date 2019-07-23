@@ -23,7 +23,6 @@ $(document).ready(function () {
     /*AOS END*/
 
     /*DATE STARTS*/
-
     function appendLeadingZeroes(n) {
         if (n <= 9) {
             return "0" + n;
@@ -44,7 +43,7 @@ $(document).ready(function () {
         document.getElementById("date-heading").innerHTML = `Now is: ${formatted_date}`;
     }
 
-    setInterval(showTime, 950);
+    setInterval(showTime, 960);
     /*DATE ENDS*/
 
 });
