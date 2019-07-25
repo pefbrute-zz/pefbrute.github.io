@@ -17,7 +17,6 @@
 
 	<!-- ↓ Main StyleSheets-starts ↓ -->
 	<link href="css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="css/foundation.min.css">
 	<!-- ↑ Main StyleSheets---ends ↑ -->
 
 	<!-- ↓ Icons-starts ↓ -->
@@ -62,536 +61,74 @@
 </head>
 
 <body>
-
-	<p>Do you like me?</p>
-	<div class="switch large">
-		<input class="switch-input" id="yes-no" type="checkbox" name="exampleSwitch">
-		<label class="switch-paddle" for="yes-no">
-			<span class="show-for-sr">Do you like me?</span>
-			<span class="switch-active" aria-hidden="true">No</span>
-			<span class="switch-inactive" aria-hidden="true">No</span>
-		</label>
-	</div>
-	<div class="slider" data-slider data-initial-start="0" data-end="500">
-		<span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
-		<span class="slider-fill" data-slider-fill></span>
-		<input type="hidden">
-	</div>
-
-	<div class="success callout" data-closable="slide-out-right">
-		<button class="close-button" aria-label="Close alert" type="button" data-close>
-			<span aria-hidden="true">&times;</span>
-		</button>
-		<p>Look at this close button!</p>
-	</div>
-
-	<ul class="menu icons icon-bottom">
-		<li><a href="#"><i class="fas fa-bars"></i> <span>One</span></a></li>
-		<li><a href="#"><i class="fas fa-bars"></i> <span>Two</span></a></li>
-		<li><a href="#"><i class="fas fa-bars"></i> <span>Three</span></a></li>
-		<li><a href="#"><i class="fas fa-bars"></i> <span>Four</span></a></li>
-	</ul>
-
-	<div class="container">
-		<ul class="vertical menu drilldown" data-drilldown>
-			<li><a href="#">One</a></li>
-			<li>
-				<a href="#">Two</a>
-				<ul class="menu vertical nested">
-					<li><a href="#">Two A</a></li>
-					<li><a href="#">Two B</a></li>
-					<li><a href="#">Two C</a></li>
-					<li><a href="#">Two D</a></li>
-				</ul>
-			</li>
-			<li><a href="#">Three</a></li>
-			<li><a href="#">Four</a></li>
-		</ul>
-	</div>
-
-	<!-- Add a Sticky Menu -->
-	<div data-sticky-container>
-		<div class="top-bar" data-sticky data-margin-top="0" id="example-menu">
-			<div class="top-bar-left">
-				<ul class="menu">
-					<li class="menu-text">Site Title</li>
-				</ul>
-			</div>
-			<div class="top-bar-right">
-				<ul class="menu" data-magellan>
-					<li><a href="#first">One</a></li>
-					<li><a href="#second">Two</a></li>
-					<li><a href="#third">Three</a></li>
-				</ul>
-			</div>
+	<div id="practice">
+		<div id="date" class="my-5 text-center">
+			<h3 id="date-heading"></h3>
+			<h4>Today I have button for you:</h4>
 		</div>
-	</div>
-
-	<!-- Add content where magellan will be linked -->
-	<div class="sections">
-		<section id="first" data-magellan-target="first"></section>
-		<section id="second" data-magellan-target="second">Second Section</section>
-		<section id="third" data-magellan-target="third">Third Section</section>
-	</div>
-
-	<form data-abide novalidate>
-		<div data-abide-error class="alert callout" style="display: none;">
-			<p><i class="fi-alert"></i>You have some problems below</p>
+		<div class="text-center">
+			<a class="btn btn-template" onclick="alertName()" id="user-btn">Press Me:></a>
 		</div>
-		<div class="grid-container">
-			<div class="grid-x grid-margin-x">
-				<div class="cell small-12">
-					<input type="text" placeholder="Number Required" aria-describedby="example1Hint1"
-						aria-errormessage="example1Error1" required pattern="number">
-					<span class="form-error" id="example1Error1">
-						So, just fill it.
-					</span>
+		<div id="practice-forms" class="container">
+			<div class="row">
+				<div class="col my-5">
+					<form id="frm1">
+						<input class="mb-2" type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
 				</div>
-				<div class="cell small-12">
-					<input type="password" id="password" placeholder="Password Required"
-						aria-describedby="example1Hint2" aria-errormessage="example1Error2" required>
-					<span class="form-error" id="example1Error2">
-						I'm required!
-					</span>
+				<div class="col my-5">
+					<form id="frm2">
+						<input class="mb-2" type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
 				</div>
-				<div class="cell small-12">
-					<label>
-						<input type="password" placeholder="Re-enter Password" aria-describedby="example1Hint3"
-							aria-errormessage="example1Error3" required pattern="alpha_numeric" data-equalto="password">
-						<span class="form-error" id="example1Error3">
-							Hey, passwords are supposed to match!
-						</span>
-					</label>
+				<div class="col my-5">
+					<form id="frm3">
+						<input class="mb-2" type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
+				</div>
+				<div class="col my-5">
+					<form id="frm4">
+						<input class="mb-2" type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
+				</div>
+				<div class="col my-5">
+					<form id="frm5">
+						<input class="mb-2" type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
+				</div>
+				<div class="col my-5">
+					<form id="frm5">
+						<input class="mb-2" type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
+				</div>
+				<div class="col my-5">
+					<form id="frm5">
+						<input type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
+				</div>
+				<div class="col my-5">
+					<form id="frm5">
+						<input type="text" placeholder="First Name" name="fname"><br>
+						<input type="text" placeholder="Last Name" name="lname"><br><br>
+						<input type="button" value="Reset" id="practice-form-input">
+					</form>
 				</div>
 			</div>
 		</div>
-		<div class="grid-container">
-			<div class="grid-x grid-margin-x">
-				<div class="cell large-6">
-					<label>URL Pattern, not required, but throws error if it doesn't match the Regular Expression for a
-						valid URL.
-						<input type="text" placeholder="https://foundation.zurb.com" pattern="url">
-					</label>
-				</div>
-				<div class="cell large-6">
-					<label>Website Pattern, not required, but throws error if it doesn't match the Regular Expression
-						for a
-						valid URL or a Domain.
-						<input type="text" placeholder="https://zurb.com or zurb.com" pattern="website">
-					</label>
-				</div>
-			</div>
-		</div>
-		<div class="grid-container">
-			<div class="grid-x grid-margin-x">
-				<div class="cell large-6">
-					<label>European Cars, Choose One, it can't be the blank option.
-						<select id="select" required>
-							<option value=""></option>
-							<option value="volvo">Volvo</option>
-							<option value="saab">Saab</option>
-							<option value="mercedes">Mercedes</option>
-							<option value="audi">Audi</option>
-						</select>
-					</label>
-				</div>
-				<fieldset class="cell large-6">
-					<legend>Check these out</legend>
-					<input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-					<input id="checkbox2" type="checkbox" required><label for="checkbox2">Checkbox 2</label>
-					<input id="checkbox3" type="checkbox"><label for="checkbox3">Checkbox 3</label>
-				</fieldset>
-			</div>
-		</div>
-		<div class="grid-container">
-			<div class="grid-x grid-margin-x">
-				<fieldset class="cell large-6">
-					<legend>Choose Your Favorite - not required, you can leave this one blank.</legend>
-					<input type="radio" name="pockets" value="Red" id="pocketsRed"><label for="pocketsRed">Red</label>
-					<input type="radio" name="pockets" value="Blue" id="pocketsBlue"><label
-						for="pocketsBlue">Blue</label>
-					<input type="radio" name="pockets" value="Yellow" id="pocketsYellow"><label
-						for="pocketsYellow">Yellow</label>
-				</fieldset>
-				<fieldset class="cell large-6">
-					<legend>Choose Your Favorite, and this is required, so you have to pick one.</legend>
-					<input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-					<input type="radio" name="pokemon" value="Blue" id="pokemonBlue" required><label
-						for="pokemonBlue">Blue</label>
-					<input type="radio" name="pokemon" value="Yellow" id="pokemonYellow"><label
-						for="pokemonYellow">Yellow</label>
-				</fieldset>
-			</div>
-		</div>
-		<div class="grid-container">
-			<div class="grid-x grid-margin-x">
-				<fieldset class="cell large-6">
-					<button class="button" type="submit" value="Submit">Submit</button>
-				</fieldset>
-				<fieldset class="cell large-6">
-					<button class="button" type="reset" value="Reset">Reset</button>
-				</fieldset>
-			</div>
-		</div>
-	</form>
-
-	<p class="text-center"><button class="button" data-open="exampleModal1">Click=>Open Modal</button></p>
-	<div class="reveal" id="exampleModal1" data-reveal>
-		<H3>Your banner could be here</H3>
-		<h2>And also here</h2>
-		<p class="text-center"><button class="button" data-open="exampleModal2">Click=>Open Modal</button></p>
-		<button class="close-button" data-close aria-label="Close modal" type="button">
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>
-	<div class="reveal" id="exampleModal2" data-reveal>
-		<h2>One More Modal Window is here.</h2>
-		<button class="close-button" data-close aria-label="Close reveal" type="button">
-			<span aria-hidden="true">&times;</span>
-		</button>
-	</div>
-
-	<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit
-		data-options="animInFromLeft:spin-in; animInFromRight:spin-in-ccw; animOutToLeft:spin-out-ccw; animOutToRight:spin-out-ccw;">
-		<div class="orbit-wrapper">
-			<div class="orbit-controls">
-				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-				<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-			</div>
-			<ul class="orbit-container">
-				<li class="is-active orbit-slide">
-					<figure class="orbit-figure">
-						<img class="orbit-image" src="img/Icecream.jpg" alt="Space">
-						<figcaption class="orbit-caption">Ice Cream</figcaption>
-					</figure>
-				</li>
-				<li class="orbit-slide">
-					<figure class="orbit-figure">
-						<img class="orbit-image" src="img/The-feast-ice-cream-museum-promote.jpg" alt="Space">
-						<figcaption class="orbit-caption">Lets Ice Cream!</figcaption>
-					</figure>
-				</li>
-				<li class="orbit-slide">
-					<figure class="orbit-figure">
-						<img class="orbit-image" src="img/images.jpg" alt="Space">
-						<figcaption class="orbit-caption">Ice Creaming</figcaption>
-					</figure>
-				</li>
-				<li class="orbit-slide">
-					<figure class="orbit-figure">
-						<img class="orbit-image" src="img/ice-cream-bowls.jpg" alt="Space">
-						<figcaption class="orbit-caption">Outta This Ice Cream</figcaption>
-					</figure>
-				</li>
-			</ul>
-		</div>
-		<nav class="orbit-bullets">
-			<button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span
-					class="show-for-sr">Current Slide</span></button>
-			<button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-			<button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-			<button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-		</nav>
-	</div>
-
-	<div class="grid-container">
-		<div class="grid-x grid-padding-x small-up-2 medium-up-3">
-			<div class="cell">
-				<div class="card">
-					<div class="card-divider grid-padding-x">
-						<span class="label success">The Best Ice Cream</span>
-						<span class="label primary">The Winner of Ice Cream Challenging</span>
-					</div>
-					<img
-						src="https://minimalistbaker.com/wp-content/uploads/2015/08/AMAZING-5-Ingredient-Vanilla-Coconut-Ice-Cream-Incredibly-simple-perfectly-sweet-INSANELY-creamy-vegan-glutenfree-icecream-dessert-recipe-vanilla-coconuticecream-coconut.jpg">
-					<div class="card-section">
-						<h4>This is a row of cards.</h4>
-						<p>This row of cards is embedded in an X-Y Block Grid.</p>
-					</div>
-				</div>
-			</div>
-			<div class="cell">
-				<div class="card">
-					<div class="card-divider grid-padding-x">
-						<span class="label success">The Best Ice Cream</span>
-						<span class="label primary">The Winner of Ice Cream Challenging</span>
-					</div>
-					<img
-						src="https://minimalistbaker.com/wp-content/uploads/2015/08/AMAZING-5-Ingredient-Vanilla-Coconut-Ice-Cream-Incredibly-simple-perfectly-sweet-INSANELY-creamy-vegan-glutenfree-icecream-dessert-recipe-vanilla-coconuticecream-coconut.jpg">
-					<div class="card-section">
-						<h4>This is a card.</h4>
-						<p>It has an easy to override visual style, and is appropriately subdued.</p>
-					</div>
-				</div>
-			</div>
-			<div class="cell">
-				<div class="card">
-					<div class="card-divider grid-padding-x">
-						<span class="label success">The Best Ice Cream</span>
-						<span class="label primary">The Winner of Ice Cream Challenging</span>
-					</div>
-					<img
-						src="https://minimalistbaker.com/wp-content/uploads/2015/08/AMAZING-5-Ingredient-Vanilla-Coconut-Ice-Cream-Incredibly-simple-perfectly-sweet-INSANELY-creamy-vegan-glutenfree-icecream-dessert-recipe-vanilla-coconuticecream-coconut.jpg">
-					<div class="card-section">
-						<h4>This is a card.</h4>
-						<p>It has an easy to override visual style, and is appropriately subdued.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="grid-x grid-padding-x small-up-2 medium-up-3">
-		<div class="cell">
-			<div class="card">
-				<div class="card-divider grid-padding-x">
-					<span class="label success">The Best Ice Cream</span>
-					<span class="label primary">The Winner of Ice Cream Challenging</span>
-				</div>
-				<img
-					src="https://minimalistbaker.com/wp-content/uploads/2015/08/AMAZING-5-Ingredient-Vanilla-Coconut-Ice-Cream-Incredibly-simple-perfectly-sweet-INSANELY-creamy-vegan-glutenfree-icecream-dessert-recipe-vanilla-coconuticecream-coconut.jpg">
-				<div class="card-section">
-					<h4>This is a row of cards.</h4>
-					<p>This row of cards is embedded in an Flex Block Grid.</p>
-				</div>
-			</div>
-		</div>
-		<div class="cell">
-			<div class="card">
-				<img
-					src="https://minimalistbaker.com/wp-content/uploads/2015/08/AMAZING-5-Ingredient-Vanilla-Coconut-Ice-Cream-Incredibly-simple-perfectly-sweet-INSANELY-creamy-vegan-glutenfree-icecream-dessert-recipe-vanilla-coconuticecream-coconut.jpg">
-				<div class="card-section">
-					<h4>This is a card.</h4>
-					<p>It has an easy to override visual style, and is appropriately subdued.</p>
-				</div>
-			</div>
-		</div>
-		<div class="cell">
-			<div class="card">
-				<img
-					src="https://minimalistbaker.com/wp-content/uploads/2015/08/AMAZING-5-Ingredient-Vanilla-Coconut-Ice-Cream-Incredibly-simple-perfectly-sweet-INSANELY-creamy-vegan-glutenfree-icecream-dessert-recipe-vanilla-coconuticecream-coconut.jpg">
-				<div class="card-section">
-					<h4>This is a card.</h4>
-					<p>It has an easy to override visual style, and is appropriately subdued.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="grid-container">
-		<div class="grid-x grid-y">
-			<nav aria-label="You are here:" role="navigation">
-				<ul class="breadcrumbs">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Features</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-					<li><a href="#">Deeper-deeper</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-
-	<div class="grid-y" style="height: 500px;">
-		<div class="cell small-6 medium-6 large-2" style="background-color: #fab;">
-			6/8/5
-		</div>
-		<div class="cell small-6 medium-6 large-5" style="background-color: #00FFFF;">
-			6/6/7
-		</div>
-	</div>
-
-	<div class="grid-x">
-		<div class="cell" style="background-color: #fab;">full width cell</div>
-		<div class="cell" style="background-color: #00FFFF;">full width cell</div>
-	</div>
-	<div class="grid-x">
-		<div class="cell small-6" style="background-color: #fab;">6 cells</div>
-		<div class="cell small-6" style="background-color: #00FFFF;">6 cells</div>
-	</div>
-	<div class="grid-x">
-		<div class="cell medium-6 large-4" style="background-color: #fab;">12/6/4 cells</div>
-		<div class="cell medium-6 large-8" style="background-color: #00FFFF;">12/6/8 cells</div>
-	</div>
-
-	<div class="grid-y medium-grid-frame">
-		<div class="cell shrink header medium-cell-block-container">
-			<h1>Grid Frame Header</h1>
-			<div class="grid-x grid-padding-x">
-				<div class="cell medium-4" style="background-color: #81E131;">
-					A medium 4 cell
-				</div>
-				<div class="cell medium-4 medium-cell-block" style="background-color: #6922FF;">
-					<p style="width:80vw;">A medium 4 cell block... on medium this content should overflow and let you
-						horizontally scroll across... one might use this for an array of options</p>
-				</div>
-				<div class="cell medium-4" style="background-color: #FF5733;">
-					A medium 4 cell
-				</div>
-			</div>
-		</div>
-		<div class="cell medium-auto medium-cell-block-container">
-			<div class="grid-x grid-padding-x">
-				<div class="cell medium-4 medium-cell-block-y" style="background-color: #fab;">
-					<h2>Buddy 1</h2>
-					<p>
-						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem aspernatur facere saepe
-						vero illum quia quas cupiditate voluptate? Modi necessitatibus pariatur magni quos ratione
-						veritatis et, aperiam accusantium impedit enim, totam reiciendis rem, ducimus odit distinctio
-						perferendis asperiores aut facere fugiat repellendus voluptatem! Dicta perferendis iure, harum
-						voluptatum possimus molestiae necessitatibus numquam? Non ad a doloremque et laudantium eius
-						sequi tenetur. Facere impedit nobis itaque, quidem exercitationem perferendis dolor, vel
-						necessitatibus et assumenda, quasi ipsa in voluptas magnam possimus? Voluptas doloribus maxime
-						repellat suscipit molestiae in blanditiis. Illo ipsum nostrum, ratione omnis debitis quod nihil
-						rem laudantium. Optio delectus omnis consectetur harum incidunt soluta aliquid numquam et
-						asperiores. Blanditiis tenetur aspernatur quas labore mollitia reprehenderit temporibus, aliquid
-						corrupti odio maiores ab alias, excepturi perspiciatis vel voluptas assumenda tempore minima
-						quibusdam dicta? Ipsa unde quasi fugit consectetur quo quia magni aperiam qui perspiciatis sint
-						quod excepturi autem rem, veniam, dignissimos nobis ea, rerum voluptatum nisi atque minima dolor
-						omnis. Est iure quod amet accusamus expedita temporibus ea omnis, magnam quaerat porro
-						reiciendis eligendi, ratione nobis recusandae odit illo, tempore fugiat excepturi optio labore
-						et autem praesentium nihil. Iure in error delectus reprehenderit distinctio, at, commodi
-						eligendi hic deserunt ut perspiciatis velit.
-					</p>
-
-				</div>
-				<div class="cell medium-8 medium-cell-block-y" style="background-color: #ffbb;">
-					<h2>Buddy 2</h2>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus rem libero non at nostrum
-						aspernatur enim dolores ratione deserunt, quasi inventore, saepe nesciunt! Ducimus magni laborum
-						quae, ullam, sequi culpa ab sapiente mollitia perferendis eum sed dignissimos vel consequuntur
-						tempora inventore maiores! Provident harum ut possimus libero, amet accusamus, unde fugiat
-						itaque incidunt veritatis eius? Iste, voluptatibus laudantium atque doloribus tenetur, nesciunt
-						vel fugit necessitatibus ipsum voluptate, cupiditate voluptates? Sint doloribus delectus
-						accusantium, magnam facere saepe laudantium libero dolore. Non facere ipsum eos eveniet
-						expedita, dolores, quibusdam et iusto, sequi in saepe laudantium exercitationem modi ipsam
-						inventore maxime cumque a?
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="cell footer">
-			<h3>Footer</h3>
-		</div>
-	</div>
-
-	<blockquote>
-		Those people who think they know everything are a great annoyance to those of us who do.
-		<cite>Isaac Asimov</cite>
-	</blockquote>
-
-	<!-- <button type="button" class="button" data-toggle="offCanvasLeftSplit1">OPEN Left</button>
-	<button type="button" class="button" data-toggle="offCanvasRightSplit2">OPEN Right</button>
-	<div class="grid-x grid-margin-x">
-		<div class="cell small-6">
-			<div class="off-canvas-wrapper">
-				<div class="off-canvas-absolute position-left" id="offCanvasLeftSplit1" data-off-canvas>
-				</div>
-				<div class="off-canvas-content" style="min-height: 300px;" data-off-canvas-content>
-					<p>I have nothing to do with the off-canvas on the right!</p>
-				</div>
-			</div>
-		</div>
-		<div class="cell small-6">
-			<div class="off-canvas-wrapper">
-				<div class="off-canvas-absolute position-right" id="offCanvasRightSplit2" data-off-canvas>
-				</div>
-				<div class="off-canvas-content" style="min-height: 300px;" data-off-canvas-content>
-					<p>Nothing Unique</p>
-				</div>
-			</div>
-		</div>
-	</div> -->
-
-	<div class="media-object">
-		<div class="media-object-section">
-			<div class="thumbnail">
-				<img src="img/BEAUTIFUL ICE CREAM.jpg">
-			</div>
-		</div>
-		<div class="media-object-section">
-			<h4>Dreams feel real while we're in them.</h4>
-			<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is
-				like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or
-				destroy you.</p>
-		</div>
-	</div>
-
-	<div class="grid-x" data-equalizer="foo">
-		<div class="cell medium-4" data-equalizer-watch="foo">
-			<div class="callout" data-equalizer-watch="foo" data-equalizer="bar">
-				<h3>Parent panel</h3>
-				<div class="callout" data-equalizer-watch="bar"></div>
-				<div class="callout" data-equalizer-watch="bar"></div>
-				<div class="callout" data-equalizer-watch="bar"></div>
-			</div>
-		</div>
-		<div class="cell medium-4">
-			<div class="callout panel" data-equalizer-watch="foo"></div>
-		</div>
-		<div class="cell medium-4">
-			<div class="callout" data-equalizer-watch="foo"></div>
-		</div>
-	</div>
-
-	<ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true">
-		<li>
-			<a href="#">Pefbrute Experience</a>
-			<ul class="menu vertical nested">
-				<li>
-					<a href="#">Item OneA</a>
-					<ul class="menu vertical nested">
-						<li><a href="#">Item OneAi</a></li>
-						<li><a href="#">Item OneAii</a></li>
-						<li><a href="#">Item OneAiii</a></li>
-					</ul>
-				</li>
-				<li><a href="#">Item OneB</a></li>
-				<li><a href="#">Item OneC</a></li>
-			</ul>
-		</li>
-		<li>
-			<a href="#">Item 2</a>
-			<ul class="menu vertical nested">
-				<li><a href="#">Item 2A</a></li>
-				<li><a href="#">Item 2B</a></li>
-			</ul>
-		</li>
-		<li><a href="#">Item 3</a></li>
-	</ul>
-
-	<div class="secondary progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0"
-		aria-valuetext="25 percent" aria-valuemax="100">
-		<div class="progress-meter" style="width: 25%"></div>
-	</div>
-
-	<div class="success progress">
-		<div class="progress-meter" style="width: 50%"></div>
-	</div>
-
-	<div class="warning progress">
-		<div class="progress-meter" style="width: 50%"></div>
-	</div>
-
-	<div class="alert progress">
-		<div class="progress-meter" style="width: 75%"></div>
-	</div>
-
-	<div id="date" class="my-5">
-		<h3 class="text-center" id="date-heading"></h3>
-		<h4>Today I have nothing new for you:(</h4>
 	</div>
 
 	<!-- ↓ Scripts-starts ↓ -->
@@ -602,10 +139,6 @@
 	<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 	<script src="lib/bootstrap/js/popper.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="js/vendor/foundation.min.js"></script>
-	<script>
-		$(document).foundation();
-	</script>
 	<!-- ↑ General_Scripts---ends ↑ -->
 
 

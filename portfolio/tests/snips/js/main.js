@@ -33,7 +33,7 @@ $(document).ready(function () {
     function showTime() {
         let current_datetime = new Date()
         // console.log(current_datetime.toString());
-        let formatted_date = 
+        let formatted_date =
             appendLeadingZeroes(current_datetime.getMonth() + 1) + "/" +
             appendLeadingZeroes(current_datetime.getDate()) + "/" +
             current_datetime.getFullYear() + " " +
@@ -46,4 +46,15 @@ $(document).ready(function () {
     setInterval(showTime, 960);
     /*DATE ENDS*/
 
+    document.getElementById("user-btn").addEventListener("click", alertName);
+    document.getElementById("practice-form-input").addEventListener("click", resetSubmit);
+
+    function alertName() {
+        let username = window.prompt('Write Your Name: ');
+        alert(`Hello ${username}!`);
+    }
+
+    function resetSubmit() {
+        document.getElementById("frm1").reset();
+    }
 });
