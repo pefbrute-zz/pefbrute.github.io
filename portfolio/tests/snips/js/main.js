@@ -46,6 +46,7 @@ $(document).ready(function () {
     setInterval(showTime, 960);
     /*DATE ENDS*/
 
+    /*FORMS STARTS*/
     document.getElementById("user-btn").addEventListener("click", alertName);
     document.getElementById("practice-form-input").addEventListener("click", resetSubmit);
 
@@ -57,4 +58,15 @@ $(document).ready(function () {
     function resetSubmit() {
         document.getElementById("frm1").reset();
     }
+    /*FORMS STARTS*/
+
+    /*Calculator STARTS */
+        function sum(firstNumber,secondNumber){
+            let answer = firstNumber + secondNumber;
+            document.getElementById('super-puper-easy-calculator-answer').innerHTML = `Your sum is: ${answer}`;
+        }
+        var firstNumber = parseInt(prompt('Enter Your First Number'));
+        var secondNumber = parseInt(prompt('Enter Your Second Number'));
+        sum(firstNumber,secondNumber);
+    /*Calculator ENDS */
 });
