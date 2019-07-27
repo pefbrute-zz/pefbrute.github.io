@@ -61,12 +61,20 @@ $(document).ready(function () {
     /*FORMS STARTS*/
 
     /*Calculator STARTS */
-        function sum(firstNumber,secondNumber){
-            let answer = firstNumber + secondNumber;
-            document.getElementById('super-puper-easy-calculator-answer').innerHTML = `Your sum is: ${answer}`;
-        }
-        var firstNumber = parseInt(prompt('Enter Your First Number'));
-        var secondNumber = parseInt(prompt('Enter Your Second Number'));
-        sum(firstNumber,secondNumber);
+    function sum(firstNumber, secondNumber) {
+        let answer = firstNumber + secondNumber;
+        document.getElementById('super-puper-easy-calculator-answer').innerHTML = `Your sum is: ${answer}`;
+    }
+    var firstNumber = parseInt(prompt('Enter Your First Number'));
+    var secondNumber = parseInt(prompt('Enter Your Second Number'));
+    sum(firstNumber, secondNumber);
     /*Calculator ENDS */
+
+    document.getElementById("btn-object").addEventListener("click", showName);
+    var testObject = {
+        name: "First Name",
+        showName(){
+            document.getElementById("object-name-output").innerHTML =  this.name;
+        }
+    }
 });
