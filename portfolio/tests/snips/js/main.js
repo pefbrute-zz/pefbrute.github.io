@@ -72,7 +72,7 @@ $(document).ready(function () {
 
     document.getElementById("btn-object").addEventListener("click", showName);
     var testObject = {
-        name: "First Name",
+        name: "Some Name",
         showName(){
             document.getElementById("object-name-output").innerHTML =  this.name;
         }
