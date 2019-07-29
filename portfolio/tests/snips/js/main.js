@@ -70,6 +70,7 @@ $(document).ready(function () {
     sum(firstNumber, secondNumber);
     /*Calculator ENDS */
 
+    /*Output Object Name STARTS*/
     document.getElementById("btn-object").addEventListener("click", showName);
     var testObject = {
         name: "Some Name",
@@ -77,4 +78,5 @@ $(document).ready(function () {
             document.getElementById("object-name-output").innerHTML =  this.name;
         }
     }
+    /*Output Object Name ENDS*/
 });
