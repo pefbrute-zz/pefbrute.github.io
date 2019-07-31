@@ -70,13 +70,25 @@ $(document).ready(function () {
     sum(firstNumber, secondNumber);
     /*Calculator ENDS */
 
-    /*Output Object Name STARTS*/
-    document.getElementById("btn-object").addEventListener("click", showName);
-    var testObject = {
-        name: "Some Name",
-        showName(){
-            document.getElementById("object-name-output").innerHTML =  this.name;
-        }
+    // /*Output Object Name STARTS*/
+    // document.getElementById("btn-object").addEventListener("click", showName);
+    // var testObject = {
+    //     name: "Some Name",
+    //     showName(){
+    //         document.getElementById("object-name-output").innerHTML =  this.name;
+    //     }
+    // }
+    // /*Output Object Name ENDS*/
+    function objectForPrototype(name){
+        this.name = name;
+        // function outputName(){
+        //     alert(this.name);
+        // }
     }
-    /*Output Object Name ENDS*/
+
+    objectForPrototype.prototype.outputName = function (name){
+        alert(this.name);
+    }
+    const prototypeTest = new objectForPrototype('Fedor');
+    prototypeTest.outputName();
 });
