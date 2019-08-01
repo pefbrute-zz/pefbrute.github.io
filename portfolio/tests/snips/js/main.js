@@ -91,4 +91,12 @@ $(document).ready(function () {
     }
     const prototypeTest = new objectForPrototype('Fedor');
     prototypeTest.outputName();
+
+    class myClass {
+        constructor(age) { this.age = age; }
+        showAge(age){
+            alert (this.age)
+        }
+    }
+    new myClass(20).showAge();
 });
