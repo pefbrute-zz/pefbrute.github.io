@@ -93,10 +93,15 @@ $(document).ready(function () {
     prototypeTest.outputName();
 
     class myClass {
-        constructor(age) { this.age = age; }
+        constructor(age,firstName) { this.age = age; this.firstName = firstName; }
         showAge(age){
-            alert (this.age)
+            alert (this.age);
+        }
+        showFirstName(firstName){
+            alert (this.firstName);
         }
     }
-    new myClass(20).showAge();
+    testClass = new myClass(20,'Tolya');
+    testClass.showAge();
+    testClass.showFirstName();
 });
