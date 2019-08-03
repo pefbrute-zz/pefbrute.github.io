@@ -101,7 +101,7 @@ $(document).ready(function () {
             alert (this.firstName);
         }
     }
-    testClass = new myClass(20,'Tolya');
+    testClass = new myClass(20,'Penya');
     testClass.showAge();
     testClass.showFirstName();
 });
