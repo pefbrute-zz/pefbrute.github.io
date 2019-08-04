@@ -93,6 +93,7 @@ $(document).ready(function () {
     prototypeTest.outputName();
 
     class myClass {
+        //Between Class Methods It Doesn't Require Coma.
         constructor(age,firstName) { this.age = age; this.firstName = firstName; }
         showAge(age){
             alert (this.age);
