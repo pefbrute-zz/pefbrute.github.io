@@ -102,7 +102,7 @@ $(document).ready(function () {
             alert (this.firstName);
         }
     }
-    testClass = new myClass(20,'Penya');
+    testClass = new myClass(13,'Penya');
     testClass.showAge();
     testClass.showFirstName();
 });
