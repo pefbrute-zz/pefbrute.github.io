@@ -79,14 +79,14 @@ $(document).ready(function () {
     //     }
     // }
     // /*Output Object Name ENDS*/
-    function objectForPrototype(name){
+    function objectForPrototype(name) {
         this.name = name;
         // function outputName(){
         //     alert(this.name);
         // }
     }
 
-    objectForPrototype.prototype.outputName = function (name){
+    objectForPrototype.prototype.outputName = function (name) {
         alert(this.name);
     }
     const prototypeTest = new objectForPrototype('Fedor');
@@ -94,57 +94,60 @@ $(document).ready(function () {
 
     class myClass {
         //Between Class Methods It Doesn't Require Coma.
-        constructor(age,firstName) { this.age = age; this.firstName = firstName; }
-        showAge(age){
-            alert (this.age);
+        constructor(age, firstName) {
+            this.age = age;
+            this.firstName = firstName;
         }
-        showFirstName(firstName){
-            alert (this.firstName);
+        showAge(age) {
+            alert(this.age);
+        }
+        showFirstName(firstName) {
+            alert(this.firstName);
         }
     }
-    testClass = new myClass(13,'Penya');
+    testClass = new myClass(13, 'Penya');
     testClass.showAge();
     testClass.showFirstName();
 
-      class Clock({
-          template
-      }) {
+    class Clock({
+        template
+    }) {
 
-          let timer;
+        let timer;
 
-          render() {
-              let date = new Date();
+        render() {
+            let date = new Date();
 
-              let hours = date.getHours();
-              if (hours < 10) hours = '0' + hours;
+            let hours = date.getHours();
+            if (hours < 10) hours = '0' + hours;
 
-              let mins = date.getMinutes();
-              if (mins < 10) mins = '0' + mins;
+            let mins = date.getMinutes();
+            if (mins < 10) mins = '0' + mins;
 
-              let secs = date.getSeconds();
-              if (secs < 10) secs = '0' + secs;
+            let secs = date.getSeconds();
+            if (secs < 10) secs = '0' + secs;
 
-              let output = template
-                  .replace('h', hours)
-                  .replace('m', mins)
-                  .replace('s', secs);
+            let output = template
+                .replace('h', hours)
+                .replace('m', mins)
+                .replace('s', secs);
 
-              console.log(output);
-          }
+            console.log(output);
+        }
 
-          this.stop = function () {
-              clearInterval(timer);
-          };
+        this.stop = function () {
+            clearInterval(timer);
+        };
 
-          this.start = function () {
-              render();
-              timer = setInterval(render, 1000);
-          };
+        this.start = function () {
+            render();
+            timer = setInterval(render, 1000);
+        };
 
-      }
+    }
 
-      let clock = new Clock({
-          template: 'h:m:s'
-      });
-      clock.start();
+    let clock = new Clock({
+        template: 'h:m:s'
+    });
+    clock.start();
 });
