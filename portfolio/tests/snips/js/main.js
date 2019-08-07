@@ -109,13 +109,13 @@ $(document).ready(function () {
     testClass.showAge();
     testClass.showFirstName();
 
-    class Clock({
+    function Clock({
         template
     }) {
 
         let timer;
 
-        render() {
+        function render() {
             let date = new Date();
 
             let hours = date.getHours();
@@ -128,9 +128,9 @@ $(document).ready(function () {
             if (secs < 10) secs = '0' + secs;
 
             let output = template
-                .replace('h', hours)
-                .replace('m', mins)
-                .replace('s', secs);
+                .replace('t', hours)
+                .replace('e', mins)
+                .replace('st', secs);
 
             console.log(output);
         }
@@ -147,7 +147,13 @@ $(document).ready(function () {
     }
 
     let clock = new Clock({
-        template: 'h:m:s'
+        template: 't:e:st'
     });
     clock.start();
+
+
+
+
+
+
 });
