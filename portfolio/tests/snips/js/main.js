@@ -146,10 +146,10 @@ $(document).ready(function () {
 
     }
 
-    let clock = new Clock({
+    let myClock = new Clock({
         template: 't:e:st'
     });
-    clock.start();
+    myClock.start();
 
 
 
