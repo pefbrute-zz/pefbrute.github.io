@@ -109,13 +109,17 @@ $(document).ready(function () {
     testClass.showAge();
     testClass.showFirstName();
 
-    function Clock({
-        template
-    }) {
+    class Clock
+    // ({template}) 
+    {
+        constructor(template){
+            this.template = template;
+        }
+        // constructor(timer){
+        //     this.timer = timer;
+        // }
 
-        let timer;
-
-        function render() {
+        render() {
             let date = new Date();
 
             let hours = date.getHours();
@@ -135,12 +139,12 @@ $(document).ready(function () {
             console.log(output);
         }
 
-        this.stop = function () {
+        stop(){
             clearInterval(timer);
         };
 
-        this.start = function () {
-            render();
+        start() {
+            this.render();
             timer = setInterval(render, 1000);
         };
 
