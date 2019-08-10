@@ -79,6 +79,7 @@ $(document).ready(function () {
     //     }
     // }
     // /*Output Object Name ENDS*/
+
     function objectForPrototype(name) {
         this.name = name;
         // function outputName(){
@@ -109,55 +110,167 @@ $(document).ready(function () {
     testClass.showAge();
     testClass.showFirstName();
 
-    class Clock
-    // ({template}) 
-    {
-        constructor(template){
-            this.template = template;
+    // class Clock
+    // // ({template}) 
+    // {
+    //     constructor(template){
+    //         this.template = template;
+    //     }
+    //     // constructor(timer){
+    //     //     this.timer = timer;
+    //     // }
+
+    //     render() {
+    //         let date = new Date();
+
+    //         let hours = date.getHours();
+    //         if (hours < 10) hours = '0' + hours;
+
+    //         let mins = date.getMinutes();
+    //         if (mins < 10) mins = '0' + mins;
+
+    //         let secs = date.getSeconds();
+    //         if (secs < 10) secs = '0' + secs;
+
+    //         let output = template
+    //             .replace('t', hours)
+    //             .replace('e', mins)
+    //             .replace('st', secs);
+
+    //         console.log(output);
+    //     }
+
+    //     stop(){
+    //         clearInterval(timer);
+    //     };
+
+    //     start() {
+    //         this.render();
+    //         timer = setInterval(render, 1000);
+    //     };
+
+    // }
+
+    // let myClock = new Clock({
+    //     template: 't:e:st'
+    // });
+    // myClock.start();
+
+    /*STARTS CLASSES*/
+    //Class Syntax
+    class MyClass {
+        constructor(quantity, quality) {
+            this.quantity = quantity;
+            this.quality = quality;
         }
-        // constructor(timer){
-        //     this.timer = timer;
-        // }
+        method1() {
 
-        render() {
-            let date = new Date();
-
-            let hours = date.getHours();
-            if (hours < 10) hours = '0' + hours;
-
-            let mins = date.getMinutes();
-            if (mins < 10) mins = '0' + mins;
-
-            let secs = date.getSeconds();
-            if (secs < 10) secs = '0' + secs;
-
-            let output = template
-                .replace('t', hours)
-                .replace('e', mins)
-                .replace('st', secs);
-
-            console.log(output);
         }
+        method2() {
 
-        stop(){
-            clearInterval(timer);
-        };
+        }
+        method3() {
 
-        start() {
-            this.render();
-            timer = setInterval(render, 1000);
-        };
+        }
 
     }
 
-    let myClock = new Clock({
-        template: 't:e:st'
+
+    //Class Example 1
+    class ClassCar {
+        drive() {
+            console.log('Vroom!');
+        }
+    }
+
+    const car1 = new ClassCar();
+    console.log(car1.drive());
+    /*ENDS CLASSES*/
+
+    /*STARTS CONSTRUCTORS*/
+    //Constructor Syntax
+    function construct(prop1, prop2, prop3, prop4, prop5) {
+        this.prop1 = prop1;
+        this.prop2 = prop2;
+        this.prop3 = prop3;
+        this.prop4 = prop4;
+        this.prop5 = prop5;
+    }
+    var c = new construct(1, "Ηello", true, null, {
+        smth: 3
     });
-    myClock.start();
+    console.log(c);
 
 
+    //Constructor Example 1
+    function ConstructorCar() {}
+
+    ConstructorCar.prototype.drive = function () {
+        console.log('Vroom!');
+    };
+
+    const car2 = new ConstructorCar();
+    console.log(car2.drive());
+    /*ENDS CONSTRUCTORS*/
+
+    /*STARTS FACTORY FUNCTIONS*/
+    //Factory Function Syntax
+    function Smth() {
+        var self = {
+            someProperty1: 'Property1',
+            someProperty2: 'Property2',
+            someProperty3: 'Property3',
+            someMethod: function (argument) {
+                self.someProperty1 = argument;
+            }
+        };
+        return self;
+    }
+    var smth1 = Smth();
+    console.log(smth1.someProperty1);
+    smth1.someMethod('Property1111111111');
+    console.log(smth1.someProperty1);
 
 
+    //Factory Function Example 1
+    const proto = {
+        drive() {
+            return 'Some Sound';
+        }
+    };
 
+    function factoryCar() {
+        return Object.create(proto);
+    }
+    const car = factoryCar();
+    console.log(car.drive());
+
+
+    //Factory Function Example 2
+    function createRectangle(lenght, width) {
+        return {
+            lenght,
+            width,
+            area() {
+                return lenght * width;
+            }
+        };
+    }
+    const rectangle1 = createRectangle(2, 5);
+    console.log(rectangle1.area());
+
+
+    //Factory Function Example 3
+    function thing() {
+        return {
+            angles: 3,
+            size: "XLL",
+            f: function () {},
+            g: function () {}
+        };
+    }
+    var smth = thing();
+    console.log(smth.angles);
+    /*ENDS FACTORY FUNCTIONS*/
 
 });
