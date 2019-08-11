@@ -185,9 +185,9 @@ $(document).ready(function () {
 
     const car1 = new ClassCar();
     console.log(car1.drive());
-    /*ENDS CLASSES*/
+    /*ENDS Classes*/
 
-    /*STARTS CONSTRUCTORS*/
+    /*STARTS Constructors*/
     //Constructor Syntax
     function construct(prop1, prop2, prop3, prop4, prop5) {
         this.prop1 = prop1;
@@ -211,9 +211,9 @@ $(document).ready(function () {
 
     const car2 = new ConstructorCar();
     console.log(car2.drive());
-    /*ENDS CONSTRUCTORS*/
+    /*ENDS Constructors*/
 
-    /*STARTS FACTORY FUNCTIONS*/
+    /*STARTS Factory Functions*/
     //Factory Function Syntax
     function Smth() {
         var self = {
@@ -271,6 +271,25 @@ $(document).ready(function () {
     }
     var smth = thing();
     console.log(smth.angles);
-    /*ENDS FACTORY FUNCTIONS*/
+    /*ENDS Factory Functions*/
 
+    //STARTS Getters & Setters
+    const someWord = {
+        firstWord: 'Smth',
+        secondWord: 'And',
+        lastWord: 'Smth',
+        get fullWord() {
+            return `${this.firstWord} ${this.secondWord} ${this.lastWord}`
+        },
+        set fullWord(word) {
+            let words = word.toString().split(' ');
+            this.firstWord = words[0] || '';
+            this.secondWord = words[1] || '';
+            this.lastWord = words[2] || '';
+        }
+    }
+    someWord.fullWord = 'How Are You?';
+    console.log(someWord.secondWord);
+    console.log(someWord.fullWord)
+    //ENDS Getters & Setters
 });
