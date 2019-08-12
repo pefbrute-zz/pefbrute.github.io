@@ -279,7 +279,7 @@ $(document).ready(function () {
         secondWord: 'And',
         lastWord: 'Smth',
         get fullWord() {
-            return `${this.firstWord} ${this.secondWord} ${this.lastWord}`
+            return `${this.firstWord} ${this.secondWord} ${this.lastWord}`;
         },
         set fullWord(word) {
             let words = word.toString().split(' ');
@@ -287,9 +287,20 @@ $(document).ready(function () {
             this.secondWord = words[1] || '';
             this.lastWord = words[2] || '';
         }
-    }
+    };
+    Object.defineProperty(someWord, "lastTwoWords",{
+        get:function(){
+            return `${this.secondWord} ${this.lastWord}`;
+        },
+        set: function(newLastTwoWords){
+            let lastWords = newLastTwoWords.toString().split(' ');
+            this.secondWord = lastWords[0];
+            this.lastWord = lastWords[1];
+        },
+    });
     someWord.fullWord = 'How Are You?';
     console.log(someWord.secondWord);
-    console.log(someWord.fullWord)
+    console.log(someWord.fullWord);
+    console.log(someWord.lastTwoWords);
     //ENDS Getters & Setters
 });
