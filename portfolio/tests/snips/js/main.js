@@ -290,7 +290,7 @@ $(document).ready(function () {
     };
     Object.defineProperty(someWord, "lastTwoWords",{
         get:function(){
-            return `${this.secondWord} ${this.lastWord}`;
+            return `Fullname is:${this.secondWord} ${this.lastWord}`;
         },
         set: function(newLastTwoWords){
             let lastWords = newLastTwoWords.toString().split(' ');
