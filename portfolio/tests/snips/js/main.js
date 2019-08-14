@@ -225,8 +225,8 @@ $(document).ready(function () {
             }
         };
         return self;
-    }
-    var smth1 = Smth();
+    }    
+    var smth1 = Smth(); //It Doesn't Require new Keyword for creating object.
     console.log(smth1.someProperty1);
     smth1.someMethod('Property1111111111');
     console.log(smth1.someProperty1);
