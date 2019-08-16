@@ -215,7 +215,7 @@ $(document).ready(function () {
 
     /*STARTS Factory Functions*/
     //Factory Function Syntax
-    //Factory Functions Causes Less Bugs
+    //Factory Functions Causes Less Bugs and more safer
     function Smth() {
         var self = {
             someProperty1: 'Property1',
