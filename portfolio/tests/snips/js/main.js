@@ -226,7 +226,7 @@ $(document).ready(function () {
             }
         };
         return self;
-    }    
+    }
     var smth1 = Smth(); //It Doesn't Require new Keyword for creating object.
     console.log(smth1.someProperty1);
     smth1.someMethod('Property1111111111');
@@ -289,11 +289,11 @@ $(document).ready(function () {
             this.lastWord = words[2] || '';
         }
     };
-    Object.defineProperty(someWord, "lastTwoWords",{
-        get:function(){
+    Object.defineProperty(someWord, "lastTwoWords", {
+        get: function () {
             return `Fullname is:${this.secondWord} ${this.lastWord}`;
         },
-        set: function(newLastTwoWords){
+        set: function (newLastTwoWords) {
             let lastWords = newLastTwoWords.toString().split(' ');
             this.secondWord = lastWords[0];
             this.lastWord = lastWords[1];
@@ -304,4 +304,18 @@ $(document).ready(function () {
     console.log(someWord.fullWord);
     console.log(someWord.lastTwoWords);
     //ENDS Getters & Setters
+
+    //STARTS Closures
+    const counterConstructor = () => {
+        let count = 0;
+        return () => {
+            console.log(count);
+            count++;
+        };
+    };
+
+    const counter = counterConstructor();
+    counter(); // 0
+    counter(); // 1
+    //ENDS Closures
 });
