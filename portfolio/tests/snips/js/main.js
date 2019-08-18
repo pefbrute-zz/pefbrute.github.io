@@ -307,7 +307,7 @@ $(document).ready(function () {
 
     //STARTS Closures
     const counterConstructor = () => {
-        let count = 0;
+        let count = 0; //You can't access left variable, it's private variable.
         return () => {
             console.log(count);
             count++;
