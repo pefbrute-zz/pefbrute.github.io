@@ -305,9 +305,22 @@ $(document).ready(function () {
     console.log(someWord.lastTwoWords);
     //ENDS Getters & Setters
 
-    //STARTS Closures
+    //STARTS Scopes
+    scope1 = function () {
+        //"name" is not accessible here
+        console.log(name); //Error, because of Lexical Scope
+        scope2 = function () {
+            let name = 'Fedor';
+            console.log(name); // Fedor
+            scope3 = function () {
+                //"name" is accessible here
+                console.log(name); //Fedor
+            }
+        }
+    }
+
     const counterConstructor = () => {
-        let count = 0; //You can't access left variable, it's private variable.
+        let count = 0; //You can't access left variable — it's private variable.
         return () => {
             console.log(count);
             count++;
@@ -317,5 +330,5 @@ $(document).ready(function () {
     const counter = counterConstructor();
     counter(); // 0
     counter(); // 1
-    //ENDS Closures
+    //ENDS Scopes
 });
