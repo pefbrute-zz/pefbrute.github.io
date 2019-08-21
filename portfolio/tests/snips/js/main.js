@@ -318,7 +318,7 @@ $(document).ready(function () {
             }
         }
     }
-    
+
     //Closure Example
     const counterConstructor = () => {
         let count = 0; //You can't access left variable — it's private variable.
@@ -332,4 +332,22 @@ $(document).ready(function () {
     counter(); // 0
     counter(); // 1
     //ENDS Scopes
+
+    //"this" Example
+    //In different cases — different value.
+        var myObj = {};
+        myObj.myMethod = function(){
+            console.log(this); // myObj;
+        }
+
+        function foo() {
+            console.log(this); // window;
+        }
+
+        function bar(){
+            function foo(){
+                console.log(this); //bar();
+            }
+        }
+    //
 });
