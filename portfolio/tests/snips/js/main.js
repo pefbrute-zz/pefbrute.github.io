@@ -335,18 +335,18 @@ $(document).ready(function () {
 
     //"this" Example
     //In different cases — different value.
-        var myObj = {};
-        myObj.myMethod = function(){
-            console.log(this); // myObj;
+        var someObj = {};
+        someObj.someMethod = function(){
+            console.log(this); // someObj;
         }
 
         function foo() {
             console.log(this); // window;
         }
 
-        function bar(){
-            function foo(){
-                console.log(this); //bar();
+        function foo(){
+            function bar(){
+                console.log(this); //foo();
             }
         }
     //
