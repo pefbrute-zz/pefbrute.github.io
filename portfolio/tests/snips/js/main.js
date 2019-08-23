@@ -333,7 +333,7 @@ $(document).ready(function () {
     counter(); // 1
     //ENDS Scopes
 
-    //"this" Example
+    //"this" keyword Example
     //In different cases — different value.
         var someObj = {};
         someObj.someMethod = function(){
