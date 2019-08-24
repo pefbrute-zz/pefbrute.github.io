@@ -335,19 +335,43 @@ $(document).ready(function () {
 
     //"this" keyword Example
     //In different cases — different value.
-        var someObj = {};
-        someObj.someMethod = function(){
-            console.log(this); // someObj;
-        }
+    var someObj = {};
+    someObj.someMethod = function () {
+        console.log(this); // someObj;
+    }
 
-        function foo() {
-            console.log(this); // window;
-        }
+    function foo() {
+        console.log(this); // window;
+    }
 
-        function foo(){
-            function bar(){
-                console.log(this); //foo();
-            }
+    function foo() {
+        function bar() {
+            console.log(this); //foo();
         }
+    }
     //
+
+    //Starts .call(), .apply() And .bind() Examples
+    function checkFun(a, b, c) {
+        console.log(this);
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+    checkFun.call(1, 2, 3, 4); //First Argument For "this" Keyword, Others Like Arguments For A Function
+
+    function checkFun(a, b, c) {
+        console.log(this);
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+    checkFun.apply(1, [2, 3, 4]); //First Argument And Others Are The Same
+
+    var func = function () {
+        console.log(this)
+    }.bind(1); //First Argument and Others Are The Same
+    func();
+
+    //Ends .call(), .apply() And .bind() Examples
 });
