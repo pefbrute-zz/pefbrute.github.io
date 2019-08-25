@@ -374,4 +374,23 @@ $(document).ready(function () {
     func();
 
     //Ends .call(), .apply() And .bind() Examples
+
+    // Starts Private and Public Scopes + The Module Pattern
+    var theModulePattern = (function () {
+        //Underscore for visual help to defferianate private and public
+        var _privateMethod = function () {
+            //Some Unaccessible in Global Scope Staff
+        };
+
+        return {
+            publicMethod: function () {
+                //Some Accessible in Global Scope Staff
+                //The Scope Also Has Access To The Private Scope ↑
+            }
+        };
+    })();
+    theModulePattern.publicMethod();
+    _privateMethod(); //Uncaught ReferrenceError
+    // Ends Private and Public Scopes
+
 });
