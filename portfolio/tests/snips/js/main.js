@@ -375,7 +375,7 @@ $(document).ready(function () {
 
     //Ends .call(), .apply() And .bind() Examples
 
-    // Starts Private and Public Scopes + The Module Pattern
+    // Starts Private and Public Scopes + The Module Pattern + IIFE
     var theModulePattern = (function () {
         //Underscore for visual help to defferianate private and public
         var _privateMethod = function () {
