@@ -331,15 +331,14 @@ $(document).ready(function () {
     const counter = counterConstructor();
     counter(); // 0
     counter(); // 1
-    //ENDS Scopes
-
+    
     //"this" keyword Example
     //In different cases — different value.
     var someObj = {};
     someObj.someMethod = function () {
         console.log(this); // someObj;
     }
-
+    
     function foo() {
         console.log(this); // window;
     }
@@ -359,7 +358,7 @@ $(document).ready(function () {
         console.log(c);
     }
     checkFun.call(1, 2, 3, 4); //First Argument For "this" Keyword, Others Like Arguments For A Function
-
+    
     function checkFun(a, b, c) {
         console.log(this);
         console.log(a);
@@ -367,21 +366,21 @@ $(document).ready(function () {
         console.log(c);
     }
     checkFun.apply(1, [2, 3, 4]); //First Argument And Others Are The Same
-
+    
     var func = function () {
         console.log(this)
     }.bind(1); //First Argument and Others Are The Same
     func();
-
+    
     //Ends .call(), .apply() And .bind() Examples
-
+    
     // Starts Private and Public Scopes + The Module Pattern + IIFE
     var theModulePattern = (function () {
         //Underscore for visual help to defferianate private and public
         var _privateMethod = function () {
             //Some Unaccessible in Global Scope Staff
         };
-
+        
         return {
             publicMethod: function () {
                 //Some Accessible in Global Scope Staff
@@ -392,5 +391,6 @@ $(document).ready(function () {
     theModulePattern.publicMethod();
     _privateMethod(); //Uncaught ReferrenceError
     // Ends Private and Public Scopes
-
+    //ENDS Scopes
+    
 });
