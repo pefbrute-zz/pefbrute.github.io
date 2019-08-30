@@ -1,0 +1,130 @@
+/* --- ↓ Foundation-starts ↓ --- */
+html,
+body {
+    margin: 0;
+    font-size: 100%;
+    background: #fff;
+    font-family: "", sans-serif;
+
+    @include transition(.2s)
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- ↑ Foundation---ends ↑ --- */
+
+
+/* --- ↓ Typography-starts ↓ --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: #222222;
+    font-family: "", sans-serif;
+    text-transform: '';
+
+    @include transition(.2s);
+
+    &:hover {
+        color: "";
+    }
+}
+
+h1 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+h2 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+h3 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+h4 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+h5 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+h6 {
+    font-weight: "";
+    text-transform: '';
+
+    @include transition(.2s);
+}
+
+a {
+    text-transform: '';
+
+    @include transition(.2s);
+
+    &:hover {
+        text-decoration: none;
+        color: aqua;
+    }
+}
+
+p {
+    font-family: "";
+    color: black;
+    text-transform: '';
+
+    @include transition(.2s);
+
+    &:hover {
+        color: "";
+    }
+}
+
+/* --- ↑ Typography---ends ↑ --- */
+
+
+/* --- ↓ Icons-starts ↓ --- */
+.fas,
+.fab,
+.far {
+    color: blue;
+    font-size: $font-size-base;
+    padding: 20px auto;
+    margin: 20px auto;
+
+    &:hover {
+        color: white;
+    }
+
+}
+
+/* --- ↑ Icons---ends ↑ --- */
+
+
+/* --- ↓ Lists-starts ↓ --- */
+
+li {
+    @include list-unstyled;
+}
+
+/* --- ↑ Lists---ends ↑ --- */
