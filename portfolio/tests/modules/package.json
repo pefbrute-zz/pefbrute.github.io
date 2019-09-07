@@ -9,7 +9,8 @@
   "scripts": {
     "build": "webpack --progress --mode=production",
     "watch": "webpack --progress --watch",
-    "server": "webpack-dev-server --open"
+    "server": "webpack-dev-server --open",
+    "hello": "echo 'Hello World!'"
   },
   "author": "",
   "license": "ISC",
