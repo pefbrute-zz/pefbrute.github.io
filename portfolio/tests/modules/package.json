@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "build": "webpack --progress --mode=production",
+    "build-dev": "webpack --progress --mode=development",
+    "build-prod": "webpack --progress --mode=production",
     "watch": "webpack --progress --watch",
     "server": "webpack-dev-server --open",
     "hello": "echo 'Hello World!'"
