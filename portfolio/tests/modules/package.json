@@ -11,7 +11,8 @@
     "build-prod": "webpack --progress --mode=production",
     "watch": "webpack --progress --watch",
     "server": "webpack-dev-server --open",
-    "hello": "echo 'Hello World!!!'"
+    "hello": "echo 'Hello World!!!'",
+    "bye": "echo 'Bye-Bye!'"
   },
   "author": "",
   "license": "ISC",
