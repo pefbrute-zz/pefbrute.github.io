@@ -12,7 +12,7 @@
     "watch": "webpack --progress --watch",
     "server": "webpack-dev-server --open",
     "hello": "echo 'Hello World!!!'",
-    "bye": "echo 'Bye-Bye!'"
+    "bye": "echo 'Bye-Bye!!!'"
   },
   "author": "",
   "license": "ISC",
