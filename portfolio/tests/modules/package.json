@@ -1,7 +1,7 @@
 {
   "name": "modules",
-  "version": "1.0.0",
-  "description": "My First Package.json Configuration File",
+  "version": "1.0.1",
+  "description": "this property makes easy to find your package in npm website",
   "main": "index.js",
   "directories": {
     "lib": "lib"
