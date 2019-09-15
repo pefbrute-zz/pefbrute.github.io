@@ -14,7 +14,7 @@
     "hello": "echo 'Hello World!'",
     "bye": "echo 'Bye-Bye!'"
   },
-  "author": "",
+  "author": "pefbrute",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^4.3.1",
