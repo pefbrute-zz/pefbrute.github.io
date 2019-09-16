@@ -1,4 +1,4 @@
 module.exports = {
     customField: 'Some field',
-    otherCustomField: 'Other Some Field'
+    otherCustomField: 'Other Some Field!'
 }
