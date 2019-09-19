@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "I-did": "echo I did nothing:/",
+    "I-did+again": "echo I did nothing again:/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
