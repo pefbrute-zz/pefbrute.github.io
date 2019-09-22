@@ -8,7 +8,7 @@
   },
   "scripts": {
     "I-did+again": "echo I did nothing again://",
-    "I did smth": "echo I did smth:)",
+    "I did smth": "echo I did smth again:)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
