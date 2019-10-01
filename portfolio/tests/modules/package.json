@@ -1,7 +1,7 @@
 {
   "name": "modules",
   "version": "1.0.1",
-  "description": "this property makes easy to find your package in npm website",
+  "description": "",
   "main": "index.js",
   "directories": {
     "lib": "lib"
