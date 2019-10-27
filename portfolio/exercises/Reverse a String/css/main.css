@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* --- ↓ Button-Styles-starts ↓ --- */
+.btn-template {
+  line-height: 1px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  padding: 10px 30px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 30px;
+  -webkit-box-shadow: 15px, 15px, 25px, 0px, #000000;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 15px, 15px, 25px, 0px, #000000;
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+ iOS 5 */
+}
+
+.btn-template:hover {
+  background-color: #000000;
+  border-color: #000000;
+  -webkit-box-shadow: 15px, 15px, 25px, 0px, #ffffff;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 15px, 15px, 25px, 0px, #ffffff;
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+ iOS 5 */
+}
+
+.btn-template:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+/* --- ↑ Button-Styles---ends ↑ --- */
+/* --- ↓ Foundation-starts ↓ --- */
+html,
+body {
+  margin: 0;
+  font-size: 100%;
+  background: #fff;
+  font-family: "", sans-serif;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- ↑ Foundation---ends ↑ --- */
+/* --- ↓ Typography-starts ↓ --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: #222222;
+  font-family: "", sans-serif;
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  color: "";
+}
+
+h1 {
+  font-weight: "";
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h2 {
+  font-weight: "";
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h3 {
+  font-weight: "";
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h4 {
+  font-weight: "";
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h5 {
+  font-weight: "";
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h6 {
+  font-weight: "";
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a {
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: aqua;
+}
+
+p {
+  font-family: "";
+  color: #000000;
+  text-transform: '';
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+p:hover {
+  color: "";
+}
+
+/* --- ↑ Typography---ends ↑ --- */
+/* --- ↓ Icons-starts ↓ --- */
+.fas,
+.fab,
+.far {
+  color: blue;
+  font-size: 1rem;
+  padding: 20px auto;
+  margin: 20px auto;
+}
+
+.fas:hover,
+.fab:hover,
+.far:hover {
+  color: white;
+}
+
+/* --- ↑ Icons---ends ↑ --- */
+/* --- ↓ Lists-starts ↓ --- */
+li {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* --- ↑ Lists---ends ↑ --- */
+/*# sourceMappingURL=main.css.map */
