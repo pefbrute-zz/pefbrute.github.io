@@ -22,6 +22,9 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
-    
+    setTimeout(function () {
+        var selObj = window.getSelection();
+        window.alert(selObj);
+    }, 5000);
 
 });
