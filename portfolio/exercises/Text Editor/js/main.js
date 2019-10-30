@@ -23,8 +23,13 @@ $(document).ready(function () {
     /*AOS END*/
 
     setTimeout(function () {
-        var selObj = window.getSelection();
-        window.alert(selObj);
+        var text = window.getSelection().toString();
+        var boldText = text.bold();
+        const activeTxtarea = document.activeElement;
+        var startPos = activeTxtarea.selectionStart;
+        var endPos = activeTxtarea.selectionEnd;
+        activeTxtarea.slice(startPos,endPos);
+        window.alert(boldText);
     }, 5000);
 
 });
