@@ -27,7 +27,7 @@ $(document).ready(function () {
     });
     setTimeout(function () {
         var text = window.getSelection().toString();
-        // var boldText = text.style.fontWeight = 'bold';
+        var boldText = text.bold();
         const activeTxtarea = document.activeElement;
         var startPos = activeTxtarea.selectionStart;
         var endPos = activeTxtarea.selectionEnd;
@@ -41,7 +41,7 @@ $(document).ready(function () {
                 txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
             }
         }
-        // replaceSelectedText(boldText);
+        replaceSelectedText(boldText);
         // window.alert(boldText);
     }, 5000);
 
