@@ -165,4 +165,9 @@ li {
 }
 
 /* --- ↑ Lists---ends ↑ --- */
+.editable {
+  border: 2px black solid;
+  width: 500px;
+  height: 500px;
+}
 /*# sourceMappingURL=main.css.map */
