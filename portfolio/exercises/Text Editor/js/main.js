@@ -22,18 +22,22 @@ $(document).ready(function () {
     });
     /*AOS END*/
     
-    $('.editable').each(function () {
-        this.contentEditable = true;
-    });
+    // $('.editable').each(function () {
+    //     this.contentEditable = true;
+    // });
+    
+    window.onload = function () {
+    var edit = document.getElementById("editable");
+    edit.contentEditable = true;
     setTimeout(function () {
         var text = window.getSelection().toString();
         var boldText = text.bold();
-        const activeTxtarea = document.activeElement;
-        var startPos = activeTxtarea.selectionStart;
-        var endPos = activeTxtarea.selectionEnd;
+        // const activeTxtarea = document.activeElement;
+        // var startPos = activeTxtarea.selectionStart;
+        // var endPos = activeTxtarea.selectionEnd;
         // activeTxtarea.slice(startPos,endPos);
         function replaceSelectedText(text) {
-            var txtArea = document.activeElement;
+            var txtArea = document.getElementById("editable");
             if (txtArea.selectionStart != undefined) {
                 var startPos = txtArea.selectionStart;
                 var endPos = txtArea.selectionEnd;
@@ -45,4 +49,6 @@ $(document).ready(function () {
         // window.alert(boldText);
     }, 5000);
 
+    };
+   
 });
