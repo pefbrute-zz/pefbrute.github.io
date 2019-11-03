@@ -23,18 +23,30 @@ $(document).ready(function () {
     /*AOS END*/
 
     setTimeout(function() {
-        var text = window.getSelection();
-        var anchNode = text.anchorNode;
-        var anchOffset = text.anchorOffset;
-        var fcsNode = text.focusNode;
-        var fcsOffset = text.focusOffset;
-        var someOperation = text.anchorNode;
-        window.alert("AnchorNode: " + anchNode
-            + "\n" + "AnchorOffset: " + anchOffset
-            + "\n" + "FocusNode: " + fcsNode
-            + "\n" + "FocusOffset: " + fcsOffset
-            
-                    );
-    }, 1000)
+        var txt = window.getSelection();
+        //Properties:
+        // var anchNode = txt.anchorNode;
+        // var anchOffset = txt.anchorOffset;
+        // var fcsNode = txt.focusNode;
+        // var fcsOffset = txt.focusOffset;
+        // var isCollapsed = txt.isCollapsed;
+        // var rangeCount = txt.rangeCount;
+        // var type = txt.type;
+        // window.alert("AnchorNode: " + anchNode
+        //     + "\n" + "AnchorOffset: " + anchOffset
+        //     + "\n" + "FocusNode: " + fcsNode
+        //     + "\n" + "FocusOffset: " + fcsOffset
+        //     + "\n" + "isCollapsed: " + isCollapsed
+        //     + "\n" + "rangeCount: " + rangeCount
+        //     + "\n" + "type: " + type
+        //             );
+        //;
+
+        //Methods:
+        // txt.addRange(1,10);
+        txt.collapse(1);
+
+        //;
+    }, 2000)
 
 });
