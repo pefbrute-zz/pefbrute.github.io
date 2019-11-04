@@ -5,23 +5,24 @@
   font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
+  background-color: orange;
+  border-color: orange;
+  color: white;
   padding: 10px 30px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  border-radius: 30px;
-  -webkit-box-shadow: 15px, 15px, 25px, 0px, #000000;
+  border-radius: 0px;
+  -webkit-box-shadow: 15px, 15px, 15px, 0px, #000000;
   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
   /* Firefox 3.5 - 3.6 */
-  box-shadow: 15px, 15px, 25px, 0px, #000000;
+  box-shadow: 15px, 15px, 15px, 0px, #000000;
   /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+ iOS 5 */
 }
 
 .btn-template:hover {
-  background-color: #000000;
-  border-color: #000000;
+  background-color: white;
+  color: orange;
+  border-color: white;
   -webkit-box-shadow: 15px, 15px, 25px, 0px, #ffffff;
   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
   /* Firefox 3.5 - 3.6 */

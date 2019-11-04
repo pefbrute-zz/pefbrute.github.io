@@ -22,7 +22,13 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
-    setTimeout(function() {
+    document.getElementById("MakeB").onclick = function() {makeBold()};
+    function makeBold() {
+        var txt = window.getSelection();
+        txt.collapseToEnd();
+    };
+
+    setTimeout(function () {
         var txt = window.getSelection();
         //Properties:
         // var anchNode = txt.anchorNode;
@@ -32,21 +38,24 @@ $(document).ready(function () {
         // var isCollapsed = txt.isCollapsed;
         // var rangeCount = txt.rangeCount;
         // var type = txt.type;
-        // window.alert("AnchorNode: " + anchNode
-        //     + "\n" + "AnchorOffset: " + anchOffset
-        //     + "\n" + "FocusNode: " + fcsNode
-        //     + "\n" + "FocusOffset: " + fcsOffset
-        //     + "\n" + "isCollapsed: " + isCollapsed
-        //     + "\n" + "rangeCount: " + rangeCount
-        //     + "\n" + "type: " + type
-        //             );
-        //;
+        // window.alert("AnchorNode: " + anchNode +
+        //     "\n" + "AnchorOffset: " + anchOffset +
+        //     "\n" + "FocusNode: " + fcsNode +
+        //     "\n" + "FocusOffset: " + fcsOffset +
+        //     "\n" + "isCollapsed: " + isCollapsed +
+        //     "\n" + "rangeCount: " + rangeCount +
+        //     "\n" + "type: " + type
+        // );
 
         //Methods:
         // txt.addRange(1,10);
-        txt.collapse(1);
+        // txt.collapse(1);
+        // txt.collapseToEnd();
+        // txt.collapseToStart();
+        // window.alert(txt.containsNode());
 
         //;
     }, 2000)
+
 
 });
