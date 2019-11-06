@@ -22,15 +22,15 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
-    document.getElementById("MakeB").onclick = function() {makeBold()};
-    function makeBold() {
-        var txt = window.getSelection();
-        txt.collapseToEnd();
-    };
+    // document.getElementById("MakeB").onclick = function() {makeBold()};
+    // function makeBold() {
+    //     var txt = window.getSelection();
+    //     txt.collapseToEnd();
+    // };
 
-    setTimeout(function () {
-        var txt = window.getSelection();
-        //Properties:
+    // setSelectionTimeout(function () {
+        // var txt = window.getSelection();
+        //Selection Properties:
         // var anchNode = txt.anchorNode;
         // var anchOffset = txt.anchorOffset;
         // var fcsNode = txt.focusNode;
@@ -47,7 +47,7 @@ $(document).ready(function () {
         //     "\n" + "type: " + type
         // );
 
-        //Methods:
+        //Selection Methods:
         // txt.addRange(1,10);
         // txt.collapse(1);
         // txt.collapseToEnd();
@@ -55,6 +55,10 @@ $(document).ready(function () {
         // window.alert(txt.containsNode());
 
         //;
+    // }, 2000)
+
+    setTimeout(function () {
+        window.alert("document.baseURI is " + '"' + document.baseURI + '"');
     }, 2000)
 
 
