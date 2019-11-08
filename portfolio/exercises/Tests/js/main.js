@@ -58,8 +58,22 @@ $(document).ready(function () {
     // }, 2000)
 
     setTimeout(function () {
-        window.alert("document.baseURI is " + '"' + document.baseURI + '"' +
-                    "\n" + "document.baseURIOBject " + '"' + document.baseURIOBject + '"');
+        var common_p = document.getElementById('common-p');
+        window.alert(
+                    "common_p.nodeName: " + '" ' + common_p.nodeName + ' "'
+                    + "\n" + "common_p.baseURI:  " + '" ' + common_p.baseURI + ' "'
+                    + "\n" + "common_p.childNodes: " + '" ' + common_p.childNodes + ' "'
+                    + "\n" + "common_p.firstChild: " + '" ' + common_p.firstChild + ' "'
+                    + "\n" + "common_p.nextSibling: " + '" ' + common_p.nextSibling + ' "'
+                    + "\n" + "common_p.lastChild: " + '" ' + common_p.lastChild + ' "'
+                    + "\n" + "common_p.isConnected: " + '" ' + common_p.isConnected + ' "'
+                    + "\n" + "common_p.nodeType: " + '" ' + common_p.nodeType + ' "'
+                    + "\n" + "common_p.nodeValue: " + '" ' + common_p.nodeValue + ' "'
+                    + "\n" + "common_p.ownerDocument: " + '" ' + common_p.ownerDocument + ' "'
+                    + "\n" + "common_p.nodeName: " + '" ' + common_p.nodeName + ' "');
+        console.log(common_p.childNodes);
+        console.log(common_p.firstChild);
+        console.log();
     }, 2000)
 
 
