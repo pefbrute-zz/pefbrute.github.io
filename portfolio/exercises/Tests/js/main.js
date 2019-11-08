@@ -59,7 +59,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         window.alert("document.baseURI is " + '"' + document.baseURI + '"' +
-                    "\n" + "document.baseUROBJ");
+                    "\n" + "document.baseURIOBject " + '"' + document.baseURIOBject + '"');
     }, 2000)
 
 
