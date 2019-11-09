@@ -62,15 +62,17 @@ $(document).ready(function () {
         window.alert(
                     "common_p.nodeName: " + '" ' + common_p.nodeName + ' "'
                     + "\n" + "common_p.baseURI:  " + '" ' + common_p.baseURI + ' "'
+                    + "\n" + "common_p.parentNode: " + '" ' + common_p.parentNode + ' "'
+                    + "\n" + "common_p.previousSibling: " + '" ' + common_p.previousSibling + ' "'
+                    + "\n" + "common_p.nextSibling: " + '" ' + common_p.nextSibling + ' "'
                     + "\n" + "common_p.childNodes: " + '" ' + common_p.childNodes + ' "'
                     + "\n" + "common_p.firstChild: " + '" ' + common_p.firstChild + ' "'
-                    + "\n" + "common_p.nextSibling: " + '" ' + common_p.nextSibling + ' "'
                     + "\n" + "common_p.lastChild: " + '" ' + common_p.lastChild + ' "'
                     + "\n" + "common_p.isConnected: " + '" ' + common_p.isConnected + ' "'
                     + "\n" + "common_p.nodeType: " + '" ' + common_p.nodeType + ' "'
                     + "\n" + "common_p.nodeValue: " + '" ' + common_p.nodeValue + ' "'
-                    + "\n" + "common_p.ownerDocument: " + '" ' + common_p.ownerDocument + ' "'
-                    + "\n" + "common_p.nodeName: " + '" ' + common_p.nodeName + ' "');
+                    + "\n" + "common_p.textContent: " + '" ' + common_p.textContent + ' "'
+        )
         console.log(common_p.childNodes);
         console.log(common_p.firstChild);
         console.log();
