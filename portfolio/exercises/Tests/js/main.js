@@ -57,26 +57,71 @@ $(document).ready(function () {
         //;
     // }, 2000)
 
-    setTimeout(function () {
-        var common_p = document.getElementById('common-p');
-        window.alert(
-                    "common_p.nodeName: " + '" ' + common_p.nodeName + ' "'
-                    + "\n" + "common_p.baseURI:  " + '" ' + common_p.baseURI + ' "'
-                    + "\n" + "common_p.parentNode: " + '" ' + common_p.parentNode + ' "'
-                    + "\n" + "common_p.previousSibling: " + '" ' + common_p.previousSibling + ' "'
-                    + "\n" + "common_p.nextSibling: " + '" ' + common_p.nextSibling + ' "'
-                    + "\n" + "common_p.childNodes: " + '" ' + common_p.childNodes + ' "'
-                    + "\n" + "common_p.firstChild: " + '" ' + common_p.firstChild + ' "'
-                    + "\n" + "common_p.lastChild: " + '" ' + common_p.lastChild + ' "'
-                    + "\n" + "common_p.isConnected: " + '" ' + common_p.isConnected + ' "'
-                    + "\n" + "common_p.nodeType: " + '" ' + common_p.nodeType + ' "'
-                    + "\n" + "common_p.nodeValue: " + '" ' + common_p.nodeValue + ' "'
-                    + "\n" + "common_p.textContent: " + '" ' + common_p.textContent + ' "'
-        )
-        console.log(common_p.childNodes);
-        console.log(common_p.firstChild);
-        console.log();
-    }, 2000)
+    // setTimeout(function () {
+    //     var common_p = document.getElementById('common-p');
+    //     window.alert(
+    //                 "common_p.nodeName: " + '" ' + common_p.nodeName + ' "'
+    //                 + "\n" + "common_p.baseURI:  " + '" ' + common_p.baseURI + ' "'
+    //                 + "\n" + "common_p.parentNode: " + '" ' + common_p.parentNode + ' "'
+    //                 + "\n" + "common_p.previousSibling: " + '" ' + common_p.previousSibling + ' "'
+    //                 + "\n" + "common_p.nextSibling: " + '" ' + common_p.nextSibling + ' "'
+    //                 + "\n" + "common_p.childNodes: " + '" ' + common_p.childNodes + ' "'
+    //                 + "\n" + "common_p.firstChild: " + '" ' + common_p.firstChild + ' "'
+    //                 + "\n" + "common_p.lastChild: " + '" ' + common_p.lastChild + ' "'
+    //                 + "\n" + "common_p.isConnected: " + '" ' + common_p.isConnected + ' "'
+    //                 + "\n" + "common_p.nodeType: " + '" ' + common_p.nodeType + ' "'
+    //                 + "\n" + "common_p.nodeValue: " + '" ' + common_p.nodeValue + ' "'
+    //                 + "\n" + "common_p.textContent: " + '" ' + common_p.textContent + ' "'
+    //     )
+    //     console.log(common_p.childNodes);
+    //     console.log(common_p.firstChild);
+    //     console.log();
+    // }, 2000)
+
+    function makeBold() {
+        var txt = window.getSelection();
+        txt.deleteFromDocument();
+    };
+
+    document.getElementById("MakeB").onclick = function () {
+        makeBold()
+    };
+
+    $('.editable').each(function () {
+        this.contentEditable = true;
+    });
+
+    window.onload = function () {
+        var edit = document.getElementById("editable");
+        edit.contentEditable = true;
+        setTimeout(function () {
+            var text = window.getSelection().toString();
+            var boldText = text.bold();
+            // const activeTxtarea = document.activeElement;
+            // var startPos = activeTxtarea.selectionStart;
+            // var endPos = activeTxtarea.selectionEnd;
+            // activeTxtarea.slice(startPos,endPos);
+            function replaceSelectedText(text) {
+                var txtArea = document.getElementById("editable");
+                if (txtArea.selectionStart != undefined) {
+                    var startPos = txtArea.selectionStart;
+                    var endPos = txtArea.selectionEnd;
+                    selectedText = txtArea.value.substring(startPos, endPos);
+                    txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
+                }
+            }
+            replaceSelectedText(boldText);
+            // window.alert(boldText);
+        }, 5000);
+
+    };
+
+        setTimeout(function () {
+            // var p = document.getElementsByTagName("p");
+            var sel = window.getSelection();
+            var txt_node = document.getElementById("p-editable");
+            sel.extend(txt_node);
+        }, 1000)
 
 
 });

@@ -21,34 +21,43 @@ $(document).ready(function () {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     });
     /*AOS END*/
-    
-    // $('.editable').each(function () {
-    //     this.contentEditable = true;
-    // });
-    
+
+    function makeBold() {
+        var txt = window.getSelection();
+        txt.deleteFromDocument();
+    };
+
+    document.getElementById("MakeB").onclick = function () {
+        makeBold()
+    };
+
+    $('.editable').each(function () {
+        this.contentEditable = true;
+    });
+
     window.onload = function () {
-    var edit = document.getElementById("editable");
-    edit.contentEditable = true;
-    setTimeout(function () {
-        var text = window.getSelection().toString();
-        var boldText = text.bold();
-        // const activeTxtarea = document.activeElement;
-        // var startPos = activeTxtarea.selectionStart;
-        // var endPos = activeTxtarea.selectionEnd;
-        // activeTxtarea.slice(startPos,endPos);
-        function replaceSelectedText(text) {
-            var txtArea = document.getElementById("editable");
-            if (txtArea.selectionStart != undefined) {
-                var startPos = txtArea.selectionStart;
-                var endPos = txtArea.selectionEnd;
-                selectedText = txtArea.value.substring(startPos, endPos);
-                txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
+        var edit = document.getElementById("editable");
+        edit.contentEditable = true;
+        setTimeout(function () {
+            var text = window.getSelection().toString();
+            var boldText = text.bold();
+            // const activeTxtarea = document.activeElement;
+            // var startPos = activeTxtarea.selectionStart;
+            // var endPos = activeTxtarea.selectionEnd;
+            // activeTxtarea.slice(startPos,endPos);
+            function replaceSelectedText(text) {
+                var txtArea = document.getElementById("editable");
+                if (txtArea.selectionStart != undefined) {
+                    var startPos = txtArea.selectionStart;
+                    var endPos = txtArea.selectionEnd;
+                    selectedText = txtArea.value.substring(startPos, endPos);
+                    txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
+                }
             }
-        }
-        replaceSelectedText(boldText);
-        // window.alert(boldText);
-    }, 5000);
+            replaceSelectedText(boldText,0);
+            // window.alert(boldText);
+        }, 5000);
 
     };
-   
+
 });
