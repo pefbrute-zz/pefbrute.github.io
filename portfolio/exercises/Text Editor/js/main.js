@@ -45,17 +45,17 @@ $(document).ready(function () {
             // var startPos = activeTxtarea.selectionStart;
             // var endPos = activeTxtarea.selectionEnd;
             // activeTxtarea.slice(startPos,endPos);
-            function replaceSelectedText(text) {
-                var txtArea = document.getElementById("editable");
-                if (txtArea.selectionStart != undefined) {
-                    var startPos = txtArea.selectionStart;
-                    var endPos = txtArea.selectionEnd;
-                    selectedText = txtArea.value.substring(startPos, endPos);
-                    txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
-                }
-            }
-            replaceSelectedText(boldText,0);
-            // window.alert(boldText);
+            // function replaceSelectedText(text) {
+            //     var txtArea = document.getElementById("editable");
+            //     if (txtArea.selectionStart != undefined) {
+            //         var startPos = txtArea.selectionStart;
+            //         var endPos = txtArea.selectionEnd;
+            //         selectedText = txtArea.value.substring(startPos, endPos);
+            //         txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
+            //     }
+            // }
+            // replaceSelectedText(boldText,0);
+            window.alert(boldText);
         }, 5000);
 
     };

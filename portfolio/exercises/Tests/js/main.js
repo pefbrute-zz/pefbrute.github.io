@@ -28,33 +28,34 @@ $(document).ready(function () {
     //     txt.collapseToEnd();
     // };
 
-    // setSelectionTimeout(function () {
-        // var txt = window.getSelection();
-        //Selection Properties:
-        // var anchNode = txt.anchorNode;
-        // var anchOffset = txt.anchorOffset;
-        // var fcsNode = txt.focusNode;
-        // var fcsOffset = txt.focusOffset;
-        // var isCollapsed = txt.isCollapsed;
-        // var rangeCount = txt.rangeCount;
-        // var type = txt.type;
-        // window.alert("AnchorNode: " + anchNode +
-        //     "\n" + "AnchorOffset: " + anchOffset +
-        //     "\n" + "FocusNode: " + fcsNode +
-        //     "\n" + "FocusOffset: " + fcsOffset +
-        //     "\n" + "isCollapsed: " + isCollapsed +
-        //     "\n" + "rangeCount: " + rangeCount +
-        //     "\n" + "type: " + type
-        // );
+    setTimeout(function () {
+        var txt = window.getSelection();
+        var anchNode = txt.anchorNode;
+        var anchOffset = txt.anchorOffset;
+        var fcsNode = txt.focusNode;
+        var fcsOffset = txt.focusOffset;
+        var isCollapsed = txt.isCollapsed;
+        var rangeCount = txt.rangeCount;
+        var type = txt.type;
+        window.alert(
+            "AnchorNode: " + anchNode +
+            "\n" + "AnchorOffset: " + anchOffset +
+            "\n" + "FocusNode: " + fcsNode +
+            "\n" + "FocusOffset: " + fcsOffset +
+            "\n" + "isCollapsed: " + isCollapsed +
+            "\n" + "rangeCount: " + rangeCount +
+            "\n" + "type: " + type
+        );
+    }, 2000);
 
-        //Selection Methods:
-        // txt.addRange(1,10);
-        // txt.collapse(1);
-        // txt.collapseToEnd();
-        // txt.collapseToStart();
-        // window.alert(txt.containsNode());
+    //Selection Methods:
+    // txt.addRange(1,10);
+    // txt.collapse(1);
+    // txt.collapseToEnd();
+    // txt.collapseToStart();
+    // window.alert(txt.containsNode());
 
-        //;
+    //;
     // }, 2000)
 
     // setTimeout(function () {
@@ -116,12 +117,12 @@ $(document).ready(function () {
 
     };
 
-        setTimeout(function () {
-            // var p = document.getElementsByTagName("p");
-            var sel = window.getSelection();
-            var txt_node = document.getElementById("p-editable");
-            sel.extend(txt_node);
-        }, 1000)
+    setTimeout(function () {
+        // var p = document.getElementsByTagName("p");
+        var sel = window.getSelection();
+        var txt_node = document.getElementById("p-editable");
+        alert(sel.anchorOffset,sel.focusOffset);
+    }, 1000)
 
 
 });
