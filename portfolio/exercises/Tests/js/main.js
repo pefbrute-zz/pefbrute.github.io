@@ -92,36 +92,33 @@ $(document).ready(function () {
         this.contentEditable = true;
     });
 
-    window.onload = function () {
-        var edit = document.getElementById("editable");
-        edit.contentEditable = true;
-        setTimeout(function () {
-            var text = window.getSelection().toString();
-            var boldText = text.bold();
-            // const activeTxtarea = document.activeElement;
-            // var startPos = activeTxtarea.selectionStart;
-            // var endPos = activeTxtarea.selectionEnd;
-            // activeTxtarea.slice(startPos,endPos);
-            function replaceSelectedText(text) {
-                var txtArea = document.getElementById("editable");
-                if (txtArea.selectionStart != undefined) {
-                    var startPos = txtArea.selectionStart;
-                    var endPos = txtArea.selectionEnd;
-                    selectedText = txtArea.value.substring(startPos, endPos);
-                    txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
-                }
+    var edit = document.getElementById("editable");
+    edit.contentEditable = true;
+    setTimeout(function () {
+        var text = window.getSelection().toString();
+        var boldText = text.bold();
+        // const activeTxtarea = document.activeElement;
+        // var startPos = activeTxtarea.selectionStart;
+        // var endPos = activeTxtarea.selectionEnd;
+        // activeTxtarea.slice(startPos,endPos);
+        function replaceSelectedText(text) {
+            var txtArea = document.getElementById("editable");
+            if (txtArea.selectionStart != undefined) {
+                var startPos = txtArea.selectionStart;
+                var endPos = txtArea.selectionEnd;
+                selectedText = txtArea.value.substring(startPos, endPos);
+                txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
             }
-            replaceSelectedText(boldText);
-            // window.alert(boldText);
-        }, 5000);
-
-    };
+        }
+        replaceSelectedText(boldText);
+        // window.alert(boldText);
+    }, 5000);
 
     setTimeout(function () {
         // var p = document.getElementsByTagName("p");
         var sel = window.getSelection();
         var txt_node = document.getElementById("p-editable");
-        alert(sel.anchorOffset,sel.focusOffset);
+        alert(sel.anchorOffset, sel.focusOffset);
     }, 1000)
 
 
