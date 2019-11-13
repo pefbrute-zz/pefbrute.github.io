@@ -112,7 +112,7 @@ $(document).ready(function () {
         }
         replaceSelectedText(boldText);
         // window.alert(boldText);
-    }, 5000);
+    }, 5000)
 
     setTimeout(function () {
         // var p = document.getElementsByTagName("p");
