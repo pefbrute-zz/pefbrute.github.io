@@ -22,22 +22,32 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
+
+    function selectAllText(){
+        sel.removeAllRanges();
+        var range = document.createRange();
+        range.setStart(txtInput, 0);
+        range.setEnd(txtInput, 1);
+        sel.addRange(range);
+    }
+
     function makeBold() {
         var txtInput = document.getElementById("editable");
         var sel = window.getSelection();
         var startPos = sel.anchorOffset;
-        
         var txt = sel.toString();
-        txt.bold();
-        // sel.deleteFromDocument();
+        var boldText = txt.bold();
+        sel.deleteFromDocument();
 
-        var content = txtInput.textContent;
-        var contentLength = content.length;
+        sel.removeAllRanges();
         var range = document.createRange();
         range.setStart(txtInput,0);
         range.setEnd(txtInput, 1);
-        sel = sel.removeAllRanges();
-        my_string = sel.addRange(range);
+        sel.addRange(range);
+        var my_string = window.getSelection().toString();
+        window.getSelection().getRangeAt(0).deleteContents();
+        boldText = my_string.substr(0, startPos) + boldText + my_string.substr(startPos);
+        txtInput.innerHTML = boldText;
 
 
 
