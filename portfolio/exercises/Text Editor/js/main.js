@@ -23,64 +23,72 @@ $(document).ready(function () {
     /*AOS END*/
 
 
-    function selectAllText(){
-        sel.removeAllRanges();
-        var range = document.createRange();
-        range.setStart(txtInput, 0);
-        range.setEnd(txtInput, 1);
-        sel.addRange(range);
-    }
-
-    function makeBold() {
-        var txtInput = document.getElementById("editable");
-        var sel = window.getSelection();
-        var startPos = sel.anchorOffset;
-        var txt = sel.toString();
-        var boldText = txt.bold();
-        sel.deleteFromDocument();
-
-        sel.removeAllRanges();
-        var range = document.createRange();
-        range.setStart(txtInput,0);
-        range.setEnd(txtInput, 1);
-        sel.addRange(range);
-        var my_string = window.getSelection().toString();
-        window.getSelection().getRangeAt(0).deleteContents();
-        boldText = my_string.substr(0, startPos) + boldText + my_string.substr(startPos);
-        txtInput.innerHTML = boldText;
-
-
-
-    };
-
-    document.getElementById("MakeB").onclick = function () {
-        makeBold()
-    };
+    // function selectAllText(){
+    //     sel.removeAllRanges();
+    //     var range = document.createRange();
+    //     range.setStart(txtInput, 0);
+    //     range.setEnd(txtInput, 1);
+    //     sel.addRange(range);
+    // }
 
     $('.editable').each(function () {
         this.contentEditable = true;
     });
 
-    // var edit = document.getElementById("editable");
-    // edit.contentEditable = true;
-    // setTimeout(function () {
-    //     var text = window.getSelection().toString();
-    //     var boldText = text.bold();
-    //     // const activeTxtarea = document.activeElement;
-    //     // var startPos = activeTxtarea.selectionStart;
-    //     // var endPos = activeTxtarea.selectionEnd;
-    //     // activeTxtarea.slice(startPos,endPos);
-    //     // function replaceSelectedText(text) {
-    //     //     var txtArea = document.getElementById("editable");
-    //     //     if (txtArea.selectionStart != undefined) {
-    //     //         var startPos = txtArea.selectionStart;
-    //     //         var endPos = txtArea.selectionEnd;
-    //     //         selectedText = txtArea.value.substring(startPos, endPos);
-    //     //         txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
-    //     //     }
-    //     // }
-    //     // replaceSelectedText(boldText,0);
-    //     window.alert(boldText);
-    // }, 5000);
+    // function makeBold() {
+    //     let
+    //         txtInput,
+    //         sel,
+    //         startPos,
+    //         endPos,
+    //         txt,
+    //         boldTxt,
+    //         range,
+    //         wholeTxt,
+    //         txtWithBold;
+    //     txtInput = document.getElementById("editable-p");
+    //     sel = window.getSelection();
+    //     if (sel.anchorOffset != sel.focusOffset) {
+    //         console.log(sel.anchorOffset, sel.focusOffset);
+    //         txt = sel.toString();
+    //         boldTxt = txt.bold();
+    //         startPos = sel.anchorOffset;
+    //         endPos = sel.focusOffset;
+    //         if (startPos > endPos) {
+    //             startPos = endPos;
+    //         }
+    //         console.log(sel.anchorOffset, sel.focusOffset);
+    //         sel.deleteFromDocument();
+    //         sel.removeAllRanges();
+    //         range = document.createRange();
+    //         range.setStart(txtInput, 0);
+    //         range.setEnd(txtInput, 1);
+    //         sel.addRange(range);
+    //         wholeTxt = sel.toString();
+    //         console.log(
+    //             // sel, ' ',
+    //             txt, ' ',
+    //             boldTxt, ' ',
+    //             startPos, ' ',
+    //             endPos
+    //         )
+    //         // wholeTxt.slice(0, startPos) + boldTxt + wholeTxt.slice(startPos + Math.abs(0));
+    //         txtWithBold = wholeTxt.substr(0, startPos) + boldTxt + wholeTxt.substr(startPos);
+    //         // window.getSelection().getRangeAt(0).deleteContents();
+
+    //         txtInput.innerHTML = '';
+    //         txtInput.innerHTML = txtWithBold;
+    //     }
+    //     else{
+    //         window.alert('You selected nothing — select something');
+    //     }
+
+    // };
+
+    document.getElementById("MakeB").onclick = function () {
+        // makeBold();
+        document.execCommand('Bold');
+    };
+
 
 });

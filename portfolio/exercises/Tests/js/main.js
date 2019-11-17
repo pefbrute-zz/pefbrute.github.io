@@ -22,104 +22,82 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
-    // document.getElementById("MakeB").onclick = function() {makeBold()};
-    // function makeBold() {
-    //     var txt = window.getSelection();
-    //     txt.collapseToEnd();
-    // };
-
-    setTimeout(function () {
-        var txt = window.getSelection();
-        var anchNode = txt.anchorNode;
-        var anchOffset = txt.anchorOffset;
-        var fcsNode = txt.focusNode;
-        var fcsOffset = txt.focusOffset;
-        var isCollapsed = txt.isCollapsed;
-        var rangeCount = txt.rangeCount;
-        var type = txt.type;
-        window.alert(
-            "AnchorNode: " + anchNode +
-            "\n" + "AnchorOffset: " + anchOffset +
-            "\n" + "FocusNode: " + fcsNode +
-            "\n" + "FocusOffset: " + fcsOffset +
-            "\n" + "isCollapsed: " + isCollapsed +
-            "\n" + "rangeCount: " + rangeCount +
-            "\n" + "type: " + type
-        );
-    }, 2000);
-
-    //Selection Methods:
-    // txt.addRange(1,10);
-    // txt.collapse(1);
-    // txt.collapseToEnd();
-    // txt.collapseToStart();
-    // window.alert(txt.containsNode());
-
-    //;
-    // }, 2000)
-
-    // setTimeout(function () {
-    //     var common_p = document.getElementById('common-p');
-    //     window.alert(
-    //                 "common_p.nodeName: " + '" ' + common_p.nodeName + ' "'
-    //                 + "\n" + "common_p.baseURI:  " + '" ' + common_p.baseURI + ' "'
-    //                 + "\n" + "common_p.parentNode: " + '" ' + common_p.parentNode + ' "'
-    //                 + "\n" + "common_p.previousSibling: " + '" ' + common_p.previousSibling + ' "'
-    //                 + "\n" + "common_p.nextSibling: " + '" ' + common_p.nextSibling + ' "'
-    //                 + "\n" + "common_p.childNodes: " + '" ' + common_p.childNodes + ' "'
-    //                 + "\n" + "common_p.firstChild: " + '" ' + common_p.firstChild + ' "'
-    //                 + "\n" + "common_p.lastChild: " + '" ' + common_p.lastChild + ' "'
-    //                 + "\n" + "common_p.isConnected: " + '" ' + common_p.isConnected + ' "'
-    //                 + "\n" + "common_p.nodeType: " + '" ' + common_p.nodeType + ' "'
-    //                 + "\n" + "common_p.nodeValue: " + '" ' + common_p.nodeValue + ' "'
-    //                 + "\n" + "common_p.textContent: " + '" ' + common_p.textContent + ' "'
-    //     )
-    //     console.log(common_p.childNodes);
-    //     console.log(common_p.firstChild);
-    //     console.log();
-    // }, 2000)
-
-    function makeBold() {
-        var txt = window.getSelection();
-        txt.deleteFromDocument();
-    };
-
-    document.getElementById("MakeB").onclick = function () {
-        makeBold()
-    };
-
     $('.editable').each(function () {
         this.contentEditable = true;
     });
 
-    var edit = document.getElementById("editable");
-    edit.contentEditable = true;
-    setTimeout(function () {
-        var text = window.getSelection().toString();
-        var boldText = text.bold();
-        // const activeTxtarea = document.activeElement;
-        // var startPos = activeTxtarea.selectionStart;
-        // var endPos = activeTxtarea.selectionEnd;
-        // activeTxtarea.slice(startPos,endPos);
-        function replaceSelectedText(text) {
-            var txtArea = document.getElementById("editable");
-            if (txtArea.selectionStart != undefined) {
-                var startPos = txtArea.selectionStart;
-                var endPos = txtArea.selectionEnd;
-                selectedText = txtArea.value.substring(startPos, endPos);
-                txtArea.value = txtArea.value.slice(0, startPos) + text + txtArea.value.slice(endPos);
+    function makeBold() {
+        let
+            txtInput,
+            sel,
+            startPos,
+            endPos,
+            txt,
+            boldTxt,
+            range,
+            wholeTxt,
+            txtWithBold;
+        txtInput = document.getElementById("editable-p");
+        sel = window.getSelection();
+        if (sel.anchorOffset != sel.focusOffset) {
+            console.log(sel.anchorOffset, sel.focusOffset);
+            txt = sel.toString();
+            boldTxt = txt.bold();
+            startPos = sel.anchorOffset;
+            endPos = sel.focusOffset;
+            if (startPos > endPos) {
+                startPos = endPos;
             }
-        }
-        replaceSelectedText(boldText);
-        // window.alert(boldText);
-    }, 5000)
+            console.log(sel.anchorOffset, sel.focusOffset);
+            sel.deleteFromDocument();
+            sel.removeAllRanges();
+            range = document.createRange();
+            range.setStart(txtInput, 0);
+            range.setEnd(txtInput, 1);
+            sel.addRange(range);
+            wholeTxt = sel.toString();
+            console.log(
+                // sel, ' ',
+                txt, ' ',
+                boldTxt, ' ',
+                startPos, ' ',
+                endPos
+            )
+            // wholeTxt.slice(0, startPos) + boldTxt + wholeTxt.slice(startPos + Math.abs(0));
+            txtWithBold = wholeTxt.substr(0, startPos) + boldTxt + wholeTxt.substr(startPos);
+            // window.getSelection().getRangeAt(0).deleteContents();
 
-    setTimeout(function () {
-        // var p = document.getElementsByTagName("p");
-        var sel = window.getSelection();
-        var txt_node = document.getElementById("p-editable");
-        alert(sel.anchorOffset, sel.focusOffset);
-    }, 1000)
+            txtInput.innerHTML = '';
+            txtInput.innerHTML = txtWithBold;
+        } else {
+            window.alert('You selected nothing — select something');
+        }
+
+    };
+
+    function makeBold(tag){
+        document.execCommand(tag);
+    }
+    function msieversion() {
+
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE ");
+
+        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, return version number
+        {
+            alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
+        } else // If another browser, return 0
+        {
+            alert('otherbrowser');
+            return false;
+        }
+    };
+    if (msieversion() == 0){
+        document.getElementById("MakeB").onclick = makeBold('B');
+    }
+    else{
+        document.getElementById("MakeB").onclick = makeBold('Strong');
+    }
 
 
 });
