@@ -1,7 +1,7 @@
 /* --- ↓ Button-Styles-starts ↓ --- */
 
 .btn-template {
-    @include button;
+    @include button(#ff4500,#000,160px,20px);
 }
 
 /* --- ↑ Button-Styles---ends ↑ --- */

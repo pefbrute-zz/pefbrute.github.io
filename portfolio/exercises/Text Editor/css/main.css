@@ -1,31 +1,33 @@
 @charset "UTF-8";
 /* --- ↓ Button-Styles-starts ↓ --- */
 .btn-template {
-  line-height: 1px;
+  height: 20px;
+  width: 160px;
+  line-height: 0px;
   font-size: 1rem;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   text-transform: uppercase;
-  background-color: #ffffff;
-  border-color: #ffffff;
-  color: #000000;
-  padding: 10px 30px;
+  background-color: #ff4500;
+  border-color: #ff4500;
+  color: white;
+  padding: 10px 50px auto auto;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  border-radius: 30px;
-  -webkit-box-shadow: 15px, 15px, 25px, 0px, #000000;
+  border-radius: 0px;
+  -webkit-box-shadow: 15px, 15px, 250px, 0px, #000000;
   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
   /* Firefox 3.5 - 3.6 */
-  box-shadow: 15px, 15px, 25px, 0px, #000000;
+  box-shadow: 15px, 15px, 250px, 0px, #000000;
   /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+ iOS 5 */
 }
 
 .btn-template:hover {
-  background-color: #000000;
-  border-color: #000000;
-  -webkit-box-shadow: 15px, 15px, 25px, 0px, #ffffff;
+  background-color: #000;
+  border-color: #000;
+  -webkit-box-shadow: 1px, 1px, 2px, 0px, #000;
   /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+*/
   /* Firefox 3.5 - 3.6 */
-  box-shadow: 15px, 15px, 25px, 0px, #ffffff;
+  box-shadow: 1px, 1px, 2px, 0px, #000;
   /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+ iOS 5 */
 }
 
@@ -40,7 +42,7 @@ html,
 body {
   margin: 0;
   font-size: 100%;
-  background: #fff;
+  background-image: url("../../img/bg/bg.png");
   font-family: "", sans-serif;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -167,7 +169,14 @@ li {
 /* --- ↑ Lists---ends ↑ --- */
 .editable {
   border: 2px black solid;
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .editable {
+    width: 100px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
