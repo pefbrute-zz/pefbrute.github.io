@@ -49,15 +49,15 @@
 	<link rel="stylesheet" href="lib/timepicker/css/jquery.timepicker.min.css">
 	<link rel="stylesheet" href="lib/venobox/css/venobox.css">
 	<!-- ↑ Libs---ends ↑ -->
-	
+
 	<!-- ↓ Fonts-starts ↓ -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 	<!-- ↑ Fonts---ends ↑ -->
-	
+
 	<!-- ↓ Icon-starts ↓ -->
 	<link href="icon.png" rel="icon">
 	<!-- ↑ Icon---ends ↑ -->
-	
+
 </head>
 
 <body>
@@ -65,9 +65,34 @@
 		<div class="editable" class="text-left" id="editable">
 			Hello!
 		</div>
-		<button class="btn-template mt-2" id="MakeB">Make text Bold</button>
+		<button class="btn-template mt-2" id="MakeBold">Bold</button>
+		<button class="btn-template mt-2" id="MakeEmphasized">Emphasized</button>
+		<button class="btn-template mt-2" id="MakeCode">Code</button>
+		<button class="btn-template mt-2" id="MakeParagraph">Paragraph</button>
+		<button class="btn-template mt-2" id="MakeSub">Subscript</button>
+		<button class="btn-template mt-2" id="MakeSup">Superscript</button>
+		<select name="" id="headings">
+			<option id="MakeH1" value="<h1>">
+				<button class="btn-template mt-2" id="MakeH1">H1</button>
+			</option>
+			<option id="MakeH2" value="">
+				<button class="btn-template mt-2" id="MakeH2">H2</button>
+			</option>
+			<option id="MakeH3" value="">
+				<button class="btn-template mt-2" id="MakeH3">H3</button>
+			</option>
+			<option id="MakeH4" value="">
+				<button class="btn-template mt-2" id="MakeH4">H4</button>
+			</option>
+			<option id="MakeH5" value="">
+				<button class="btn-template mt-2" id="MakeH5">H5</button>
+			</option>
+			<option id="MakeH6" value="">
+				<button class="btn-template mt-2" id="MakeH6">H6</button>
+			</option>
+		</select>
 	</div>
-	
+
 	<!-- ↓ Scripts-starts ↓ -->
 	<!-- ↓ General_Scripts-starts  ↓ -->
 	<script src="lib/jquery/jquery/js/jquery-3.4.1.min.js"></script>
@@ -77,8 +102,8 @@
 	<script src="lib/bootstrap/js/popper.min.js"></script>
 	<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- ↑ General_Scripts---ends ↑ -->
-	
-	
+
+
 	<!-- ↓ Libs-starts ↓  -->
 	<script src="lib/animateNumber/js/jquery.animateNumber.min.js"></script>
 	<script src="lib/aos/js/aos.js"></script>
@@ -122,7 +147,7 @@
 	<script src="lib/venobox/js/venobox.min.js"></script>
 	<script src="lib/waypoints/js/jquery.waypoints.min.js"></script>
 	<!-- ↑ Libs---ends ↑ -->
-	
+
 	<!-- ↓ Main_Scripts ↓ -->
 	<script src="js/main.js"></script>
 	<!-- ↑ Main_Scripts ↑ -->
