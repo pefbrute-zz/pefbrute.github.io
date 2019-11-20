@@ -109,27 +109,11 @@ $(document).ready(function () {
     document.getElementById("MakeSup").onclick = function () {
         changeText('<sup>', '</sup>');
     };
-    var headings = document.getElementById('headings');
-    headings.addEventListener('change', function(){
-        changeText();
-    })
-    document.getElementById("MakeH1").onclick = function () {
-        changeText('<h1>', '</h1>');
+    document.getElementById("MakeSup").onclick = function () {
+        changeText('<sup>', '</sup>');
     };
-    document.getElementById("MakeH2").onclick = function () {
-        changeText('<h2>', '</h2>');
-    };
-    document.getElementById("MakeH3").onclick = function () {
-        changeText('<h3>', '</h3>');
-    };
-    document.getElementById("MakeH4").onclick = function () {
-        changeText('<h4>', '</h4>');
-    };
-    document.getElementById("MakeH5").onclick = function () {
-        changeText('<h5>', '</h5>');
-    };
-    document.getElementById("MakeH6").onclick = function () {
-        changeText('<h6>', '</h6>');
+    document.getElementById("MakeSup").onclick = function () {
+        changeText('<sup>', '</sup>');
     };
 
 

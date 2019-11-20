@@ -1,10 +1,14 @@
 .editable {
     border: 2px black solid;
-    width: 100%;
     height: 100px;
-    background-color:#fff;
+    background-color: #fff;
+    // width: ;
 
-    @include media-breakpoint-down($md) {
-        width: 100px;
+    // @include media-breakpoint-down($md) {
+    //     width: 100px;
+    // }
+
+    .headings {
+        height: 20px;
     }
 }

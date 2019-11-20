@@ -95,18 +95,19 @@
 
 // --- ↓ Button-starts ↓ ---
 
-@mixin button($btn-color, $btn-color-hover, $width, $height) {
+@mixin button($btn-text-color, $btn-hover-text-color,$btn-color, $btn-color-hover, $width, $height) {
     height: $height;
     width: $width;
     line-height: 0px;
     font-size: $font-size-base;
     letter-spacing: 0px;
-    text-transform: uppercase;
 
     background-color: $btn-color;
     border-color: $btn-color;
-    color: white;
+    color: $btn-text-color;
     padding: 10px 50px auto auto;
+
+    word-wrap: break-word;
 
     @include transition (.2s);
     @include border-radius(0px);
@@ -115,6 +116,7 @@
     &:hover {
         background-color: $btn-color-hover;
         border-color: $btn-color-hover;
+        color: $btn-hover-text-color;
 
         @include box-shadow(1px, 1px, 2px, 0px, #000);
     }

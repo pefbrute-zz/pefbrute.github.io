@@ -61,36 +61,46 @@
 </head>
 
 <body>
-	<div id="text-editor" class="mx-5 my-5">
-		<div class="editable" class="text-left" id="editable">
-			Hello!
+	<div class="container mx-5 my-5" id="text-editor">
+		<div class="row">
+			<div class="editable col-12" id="editable">
+				Hello!
+			</div>
+			<div class="container">
+				<div class="row">
+					<button class="btn-template col-1" id="MakeBold">Bold</button>
+					<button class="btn-template col-2" id="MakeEmphasized">Emphasized</button>
+					<button class="btn-template col-1" id="MakeCode">Code</button>
+					<button class="btn-template col-2" id="MakeParagraph">Paragraph</button>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<button class="btn-template col-2" id="MakeSub">Subscript</button>
+					<button class="btn-template col-2" id="MakeSup">Superscript</button>
+					<select class="headings col-2" name="" id="headings">
+						<option id="MakeH1" value="<h1>">
+							<button class="btn-template mt-2" id="MakeH1">H1</button>
+						</option>
+						<option id="MakeH2" value="">
+							<button class="btn-template mt-2" id="MakeH2">H2</button>
+						</option>
+						<option id="MakeH3" value="">
+							<button class="btn-template mt-2" id="MakeH3">H3</button>
+						</option>
+						<option id="MakeH4" value="">
+							<button class="btn-template mt-2" id="MakeH4">H4</button>
+						</option>
+						<option id="MakeH5" value="">
+							<button class="btn-template mt-2" id="MakeH5">H5</button>
+						</option>
+						<option id="MakeH6" value="">
+							<button class="btn-template mt-2" id="MakeH6">H6</button>
+						</option>
+					</select>
+				</div>
+			</div>
 		</div>
-		<button class="btn-template mt-2" id="MakeBold">Bold</button>
-		<button class="btn-template mt-2" id="MakeEmphasized">Emphasized</button>
-		<button class="btn-template mt-2" id="MakeCode">Code</button>
-		<button class="btn-template mt-2" id="MakeParagraph">Paragraph</button>
-		<button class="btn-template mt-2" id="MakeSub">Subscript</button>
-		<button class="btn-template mt-2" id="MakeSup">Superscript</button>
-		<select name="" id="headings">
-			<option id="MakeH1" value="<h1>">
-				<button class="btn-template mt-2" id="MakeH1">H1</button>
-			</option>
-			<option id="MakeH2" value="">
-				<button class="btn-template mt-2" id="MakeH2">H2</button>
-			</option>
-			<option id="MakeH3" value="">
-				<button class="btn-template mt-2" id="MakeH3">H3</button>
-			</option>
-			<option id="MakeH4" value="">
-				<button class="btn-template mt-2" id="MakeH4">H4</button>
-			</option>
-			<option id="MakeH5" value="">
-				<button class="btn-template mt-2" id="MakeH5">H5</button>
-			</option>
-			<option id="MakeH6" value="">
-				<button class="btn-template mt-2" id="MakeH6">H6</button>
-			</option>
-		</select>
 	</div>
 
 	<!-- ↓ Scripts-starts ↓ -->
