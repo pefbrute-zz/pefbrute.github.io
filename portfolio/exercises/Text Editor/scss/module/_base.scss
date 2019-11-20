@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-size: 100%;
     // background: #fff;
-    background-image: url('../../img/bg/bg.png');
+    background-image: url('/img/bg/bg.png');
     font-family: "", sans-serif;
 
     @include transition(.2s)
