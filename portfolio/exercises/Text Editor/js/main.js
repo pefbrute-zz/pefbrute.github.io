@@ -109,11 +109,20 @@ $(document).ready(function () {
     document.getElementById("MakeSup").onclick = function () {
         changeText('<sup>', '</sup>');
     };
-    document.getElementById("MakeSup").onclick = function () {
-        changeText('<sup>', '</sup>');
+    document.getElementById("MakeTime").onclick = function () {
+        changeText('<time>', '</time>');
     };
-    document.getElementById("MakeSup").onclick = function () {
-        changeText('<sup>', '</sup>');
+    document.getElementById("MakeDel").onclick = function () {
+        changeText('<del>', '</del>');
+    };
+    document.getElementById("MakeCite").onclick = function () {
+        changeText('<cite>', '</cite>');
+    };
+    document.getElementById("MakeAdress").onclick = function () {
+        changeText('<adress>', '</adress>');
+    };
+    document.getElementById("MakeWBR").onclick = function () {
+        changeText('<wbr>', '</wbr>');
     };
 
 

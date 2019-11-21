@@ -2,7 +2,7 @@
 /* --- ↓ Button-Styles-starts ↓ --- */
 .btn-template {
   height: 20px;
-  width: 130px;
+  width: auto;
   line-height: 0px;
   font-size: 1rem;
   letter-spacing: 0px;
@@ -170,7 +170,7 @@ li {
 /* --- ↑ Lists---ends ↑ --- */
 .editable {
   border: 2px black solid;
-  height: 100px;
+  height: auto;
   background-color: #fff;
 }
 
