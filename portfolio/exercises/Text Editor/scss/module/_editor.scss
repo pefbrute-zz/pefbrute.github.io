@@ -3,11 +3,19 @@
     height: auto;
     background-color: #fff;
 
-    // @include media-breakpoint-down($md) {
-    //     width: 100px;
+    // .headings {
+    //     height: 2px;
     // }
+}
 
-    .headings {
-        height: 20px;
+#text-editor {
+
+    .editable,
+    .btn-template {
+        @include media-breakpoint-down($md) {
+            font-size: 7px;
+        }
+        // End it => @media (max-width:)
+
     }
 }

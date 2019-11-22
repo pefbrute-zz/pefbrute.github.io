@@ -174,7 +174,10 @@ li {
   background-color: #fff;
 }
 
-.editable .headings {
-  height: 20px;
+@media (max-width: 768px) {
+  #text-editor .editable,
+  #text-editor .btn-template {
+    font-size: 7px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
