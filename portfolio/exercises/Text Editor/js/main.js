@@ -118,12 +118,26 @@ $(document).ready(function () {
     document.getElementById("MakeCite").onclick = function () {
         changeText('<cite>', '</cite>');
     };
-    document.getElementById("MakeAdress").onclick = function () {
-        changeText('<adress>', '</adress>');
+    document.getElementById("MakeAddress").onclick = function () {
+        changeText('<address>', '</address>');
     };
     document.getElementById("MakeWBR").onclick = function () {
         changeText('<wbr>', '</wbr>');
     };
-
+    document.getElementById("MakeRuby").onclick = function () {
+        changeText('<ruby>', '</ruby>');
+    };
+    document.getElementById("MakeRt").onclick = function () {
+        changeText('<rt>', '</rt>');
+    };
+    document.getElementById("MakeRp").onclick = function () {
+        changeText('<rp>', '</rp>');
+    };
+    document.getElementById("MakeQuotation").onclick = function () {
+        changeText('<q>', '</q>');
+    };
+    document.getElementById("MakeHr").onclick = function () {
+        changeText('<hr>', '</hr>');
+    };
 
 });
