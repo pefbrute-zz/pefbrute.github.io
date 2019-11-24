@@ -87,57 +87,36 @@ $(document).ready(function () {
     // function changeText(tag) {
     //     document.execCommand(tag);
     // }
-    function changeText(tag,lastTag) {
+    function changeText(tag, lastTag) {
         document.execCommand("insertHTML", false, tag + document.getSelection() + lastTag);
     }
 
-    document.getElementById("MakeBold").onclick = function () {
-        changeText('<b>','</b>');
-    };
-    document.getElementById("MakeEmphasized").onclick = function () {
-        changeText('<em>','</em>');
-    };
-    document.getElementById("MakeCode").onclick = function () {
-        changeText('<code>','</code>');
-    };
-    document.getElementById("MakeParagraph").onclick = function () {
-        changeText('<p>', '</p>');
-    };
-    document.getElementById("MakeSub").onclick = function () {
-        changeText('<sub>', '</sub>');
-    };
-    document.getElementById("MakeSup").onclick = function () {
-        changeText('<sup>', '</sup>');
-    };
-    document.getElementById("MakeTime").onclick = function () {
-        changeText('<time>', '</time>');
-    };
-    document.getElementById("MakeDel").onclick = function () {
-        changeText('<del>', '</del>');
-    };
-    document.getElementById("MakeCite").onclick = function () {
-        changeText('<cite>', '</cite>');
-    };
-    document.getElementById("MakeAddress").onclick = function () {
-        changeText('<address>', '</address>');
-    };
-    document.getElementById("MakeWBR").onclick = function () {
-        changeText('<wbr>', '</wbr>');
-    };
-    document.getElementById("MakeRuby").onclick = function () {
-        changeText('<ruby>', '</ruby>');
-    };
-    document.getElementById("MakeRt").onclick = function () {
-        changeText('<rt>', '</rt>');
-    };
-    document.getElementById("MakeRp").onclick = function () {
-        changeText('<rp>', '</rp>');
-    };
-    document.getElementById("MakeQuotation").onclick = function () {
-        changeText('<q>', '</q>');
-    };
-    document.getElementById("MakeHr").onclick = function () {
-        changeText('<hr>', '</hr>');
-    };
+    function changeTextByButton(element, tagName) {
+        document.getElementById(element).onclick = function () {
+            changeText('<' + tagName + '>', '</' + tagName + '>');
+        }
+    }
+
+    changeTextByButton("MakeBold", "B");
+    changeTextByButton("MakeEmphasized", "em");
+    changeTextByButton("MakeParagraph", "p");
+    changeTextByButton("MakeSub", "sub");
+    changeTextByButton("MakeSup", "sup");
+    changeTextByButton("MakeTime", "time");
+    changeTextByButton("MakeDel", "del");
+    changeTextByButton("MakeCite", "cite");
+    changeTextByButton("MakeAddress", "address");
+    changeTextByButton("MakeWBR", "wbr");
+    changeTextByButton("MakeRuby", "ruby");
+    changeTextByButton("MakeRt", "rt");
+    changeTextByButton("MakeRp", "rp");
+    changeTextByButton("MakeQuotation", "q");
+    changeTextByButton("MakeHr", "hr");
+    changeTextByButton("MakeDefinition", "dfn");
+    changeTextByButton("MakeOl", "ol");
+    changeTextByButton("MakeUl", "ul");
+    changeTextByButton("MakeLi", "li");
+    changeTextByButton("MakeVar", "var");
+
 
 });
