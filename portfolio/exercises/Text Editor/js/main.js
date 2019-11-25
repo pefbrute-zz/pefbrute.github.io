@@ -116,7 +116,14 @@ $(document).ready(function () {
     changeTextByButton("MakeOl", "ol");
     changeTextByButton("MakeUl", "ul");
     changeTextByButton("MakeLi", "li");
-    changeTextByButton("MakeVar", "var");
+    changeTextByButton("MakeKBD", "kbd");
+    changeTextByButton("MakeSamp", "samp");
+    changeTextByButton("MakePre", "pre");
+    changeTextByButton("MakeMark", "mark");
+    changeTextByButton("MakeDetails", "details");
+    changeTextByButton("MakeAside", "aside");
+    changeTextByButton("MakeIns", "ins");
 
+    //Element.setAttribute(name,value);
 
 });
