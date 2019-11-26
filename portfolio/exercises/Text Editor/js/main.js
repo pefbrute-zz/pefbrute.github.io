@@ -123,6 +123,16 @@ $(document).ready(function () {
     changeTextByButton("MakeDetails", "details");
     changeTextByButton("MakeAside", "aside");
     changeTextByButton("MakeIns", "ins");
+    changeTextByButton("MakeArticle", "article");
+    changeTextByButton("MakeBDI", "bdi");
+    changeTextByButton("MakeBDO", "bdo");
+    changeTextByButton("MakeA", "anchor");
+    changeTextByButton("MakeABBR", "abbr");
+    changeTextByButton("MakeBlockquote", "blockquote");
+    changeTextByButton("MakeTable", "table");
+    changeTextByButton("MakeTR", "tr");
+    changeTextByButton("MakeTH", "th");
+    changeTextByButton("MakeTD", "td");
 
     //Element.setAttribute(name,value);
 
