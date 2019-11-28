@@ -97,7 +97,7 @@ $(document).ready(function () {
         }
     }
 
-    changeTextByButton("MakeA", "anchor");
+    changeTextByButton("MakeA", "a");
     changeTextByButton("MakeABBR", "abbr");
     changeTextByButton("MakeAddress", "address");
     changeTextByButton("MakeArticle", "article");
@@ -151,6 +151,7 @@ $(document).ready(function () {
     changeTextByButton("MakeVar", "var");
     changeTextByButton("MakeWBR", "wbr");
 
-    //Element.setAttribute(name,value);
 
+    var a = document.querySelector("a");
+    a.setAttribute("href", "#");
 });
