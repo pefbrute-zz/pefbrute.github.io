@@ -26,78 +26,73 @@ $(document).ready(function () {
         this.contentEditable = true;
     });
 
-    function makeBold() {
-        let
-            txtInput,
-            sel,
-            startPos,
-            endPos,
-            txt,
-            boldTxt,
-            range,
-            wholeTxt,
-            txtWithBold;
-        txtInput = document.getElementById("editable-p");
-        sel = window.getSelection();
-        if (sel.anchorOffset != sel.focusOffset) {
-            console.log(sel.anchorOffset, sel.focusOffset);
-            txt = sel.toString();
-            boldTxt = txt.bold();
-            startPos = sel.anchorOffset;
-            endPos = sel.focusOffset;
-            if (startPos > endPos) {
-                startPos = endPos;
-            }
-            console.log(sel.anchorOffset, sel.focusOffset);
-            sel.deleteFromDocument();
-            sel.removeAllRanges();
-            range = document.createRange();
-            range.setStart(txtInput, 0);
-            range.setEnd(txtInput, 1);
-            sel.addRange(range);
-            wholeTxt = sel.toString();
-            console.log(
-                // sel, ' ',
-                txt, ' ',
-                boldTxt, ' ',
-                startPos, ' ',
-                endPos
-            )
-            // wholeTxt.slice(0, startPos) + boldTxt + wholeTxt.slice(startPos + Math.abs(0));
-            txtWithBold = wholeTxt.substr(0, startPos) + boldTxt + wholeTxt.substr(startPos);
-            // window.getSelection().getRangeAt(0).deleteContents();
+    function changeText(tag, lastTag) {
+        document.execCommand("insertHTML", false, tag + document.getSelection() + lastTag);
+    }
 
-            txtInput.innerHTML = '';
-            txtInput.innerHTML = txtWithBold;
-        } else {
-            window.alert('You selected nothing — select something');
+    function changeTextByButton(element, tagName) {
+        document.getElementById(element).onclick = function () {
+            changeText('<' + tagName + '>', '</' + tagName + '>');
         }
-
-    };
-
-    function makeBold(tag){
-        document.execCommand(tag);
     }
-    function msieversion() {
 
-        var ua = window.navigator.userAgent;
-        var msie = ua.indexOf("MSIE ");
+    changeTextByButton("MakeA", "a");
+    changeTextByButton("MakeABBR", "abbr");
+    changeTextByButton("MakeAddress", "address");
+    changeTextByButton("MakeArticle", "article");
+    changeTextByButton("MakeAside", "aside");
+    changeTextByButton("MakeBDI", "bdi");
+    changeTextByButton("MakeBDO", "bdo");
+    changeTextByButton("MakeBlockquote", "blockquote");
+    changeTextByButton("MakeBold", "B");
+    changeTextByButton("MakeCaption", "caption");
+    changeTextByButton("MakeCite", "cite");
+    changeTextByButton("MakeDD", "dd");
+    changeTextByButton("MakeDefinition", "dfn");
+    changeTextByButton("MakeDel", "del");
+    changeTextByButton("MakeDetails", "details");
+    changeTextByButton("MakeDL", "dl");
+    changeTextByButton("MakeDT", "dt");
+    changeTextByButton("MakeEmphasized", "em");
+    changeTextByButton("MakeFooter", "footer");
+    changeTextByButton("MakeHeader", "header");
+    changeTextByButton("MakeHr", "hr");
+    changeTextByButton("MakeI", "i");
+    changeTextByButton("MakeIns", "ins");
+    changeTextByButton("MakeKBD", "kbd");
+    changeTextByButton("MakeLi", "li");
+    changeTextByButton("MakeMark", "mark");
+    changeTextByButton("MakeOl", "ol");
+    changeTextByButton("MakeParagraph", "p");
+    changeTextByButton("MakePre", "pre");
+    changeTextByButton("MakeQuotation", "q");
+    changeTextByButton("MakeRp", "rp");
+    changeTextByButton("MakeRt", "rt");
+    changeTextByButton("MakeRuby", "ruby");
+    changeTextByButton("MakeS", "s");
+    changeTextByButton("MakeSamp", "samp");
+    changeTextByButton("MakeSmall", "small");
+    changeTextByButton("MakeSpan", "spans");
+    changeTextByButton("MakeStrong", "strong");
+    changeTextByButton("MakeSub", "sub");
+    changeTextByButton("MakeSummary", "summary");
+    changeTextByButton("MakeSup", "sup");
+    changeTextByButton("MakeTable", "table");
+    changeTextByButton("MakeTbody", "tbody");
+    changeTextByButton("MakeTD", "td");
+    changeTextByButton("MakeTfoot", "tfoot");
+    changeTextByButton("MakeTH", "th");
+    changeTextByButton("MakeThead", "thead");
+    changeTextByButton("MakeTime", "time");
+    changeTextByButton("MakeTR", "tr");
+    changeTextByButton("MakeU", "u");
+    changeTextByButton("MakeUl", "ul");
+    changeTextByButton("MakeVar", "var");
+    changeTextByButton("MakeWBR", "wbr");
 
-        if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) // If Internet Explorer, return version number
-        {
-            alert(parseInt(ua.substring(msie + 5, ua.indexOf(".", msie))));
-        } else // If another browser, return 0
-        {
-            alert('otherbrowser');
-            return false;
-        }
-    };
-    if (msieversion() == 0){
-        document.getElementById("MakeB").onclick = makeBold('B');
-    }
-    else{
-        document.getElementById("MakeB").onclick = makeBold('Strong');
-    }
+
+    var a = document.querySelector("a");
+    a.setAttribute("href", "#");
 
 
 });

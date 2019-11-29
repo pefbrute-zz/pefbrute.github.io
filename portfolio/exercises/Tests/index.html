@@ -61,11 +61,108 @@
 </head>
 
 <body>
-	<div id="text-editor" class="ml-5 my-5">
-		<div class="editable" class="text-left" id="editable">
-			<p class="editable" id="editable-p">Hello!</p>
+	<div class="container my-5" id="text-editor">
+		<div class="row">
+			<div class="container">
+				<div class="row">
+					<button class="btn-template col-2" id="MakeBold">Bold</button>
+					<button class="btn-template col-2" id="MakeCode">Code</button>
+					<button class="btn-template col-2" id="MakeEmphasized">Emphasized</button>
+					<button class="btn-template col-2" id="MakeParagraph">Paragraph</button>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<button class="btn-template col-2" id="MakeSub">Subscript</button>
+					<button class="btn-template col-2" id="MakeSup">Superscript</button>
+					<select class="headings col-2" name="" id="headings">
+						<option id="MakeH1" value="<h1>">
+							<button class="btn-template mt-2" id="MakeH1">H1</button>
+						</option>
+						<option id="MakeH2" value="">
+							<button class="btn-template mt-2" id="MakeH2">H2</button>
+						</option>
+						<option id="MakeH3" value="">
+							<button class="btn-template mt-2" id="MakeH3">H3</button>
+						</option>
+						<option id="MakeH4" value="">
+							<button class="btn-template mt-2" id="MakeH4">H4</button>
+						</option>
+						<option id="MakeH5" value="">
+							<button class="btn-template mt-2" id="MakeH5">H5</button>
+						</option>
+						<option id="MakeH6" value="">
+							<button class="btn-template mt-2" id="MakeH6">H6</button>
+						</option>
+					</select>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<button class="btn-template col-2" id="MakeCite">Cite</button>
+					<button class="btn-template col-2" id="MakeDel">Deleted</button>
+					<button class="btn-template col-2" id="MakeTime">Time</button>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<button class="btn-template col-2" id="MakeA">Anchor</button>
+					<button class="btn-template col-2" id="MakeABBR">Abbreviation</button>
+					<button class="btn-template col-2" id="MakeAddress">Address</button>
+					<button class="btn-template col-2" id="MakeArticle">Article</button>
+					<button class="btn-template col-2" id="MakeAside">Aside</button>
+					<button class="btn-template col-2" id="MakeBDI">BDI</button>
+					<button class="btn-template col-2" id="MakeBDO">BDO</button>
+					<button class="btn-template col-2" id="MakeBlockquote">Blockquote</button>
+					<button class="btn-template col-2" id="MakeCaption">Caption</button>
+					<button class="btn-template col-2" id="MakeDD">DD</button>
+					<button class="btn-template col-2" id="MakeDefinition">Definition</button>
+					<button class="btn-template col-2" id="MakeDetails">Details</button>
+					<button class="btn-template col-2" id="MakeDL">Description List</button>
+					<button class="btn-template col-2" id="MakeDT">Description name</button>
+					<button class="btn-template col-2" id="MakeFooter">Footer</button>
+					<button class="btn-template col-2" id="MakeHeader">Header</button>
+					<button class="btn-template col-2" id="MakeHr">Hr</button>
+					<button class="btn-template col-2" id="MakeI">Italic</button>
+					<button class="btn-template col-2" id="MakeIns">Insert</button>
+					<button class="btn-template col-2" id="MakeKBD">Keyboard</button>
+					<button class="btn-template col-2" id="MakeLi">List</button>
+					<button class="btn-template col-2" id="MakeMark">Mark</button>
+					<button class="btn-template col-2" id="MakeOl">Ordered list</button>
+					<button class="btn-template col-2" id="MakePre">Preformated</button>
+					<button class="btn-template col-2" id="MakeQuotation">Quotation</button>
+					<button class="btn-template col-2" id="MakeRp">Rp</button>
+					<button class="btn-template col-2" id="MakeRt">Rt</button>
+					<button class="btn-template col-2" id="MakeRuby">Ruby annotation</button>
+					<button class="btn-template col-2" id="MakeS">No correct</button>
+					<button class="btn-template col-2" id="MakeSamp">Output</button>
+					<button class="btn-template col-2" id="MakeSmall">Small</button>
+					<button class="btn-template col-2" id="MakeSpan">Span</button>
+					<button class="btn-template col-2" id="MakeStrong">Strong</button>
+					<button class="btn-template col-2" id="MakeSummary">Summary</button>
+					<button class="btn-template col-2" id="MakeTable">Table</button>
+					<button class="btn-template col-2" id="MakeTbody">Table body</button>
+					<button class="btn-template col-2" id="MakeTD">Table cell</button>
+					<button class="btn-template col-2" id="MakeTfoot">Table footer</button>
+					<button class="btn-template col-2" id="MakeTH">Table header</button>
+					<button class="btn-template col-2" id="MakeThead">Table head</button>
+					<button class="btn-template col-2" id="MakeTR">Tr</button>
+					<button class="btn-template col-2" id="MakeU">Misspelled</button>
+					<button class="btn-template col-2" id="MakeUl">Unordered list</button>
+					<button class="btn-template col-2" id="MakeVar">Variable</button>
+					<button class="btn-template col-2" id="MakeWBR">Word Break</button>
+				</div>
+			</div>
+			<div class="container mt-3">
+				<div class="row">
+					<h2 class="col-12">Attributes:</h2>
+					<button class="btn-template col-2" id="MakeA">Anchor</button>
+				</div>
+			</div>
+			<div class="editable col-12" id="editable">
+				<a>Hello!</a>
+			</div>
 		</div>
-		<button id="MakeB">Make text Bold</button>
 	</div>
 
 
