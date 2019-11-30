@@ -22,9 +22,11 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
-    $('.editable').each(function () {
-        this.contentEditable = true;
-    });
+    var editables = document.querySelectorAll(".editable");
+
+    for (const element of editables) {
+        element.setAttribute("contenteditable", true);
+    }
 
     function changeText(tag, lastTag) {
         document.execCommand("insertHTML", false, tag + document.getSelection() + lastTag);
