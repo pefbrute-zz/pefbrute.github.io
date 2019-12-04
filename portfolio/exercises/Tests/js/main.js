@@ -35,10 +35,18 @@ $(document).ready(function () {
 
     document.getElementById("makeB").onclick = function () {
         var selection = document.getSelection();
-        var startPos = selection.anchorOffset;
-        var endPos = selection.focusOffset;
-        console.log(startPos);
-        console.log(endPos);
+        var txtSelection = selection.toString();
+        var range = document.createRange();
+        range.insertNode(selection);
+        // var startPos = selection.anchorOffset;
+        // var endPos = selection.focusOffset;
+        // if (startPos > endPos){
+        //     let z = startPos;
+        //     startPos = endPos;
+        //     endPos = z;
+        // }
+        // console.log(startPos);
+        // console.log(endPos);
     }
 
 
