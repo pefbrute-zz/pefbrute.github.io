@@ -37,7 +37,9 @@ $(document).ready(function () {
         var selection = document.getSelection();
         var txtSelection = selection.toString();
         var range = document.createRange();
-        range.insertNode(selection);
+        b = document.createElement("b");
+        b.textContent = txtSelection;
+        console.log(document.getElementById("anchor").outerHTML);
         // var startPos = selection.anchorOffset;
         // var endPos = selection.focusOffset;
         // if (startPos > endPos){
