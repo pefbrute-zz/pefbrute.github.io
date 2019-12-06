@@ -35,11 +35,15 @@ $(document).ready(function () {
 
     document.getElementById("makeB").onclick = function () {
         var selection = document.getSelection();
+        console.log(selection.hasChildnodes);
         var txtSelection = selection.toString();
+        selection.deleteFromDocument();
         var range = document.createRange();
         b = document.createElement("b");
         b.textContent = txtSelection;
-        console.log(document.getElementById("anchor").outerHTML);
+        var a = document.getElementById("anchor");
+        var editor = document.getElementById("editor");
+        editor.appendChild(b);
         // var startPos = selection.anchorOffset;
         // var endPos = selection.focusOffset;
         // if (startPos > endPos){
