@@ -28,14 +28,10 @@ $(document).ready(function () {
         element.setAttribute("contenteditable", true);
     }
 
-
-    // function changeText(tag, lastTag) {
-    //     document.execCommand("insertHTML", false, tag + document.getSelection() + lastTag);
-    // }
-
     document.getElementById("makeB").onclick = function () {
         var selection = document.getSelection();
         console.log(selection.hasChildnodes);
+        console.log(selection.rangeCount);
         var txtSelection = selection.toString();
         selection.deleteFromDocument();
         var range = document.createRange();
