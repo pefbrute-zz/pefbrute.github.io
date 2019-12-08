@@ -29,24 +29,32 @@ $(document).ready(function () {
     }
 
     document.getElementById("makeB").onclick = function () {
+        var editor = document.getElementById("editor");
         var selection = document.getSelection();
-        console.log(selection.hasChildnodes);
-        console.log(selection.rangeCount);
         var txtSelection = selection.toString();
+        var allTxt = editor.textContent;
         selection.deleteFromDocument();
-        var range = document.createRange();
+        var startPos = selection.anchorOffset;
+        var endPos = selection.focusOffset;
+        if (startPos > endPos) {
+            let z = startPos;
+            startPos = endPos;
+            endPos = z;
+        }
+        var allTxtLength = allTxt.length;
+        console.log(allTxtLength);
+        console.log(allTxt);
+        var firstPart = allTxt.slice(0, startPos);
+        var secondPart = allTxt.slice(startPos, allTxtLength - 1);
         b = document.createElement("b");
         b.textContent = txtSelection;
-        var a = document.getElementById("anchor");
-        var editor = document.getElementById("editor");
+        console.log(b);
+        console.log(firstPart);
+        console.log(secondPart);
+        editor.innerHTML = editor.innerHTML + firstPart;
         editor.appendChild(b);
-        // var startPos = selection.anchorOffset;
-        // var endPos = selection.focusOffset;
-        // if (startPos > endPos){
-        //     let z = startPos;
-        //     startPos = endPos;
-        //     endPos = z;
-        // }
+        editor.innerHTML = editor.innerHTML + secondPart;
+        // var a = document.getElementById("anchor");
         // console.log(startPos);
         // console.log(endPos);
     }
