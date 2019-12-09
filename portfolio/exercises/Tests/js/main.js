@@ -32,8 +32,8 @@ $(document).ready(function () {
         var editor = document.getElementById("editor");
         var selection = document.getSelection();
         var txtSelection = selection.toString();
-        var allTxt = editor.textContent;
-        selection.deleteFromDocument();
+        var allTxt = editor.textContent.trim();
+        console.log(allTxt);
         var startPos = selection.anchorOffset;
         var endPos = selection.focusOffset;
         if (startPos > endPos) {
@@ -41,19 +41,29 @@ $(document).ready(function () {
             startPos = endPos;
             endPos = z;
         }
+        console.log(startPos);
+        console.log(endPos);
+        selection.deleteFromDocument();
+        editor.innerHTML = '';
+        console.log(editor);
         var allTxtLength = allTxt.length;
         console.log(allTxtLength);
-        console.log(allTxt);
-        var firstPart = allTxt.slice(0, startPos);
-        var secondPart = allTxt.slice(startPos, allTxtLength - 1);
         b = document.createElement("b");
         b.textContent = txtSelection;
+        var firstPart = allTxt.slice(0,startPos);
+        var secondPart = allTxt.slice(startPos, allTxtLength - 1);
+        if (startPos = 0) {
+            editor.appendChild(b);
+            editor.innerHTML = editor.innerHTML + secondPart;
+        }
+        else{
+            editor.innerHTML = editor.innerHTML + firstPart;
+            editor.appendChild(b);
+            editor.innerHTML = editor.innerHTML + secondPart;
+        }
         console.log(b);
         console.log(firstPart);
         console.log(secondPart);
-        editor.innerHTML = editor.innerHTML + firstPart;
-        editor.appendChild(b);
-        editor.innerHTML = editor.innerHTML + secondPart;
         // var a = document.getElementById("anchor");
         // console.log(startPos);
         // console.log(endPos);
