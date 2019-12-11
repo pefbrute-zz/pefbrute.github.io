@@ -31,7 +31,9 @@ $(document).ready(function () {
     document.getElementById("makeB").onclick = function () {
         var editor = document.getElementById("editor");
         var selection = document.getSelection();
+        console.log(selection);
         var txtSelection = selection.toString();
+        console.log(txtSelection);
         var allTxt = editor.textContent.trim();
         console.log(allTxt);
         var startPos = selection.anchorOffset;
@@ -45,25 +47,28 @@ $(document).ready(function () {
         console.log(endPos);
         selection.deleteFromDocument();
         editor.innerHTML = '';
-        console.log(editor);
+        //editor.textContent; <=== Try it tomorrow
         var allTxtLength = allTxt.length;
         console.log(allTxtLength);
         b = document.createElement("b");
         b.textContent = txtSelection;
         var firstPart = allTxt.slice(0,startPos);
-        var secondPart = allTxt.slice(startPos, allTxtLength - 1);
-        if (startPos = 0) {
+        if (startPos == 0) {
+            let secondPart = allTxt.slice(endPos, allTxtLength);
             editor.appendChild(b);
+            console.log(secondPart);
             editor.innerHTML = editor.innerHTML + secondPart;
         }
         else{
+            let secondPart = allTxt.slice(endPos, allTxtLength);
             editor.innerHTML = editor.innerHTML + firstPart;
             editor.appendChild(b);
             editor.innerHTML = editor.innerHTML + secondPart;
         }
-        console.log(b);
-        console.log(firstPart);
-        console.log(secondPart);
+        // console.log(editor.innerHTML);
+        // console.log(b);
+        // console.log(firstPart);
+        // console.log(secondPart);
         // var a = document.getElementById("anchor");
         // console.log(startPos);
         // console.log(endPos);
