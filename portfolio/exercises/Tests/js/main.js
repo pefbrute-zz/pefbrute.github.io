@@ -22,8 +22,8 @@ $(document).ready(function () {
     });
     /*AOS END*/
 
+    
     var editables = document.querySelectorAll(".editable");
-
     for (const element of editables) {
         element.setAttribute("contenteditable", true);
     }
@@ -45,26 +45,31 @@ $(document).ready(function () {
         }
         console.log(startPos);
         console.log(endPos);
-        selection.deleteFromDocument();
-        editor.innerHTML = '';
-        //editor.textContent; <=== Try it tomorrow
-        var allTxtLength = allTxt.length;
-        console.log(allTxtLength);
-        b = document.createElement("b");
-        b.textContent = txtSelection;
-        var firstPart = allTxt.slice(0,startPos);
-        if (startPos == 0) {
-            let secondPart = allTxt.slice(endPos, allTxtLength);
-            editor.appendChild(b);
-            console.log(secondPart);
-            editor.innerHTML = editor.innerHTML + secondPart;
-        }
-        else{
-            let secondPart = allTxt.slice(endPos, allTxtLength);
-            editor.innerHTML = editor.innerHTML + firstPart;
-            editor.appendChild(b);
-            editor.innerHTML = editor.innerHTML + secondPart;
-        }
+        console.log(selection.anchorNode);
+        console.log(selection.focusNode);
+        // selection.deleteFromDocument();
+        
+        // editor.innerHTML = '';
+        // editor.textContent = '';
+        // var allTxtLength = allTxt.length;
+        // console.log(allTxtLength);
+        // b = document.createElement("b");
+        // b.textContent = b.textContent + txtSelection;
+        // var firstPart = allTxt.slice(0,startPos);
+        // if (startPos == 0) {
+        //     let secondPart = allTxt.slice(endPos, allTxtLength);
+        //     editor.appendChild(b);
+        //     console.log(secondPart);
+        //     editor.innerHTML = editor.innerHTML + secondPart;
+        // }
+        // else{
+        //     let secondPart = allTxt.slice(endPos, allTxtLength);
+        //     editor.innerHTML = editor.innerHTML + firstPart;
+        //     editor.appendChild(b);
+        //     editor.innerHTML = editor.innerHTML + secondPart;
+        // }
+
+
         // console.log(editor.innerHTML);
         // console.log(b);
         // console.log(firstPart);
