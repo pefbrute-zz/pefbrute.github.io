@@ -29,6 +29,7 @@ $(document).ready(function () {
     }
 
     var b = document.createElement("b");
+    
     document.getElementById("makeB").onclick = function () {
         console.clear();
         var editor = document.getElementById("editor");
