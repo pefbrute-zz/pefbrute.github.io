@@ -28,7 +28,6 @@ $(document).ready(function () {
         element.setAttribute("contenteditable", true);
     }
 
-    var b = document.createElement("b");
     
     document.getElementById("makeB").onclick = function () {
         console.clear();
@@ -39,9 +38,9 @@ $(document).ready(function () {
         console.log(txtSelection);
         var allTxt = editor.textContent.trim();
         console.log(allTxt);
-
+        
         var txtSelectionNode = document.createTextNode(txtSelection);
-
+        
         var startPos = selection.anchorOffset;
         var endPos = selection.focusOffset;
         if (startPos > endPos) {
@@ -59,6 +58,7 @@ $(document).ready(function () {
         // editor.textContent = '';
         var allTxtLength = allTxt.length;
         console.log(allTxtLength);
+        var b = document.createElement("b");
         console.log(b.textContent);
         b.appendChild(txtSelectionNode);
         console.log(b.textContent);
