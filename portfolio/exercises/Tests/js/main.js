@@ -29,62 +29,92 @@ $(document).ready(function () {
     }
 
     
-    document.getElementById("makeB").onclick = function () {
-        console.clear();
-        var editor = document.getElementById("editor");
-        var selection = document.getSelection();
-        console.log(selection);
-        var txtSelection = selection.toString();
-        console.log(txtSelection);
-        var allTxt = editor.textContent.trim();
-        console.log(allTxt);
+    // document.getElementById("makeB").onclick = function () {
+    //     console.clear();
+    //     var editor = document.getElementById("editor");
+    //     var selection = document.getSelection();
+    //     console.log(selection);
+    //     var txtSelection = selection.toString();
+    //     console.log(txtSelection);
+    //     var allTxt = editor.textContent.trim();
+    //     console.log(allTxt);
         
-        var txtSelectionNode = document.createTextNode(txtSelection);
+    //     var txtSelectionNode = document.createTextNode(txtSelection);
         
-        var startPos = selection.anchorOffset;
-        var endPos = selection.focusOffset;
-        if (startPos > endPos) {
-            let z = startPos;
-            startPos = endPos;
-            endPos = z;
-        }
-        console.log(startPos);
-        console.log(endPos);
-        console.log(selection.anchorNode);
-        console.log(selection.focusNode);
-        selection.deleteFromDocument();
+    //     var startPos = selection.anchorOffset;
+    //     var endPos = selection.focusOffset;
+    //     if (startPos > endPos) {
+    //         let z = startPos;
+    //         startPos = endPos;
+    //         endPos = z;
+    //     }
+    //     console.log(startPos);
+    //     console.log(endPos);
+    //     console.log(selection.anchorNode);
+    //     console.log(selection.focusNode);
+    //     selection.deleteFromDocument();
         
-        editor.innerHTML = '';
-        // editor.textContent = '';
-        var allTxtLength = allTxt.length;
-        console.log(allTxtLength);
-        var b = document.createElement("b");
-        console.log(b.textContent);
-        b.appendChild(txtSelectionNode);
-        console.log(b.textContent);
-        var firstPart = allTxt.slice(0,startPos);
-        if (startPos == 0) {
-            let secondPart = allTxt.slice(endPos, allTxtLength);
-            editor.appendChild(b);
-            console.log(secondPart);
-            editor.innerHTML = editor.innerHTML + secondPart;
+    //     editor.innerHTML = '';
+    //     var allTxtLength = allTxt.length;
+    //     console.log(allTxtLength);
+    //     var b = document.createElement("b");
+    //     console.log(b.textContent);
+    //     b.appendChild(txtSelectionNode);
+    //     console.log(b.textContent);
+    //     var firstPart = allTxt.slice(0,startPos);
+    //     if (startPos == 0) {
+    //         let secondPart = allTxt.slice(endPos, allTxtLength);
+    //         editor.appendChild(b);
+    //         console.log(secondPart);
+    //         editor.innerHTML = editor.innerHTML + secondPart;
+    //     }
+    //     else{
+    //         let secondPart = allTxt.slice(endPos, allTxtLength);
+    //         editor.innerHTML = editor.innerHTML + firstPart;
+    //         editor.appendChild(b);
+    //         editor.innerHTML = editor.innerHTML + secondPart;
+    //     }
+    // }
+
+        document.getElementById("makeB").onclick = function () {
+            console.clear();
+            var editor = document.getElementById("editor");
+            var selection = document.getSelection();
+            console.log(selection);
+            var txtSelection = selection.toString();
+            console.log(txtSelection);
+            var allTxt = editor.textContent.trim();
+            console.log(allTxt);
+
+            var txtSelectionNode = document.createTextNode(txtSelection);
+
+            var startPos = selection.anchorOffset;
+            var endPos = selection.focusOffset;
+            if (startPos > endPos) {
+                let z = startPos;
+                startPos = endPos;
+                endPos = z;
+            }
+            console.log(startPos);
+            console.log(endPos);
+            console.log(selection.anchorNode);
+            console.log(selection.focusNode);
+            selection.deleteFromDocument();
+
+            editor.innerHTML = '';
+            var allTxtLength = allTxt.length;
+            console.log(allTxtLength);
+            var bStart = "<b>";
+            var bEnd = "</b>";
+            var bTotal = bStart + txtSelection + bEnd;
+            if (startPos == 0) {
+                let secondPart = allTxt.slice(endPos, allTxtLength);
+                editor.innerHTML = bTotal + secondPart;
+            } else {
+                let firstPart = allTxt.slice(0, startPos);
+                let secondPart = allTxt.slice(endPos, allTxtLength);
+                editor.innerHTML = editor.innerHTML + firstPart + bTotal + secondPart;
+            }
         }
-        else{
-            let secondPart = allTxt.slice(endPos, allTxtLength);
-            editor.innerHTML = editor.innerHTML + firstPart;
-            editor.appendChild(b);
-            editor.innerHTML = editor.innerHTML + secondPart;
-        }
-
-
-        // console.log(editor.innerHTML);
-        // console.log(b);
-        // console.log(firstPart);
-        // console.log(secondPart);
-        // var a = document.getElementById("anchor");
-        // console.log(startPos);
-        // console.log(endPos);
-    }
-
 
 });
