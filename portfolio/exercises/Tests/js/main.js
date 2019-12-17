@@ -10,7 +10,7 @@ $(document).ready(function () {
         disableMutationObserver: false, // disables automatic mutations' detections (advanced)
         debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
         throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-        
+
         // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
         offset: 120, // offset (in px) from the original trigger point
         delay: 0, // values from 0 to 3000, with step 50ms
@@ -21,16 +21,16 @@ $(document).ready(function () {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
     });
     /*AOS END*/
-    
-    
+
+
     var editables = document.querySelectorAll(".editable");
     for (const element of editables) {
         element.setAttribute("contenteditable", true);
     }
 
-    
+
     // document.getElementById("makeB").onclick = function () {
-    
+
     //     console.clear();
     //     var editor = document.getElementById("editor");
     //     var selection = document.getSelection();
@@ -39,9 +39,9 @@ $(document).ready(function () {
     //     console.log(txtSelection);
     //     var allTxt = editor.textContent.trim();
     //     console.log(allTxt);
-        
+
     //     var txtSelectionNode = document.createTextNode(txtSelection);
-        
+
     //     var startPos = selection.anchorOffset;
     //     var endPos = selection.focusOffset;
     //     if (startPos > endPos) {
@@ -54,7 +54,7 @@ $(document).ready(function () {
     //     console.log(selection.anchorNode);
     //     console.log(selection.focusNode);
     //     selection.deleteFromDocument();
-        
+
     //     editor.innerHTML = '';
     //     var allTxtLength = allTxt.length;
     //     console.log(allTxtLength);
@@ -77,45 +77,50 @@ $(document).ready(function () {
     //     }
     // }
 
-        document.getElementById("makeB").onclick = function () {
-            console.clear();
-            var editor = document.getElementById("editor");
-            var selection = document.getSelection();
-            console.log(selection);
-            var txtSelection = selection.toString();
-            console.log(txtSelection);
-            var allTxt = editor.textContent.trim();
-            console.log(allTxt);
+    // document.getElementById("makeB").onclick = function () {
+    //     console.clear();
+    //     var editor = document.getElementById("editor");
+    //     var selection = document.getSelection();
+    //     console.log(selection);
+    //     var txtSelection = selection.toString();
+    //     console.log(txtSelection);
+    //     var allTxt = editor.textContent.trim();
+    //     console.log(allTxt);
 
-            var txtSelectionNode = document.createTextNode(txtSelection);
+    //     var txtSelectionNode = document.createTextNode(txtSelection);
 
-            var startPos = selection.anchorOffset;
-            var endPos = selection.focusOffset;
-            if (startPos > endPos) {
-                let z = startPos;
-                startPos = endPos;
-                endPos = z;
-            }
-            console.log(startPos);
-            console.log(endPos);
-            console.log(selection.anchorNode);
-            console.log(selection.focusNode);
-            selection.deleteFromDocument();
+    //     var startPos = selection.anchorOffset;
+    //     var endPos = selection.focusOffset;
+    //     if (startPos > endPos) {
+    //         let z = startPos;
+    //         startPos = endPos;
+    //         endPos = z;
+    //     }
+    //     console.log(startPos);
+    //     console.log(endPos);
+    //     console.log(selection.anchorNode);
+    //     console.log(selection.focusNode);
+    //     selection.deleteFromDocument();
 
-            editor.innerHTML = '';
-            var allTxtLength = allTxt.length;
-            console.log(allTxtLength);
-            var bStart = "<b>";
-            var bEnd = "</b>";
-            var bTotal = bStart + txtSelection + bEnd;
-            if (startPos == 0) {
-                let secondPart = allTxt.slice(endPos, allTxtLength);
-                editor.innerHTML = bTotal + secondPart;
-            } else {
-                let firstPart = allTxt.slice(0, startPos);
-                let secondPart = allTxt.slice(endPos, allTxtLength);
-                editor.innerHTML = editor.innerHTML + firstPart + bTotal + secondPart;
-            }
-        }
+    //     editor.innerHTML = '';
+    //     var allTxtLength = allTxt.length;
+    //     console.log(allTxtLength);
+    //     var bStart = "<b>";
+    //     var bEnd = "</b>";
+    //     var bTotal = bStart + txtSelection + bEnd;
+    //     if (startPos == 0) {
+    //         let secondPart = allTxt.slice(endPos, allTxtLength);
+    //         editor.innerHTML = bTotal + secondPart;
+    //     } else {
+    //         let firstPart = allTxt.slice(0, startPos);
+    //         let secondPart = allTxt.slice(endPos, allTxtLength);
+    //         editor.innerHTML = editor.innerHTML + firstPart + bTotal + secondPart;
+    //     };
+    // }
 
-});
+    document.getElementById("makeB").onclick = function () {
+        var range = document.getSelection();
+        console.log(document.getSelection().parentElement);
+    }
+
+})
