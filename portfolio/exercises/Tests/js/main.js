@@ -119,9 +119,21 @@ $(document).ready(function () {
     // }
 
     document.getElementById("makeB").onclick = function () {
-        var range = document.getSelection();
-        console.log(document.getSelection().parentElement);
-        
+        var editor = document.getElementById("editor");
+        var allTxt = editor.textContent;
+        var selection = document.getSelection();
+        var startPos = selection.anchorOffset;
+        var endPos = selection.focusOffset;
+        if (startPos > endPos) {
+            let z = startPos;
+            startPos = endPos;
+            endPos = z;
+        }
+        var range = document.createRange();
+        range.setStart(allTxt, startPos);
+        range.setEnd(allTxt, endPos);
+        console.log(range);
+
     }
 
 })
