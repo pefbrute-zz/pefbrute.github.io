@@ -121,6 +121,7 @@ $(document).ready(function () {
     document.getElementById("makeB").onclick = function () {
         var range = document.getSelection();
         console.log(document.getSelection().parentElement);
+        
     }
 
 })
