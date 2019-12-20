@@ -121,19 +121,10 @@ $(document).ready(function () {
     document.getElementById("makeB").onclick = function () {
         var editor = document.getElementById("editor");
         var allTxt = editor.textContent;
-        var selection = document.getSelection();
-        var startPos = selection.anchorOffset;
-        var endPos = selection.focusOffset;
-        if (startPos > endPos) {
-            let z = startPos;
-            startPos = endPos;
-            endPos = z;
-        }
-        var range = document.createRange();
-        range.setStart(allTxt, startPos);
-        range.setEnd(allTxt, endPos);
-        console.log(range);
-
+        var sel = document.getSelection();
+        var range = sel.getRangeAt(0);
+        console.log(range.cloneContents());
+        console.log(range.extractContents());
     }
 
 })
