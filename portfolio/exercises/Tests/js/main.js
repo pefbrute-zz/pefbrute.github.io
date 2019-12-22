@@ -121,28 +121,34 @@ $(document).ready(function () {
     document.getElementById("makeB").onclick = function () {
         var editor = document.getElementById("editor");
         var allTxt = editor.textContent;
-        console.log()
         var sel = document.getSelection();
+        console.log(sel);
+        console.log(sel.anchorNode.parentNode);
+        
         
         // domparser.parseFromString(string, mimeType)
 
-        var startPos = selection.anchorOffset;
-        var endPos = selection.focusOffset;
-        if (startPos > endPos) {
-            let z = startPos;
-            startPos = endPos;
-            endPos = z;
-        }
-        var range = sel.getRangeAt(0);
-        var ext = range.extractContents();
-        var b = document.createElement("b");
-        b.appendChild(ext);
-        var firstB = document.createTextNode("<b>");
-        var lastB = document.createTextNode("</b>");
+        // var startPos = sel.anchorOffset;
+        // var endPos = sel.focusOffset;
+        // if (startPos > endPos) {
+        //     let z = startPos;
+        //     startPos = endPos;
+        //     endPos = z;
+        // }
+        // var range = sel.getRangeAt(0);
+        // var ext = range.extractContents();
+        // var b = document.createElement("b");
+        // b.appendChild(ext);
+        let fakeAnchorNode = sel.anchorNode.parentNode.cloneNode(true);
+        let fakeOffsetNode = sel.focusNode.parentNode.cloneNode(true);
+        editor.appendChild(fakeAnchorNode);
+        editor.appendChild(fakeOffsetNode);
+        // var firstB = document.createTextNode("<b>");
+        // var lastB = document.createTextNode("</b>");
         // console.log(range.cloneContents());
-        console.log(ext);
+        // console.log(ext);
 
-        editor.appendChild(b);
+        // editor.appendChild(b);
         // editor.appendChild(firstB);
         // editor.appendChild(ext);
         // editor.appendChild(lastB);
