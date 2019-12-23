@@ -143,6 +143,7 @@ $(document).ready(function () {
         let fakeOffsetNode = sel.focusNode.parentNode.cloneNode(true);
         editor.appendChild(fakeAnchorNode);
         editor.appendChild(fakeOffsetNode);
+        
         // var firstB = document.createTextNode("<b>");
         // var lastB = document.createTextNode("</b>");
         // console.log(range.cloneContents());
