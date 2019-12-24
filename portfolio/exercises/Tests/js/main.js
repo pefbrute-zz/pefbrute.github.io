@@ -120,30 +120,37 @@ $(document).ready(function () {
 
     document.getElementById("makeB").onclick = function () {
         var editor = document.getElementById("editor");
+        let space = function space() {
+            editor.appendChild(document.createTextNode(" "));
+        }
         var allTxt = editor.textContent;
         var sel = document.getSelection();
         console.log(sel);
         console.log(sel.anchorNode.parentNode);
-        
-        
-        // domparser.parseFromString(string, mimeType)
 
-        // var startPos = sel.anchorOffset;
-        // var endPos = sel.focusOffset;
-        // if (startPos > endPos) {
-        //     let z = startPos;
-        //     startPos = endPos;
-        //     endPos = z;
-        // }
+
+        var startPos = sel.anchorOffset;
+        var endPos = sel.focusOffset;
+        if (startPos > endPos) {
+            let z = startPos;
+            startPos = endPos;
+            endPos = z;
+        }
         // var range = sel.getRangeAt(0);
         // var ext = range.extractContents();
         // var b = document.createElement("b");
         // b.appendChild(ext);
         let fakeAnchorNode = sel.anchorNode.parentNode.cloneNode(true);
-        let fakeOffsetNode = sel.focusNode.parentNode.cloneNode(true);
+        let fakeFocusNode = sel.focusNode.parentNode.cloneNode(true);
+        console.log(fakeAnchorNode.textContent);
+        let fakeAnchorText = fakeAnchorNode.textContent;
+        let fakeFocusText = fakeFocusNode.textContent;
+        fakeAnchorNode.textContent.substring(startPos, fakeAnchorText.length - 1);
+
         editor.appendChild(fakeAnchorNode);
-        editor.appendChild(fakeOffsetNode);
-        
+        space();
+        editor.appendChild(fakeFocusNode);
+        space();
         // var firstB = document.createTextNode("<b>");
         // var lastB = document.createTextNode("</b>");
         // console.log(range.cloneContents());
