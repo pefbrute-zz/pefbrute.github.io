@@ -140,17 +140,47 @@ $(document).ready(function () {
         // var ext = range.extractContents();
         // var b = document.createElement("b");
         // b.appendChild(ext);
+
         let fakeAnchorNode = sel.anchorNode.parentNode.cloneNode(true);
         let fakeFocusNode = sel.focusNode.parentNode.cloneNode(true);
-        console.log(fakeAnchorNode.textContent);
         let fakeAnchorText = fakeAnchorNode.textContent;
         let fakeFocusText = fakeFocusNode.textContent;
-        fakeAnchorNode.textContent.substring(startPos, fakeAnchorText.length - 1);
+
+        let fakeAnchorLength = fakeAnchorText.length;
+        console.log(fakeAnchorLength);
+
+        // if (startPos == fakeAnchorLength - 1) {
+        //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength - 1);
+        // } else {
+        //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength);
+        // }
+
+        fakeAnchorText = fakeAnchorText.substring(startPos);
+        fakeFocusText = fakeFocusText.substring(0, endPos);
+
+        fakeAnchorNode.textContent = fakeAnchorText;
+        console.log(fakeAnchorText);
+        fakeFocusNode.textContent = fakeFocusText;
+        console.log(fakeFocusText);
+
+        let br = document.createElement("br");
 
         editor.appendChild(fakeAnchorNode);
         space();
+
         editor.appendChild(fakeFocusNode);
-        space();
+        editor.appendChild(br);
+
+
+        // let AnchorNode = sel.anchorNode.parentNode;
+        // let FocusNode = sel.focusNode.parentNode;
+        // let AnchorText = AnchorNode.textContent;
+        // let FocusText = FocusNode.textContent;
+
+        // AnchorText.substring(0, AnchorText.length - 1);
+        // FocusText.substring(0, endPos);
+        // editor.appendChild(AnchorNode);
+
         // var firstB = document.createTextNode("<b>");
         // var lastB = document.createTextNode("</b>");
         // console.log(range.cloneContents());
