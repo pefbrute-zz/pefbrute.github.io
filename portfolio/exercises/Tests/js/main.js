@@ -119,6 +119,7 @@ $(document).ready(function () {
     // }
 
     document.getElementById("makeB").onclick = function () {
+        console.clear();
         var editor = document.getElementById("editor");
         let space = function space() {
             editor.appendChild(document.createTextNode(" "));
@@ -141,8 +142,10 @@ $(document).ready(function () {
         // var b = document.createElement("b");
         // b.appendChild(ext);
 
-        let fakeAnchorNode = sel.anchorNode.parentNode.cloneNode(true);
-        let fakeFocusNode = sel.focusNode.parentNode.cloneNode(true);
+        let anchorNode = sel.anchorNode;
+        let focusNode = sel.focusNode;
+        let fakeAnchorNode = anchorNode.parentNode.cloneNode(true);
+        let fakeFocusNode = focusNode.parentNode.cloneNode(true);
         let fakeAnchorText = fakeAnchorNode.textContent;
         let fakeFocusText = fakeFocusNode.textContent;
 
@@ -154,9 +157,15 @@ $(document).ready(function () {
         // } else {
         //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength);
         // }
-
-        fakeAnchorText = fakeAnchorText.substring(startPos);
-        fakeFocusText = fakeFocusText.substring(0, endPos);
+        console.log(sel.anchorNode.nodeName);
+        if (fakeAnchorNode.type == fakeFocusNode.type) {
+            fakeAnchorText = fakeAnchorText.substring(startPos, endPos);
+            fakeFocusText = '';
+            console.log('Yes');
+        } else {
+            fakeAnchorText = fakeAnchorText.substring(startPos);
+            fakeFocusText = fakeFocusText.substring(0, endPos);
+        }
 
         fakeAnchorNode.textContent = fakeAnchorText;
         console.log(fakeAnchorText);
@@ -167,7 +176,6 @@ $(document).ready(function () {
 
         editor.appendChild(fakeAnchorNode);
         space();
-
         editor.appendChild(fakeFocusNode);
         editor.appendChild(br);
 
