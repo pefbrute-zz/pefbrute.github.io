@@ -157,14 +157,17 @@ $(document).ready(function () {
         // } else {
         //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength);
         // }
-        console.log(sel.anchorNode.nodeName);
-        if (fakeAnchorNode.type == fakeFocusNode.type) {
+        // console.log(sel.anchorNode.nodeName);
+        // console.log(anchorNode.parentNode.localName);
+        // console.log(anchorNode.parentNode.previousSibling);
+        if (anchorNode.nodeType == focusNode.nodeType && anchorNode.parentNode.localName == focusNode.parentNode.localName && anchorNode.data == focusNode.data && anchorNode.parentNode.previousSibling == focusNode.parentNode.previousSibling && anchorNode.parentNode.nextSibling == focusNode.parentNode.nextSibling) {
             fakeAnchorText = fakeAnchorText.substring(startPos, endPos);
             fakeFocusText = '';
-            console.log('Yes');
+            console.log('In the same node');
         } else {
             fakeAnchorText = fakeAnchorText.substring(startPos);
             fakeFocusText = fakeFocusText.substring(0, endPos);
+            console.log('In different nodes');
         }
 
         fakeAnchorNode.textContent = fakeAnchorText;
