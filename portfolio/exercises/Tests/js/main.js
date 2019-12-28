@@ -132,7 +132,7 @@ $(document).ready(function () {
 
         var startPos = sel.anchorOffset;
         var endPos = sel.focusOffset;
-        if (startPos > endPos) {
+        if (startPos > endPos && endPos != 1) {
             let z = startPos;
             startPos = endPos;
             endPos = z;
@@ -160,7 +160,18 @@ $(document).ready(function () {
         // console.log(sel.anchorNode.nodeName);
         // console.log(anchorNode.parentNode.localName);
         // console.log(anchorNode.parentNode.previousSibling);
-        if (anchorNode.nodeType == focusNode.nodeType && anchorNode.parentNode.localName == focusNode.parentNode.localName && anchorNode.data == focusNode.data && anchorNode.parentNode.previousSibling == focusNode.parentNode.previousSibling && anchorNode.parentNode.nextSibling == focusNode.parentNode.nextSibling) {
+        // console.log(anchorNode.nodeType, focusNode.nodeType, '\n',
+        //     anchorNode.parentNode.localName,focusNode.parentNode.localName, '\n',
+        //     anchorNode.data == focusNode.data, '\n',
+        //     anchorNode.parentNode.previousSibling, focusNode.parentNode.previousSibling, '\n',
+        //     anchorNode.parentNode.nextSibling, focusNode.parentNode.nextSibling);
+        // if (anchorNode.nodeType == focusNode.nodeType &&
+        //     anchorNode.parentNode.localName == focusNode.parentNode.localName &&
+        //     anchorNode.data == focusNode.data &&
+        //     anchorNode.parentNode.previousSibling == focusNode.parentNode.previousSibling &&
+        //     anchorNode.parentNode.nextSibling == focusNode.parentNode.nextSibling) {
+
+        if (anchorNode.parentNode.nextSibling == focusNode.parentNode.nextSibling) {
             fakeAnchorText = fakeAnchorText.substring(startPos, endPos);
             fakeFocusText = '';
             console.log('In the same node');
