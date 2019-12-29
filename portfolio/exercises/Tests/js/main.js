@@ -132,7 +132,10 @@ $(document).ready(function () {
 
         var startPos = sel.anchorOffset;
         var endPos = sel.focusOffset;
-        if (startPos > endPos && endPos != 1) {
+        if (startPos > endPos
+            //&&  endPos != 1
+            //Node.compareDocumentPosition()
+        ) {
             let z = startPos;
             startPos = endPos;
             endPos = z;
