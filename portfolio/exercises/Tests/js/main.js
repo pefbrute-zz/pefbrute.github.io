@@ -132,14 +132,13 @@ $(document).ready(function () {
 
         var startPos = sel.anchorOffset;
         var endPos = sel.focusOffset;
-        if (startPos > endPos
-            //&&  endPos != 1
-            //Node.compareDocumentPosition()
-        ) {
+        console.log(sel.anchorNode.compareDocumentPosition(sel.focusNode));
+        if (sel.anchorNode.compareDocumentPosition(sel.focusNode) != 4) {
             let z = startPos;
             startPos = endPos;
             endPos = z;
         }
+        console.log(startPos, ' ', endPos);
         // var range = sel.getRangeAt(0);
         // var ext = range.extractContents();
         // var b = document.createElement("b");
