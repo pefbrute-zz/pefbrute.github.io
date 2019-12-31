@@ -146,13 +146,20 @@ $(document).ready(function () {
 
         let anchorNode = sel.anchorNode;
         let focusNode = sel.focusNode;
+        // console.log(anchorNode.parentNode == editor....);
+        if (anchorNode.parentNode == "a#anchor") {
+
+        }
         let fakeAnchorNode = anchorNode.parentNode.cloneNode(true);
+        console.log(fakeAnchorNode);
         let fakeFocusNode = focusNode.parentNode.cloneNode(true);
-        let fakeAnchorText = fakeAnchorNode.textContent;
+        let fakeAnchorText = fakeAnchorNode.textContent.trim();
         let fakeFocusText = fakeFocusNode.textContent;
 
         let fakeAnchorLength = fakeAnchorText.length;
         console.log(fakeAnchorLength);
+        console.log(fakeAnchorText);
+        console.log(fakeFocusText);
 
         // if (startPos == fakeAnchorLength - 1) {
         //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength - 1);
