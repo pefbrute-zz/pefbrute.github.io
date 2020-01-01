@@ -133,7 +133,13 @@ $(document).ready(function () {
         var startPos = sel.anchorOffset;
         var endPos = sel.focusOffset;
         console.log(sel.anchorNode.compareDocumentPosition(sel.focusNode));
-        if (sel.anchorNode.compareDocumentPosition(sel.focusNode) != 4) {
+        if (sel.anchorNode.compareDocumentPosition(sel.focusNode) == 2) {
+        //if (sel.anchorNode.compareDocumentPosition(sel.focusNode) != 4) {
+            // let z = sel.anchorNode;
+            // sel.anchorNode = sel.focusNode;
+            // sel.focusNode = z;
+            // console.log(sel.anchorNode);
+            // console.log(sel.focusrNode);
             let z = startPos;
             startPos = endPos;
             endPos = z;
@@ -146,15 +152,22 @@ $(document).ready(function () {
 
         let anchorNode = sel.anchorNode;
         let focusNode = sel.focusNode;
-        // console.log(anchorNode.parentNode == editor....);
-        if (anchorNode.parentNode == "a#anchor") {
-
-        }
         let fakeAnchorNode = anchorNode.parentNode.cloneNode(true);
-        console.log(fakeAnchorNode);
         let fakeFocusNode = focusNode.parentNode.cloneNode(true);
-        let fakeAnchorText = fakeAnchorNode.textContent.trim();
-        let fakeFocusText = fakeFocusNode.textContent;
+        // console.log(anchorNode.parentNode == editor....);
+        if (anchorNode.previousSibling || anchorNode.nextSibling) {
+            var fakeAnchorText = anchorNode.textContent;
+        } else {
+            var fakeAnchorText = fakeAnchorNode.textContent.trim();
+        }
+        if (focusNode.previousSibling || focusNode.nextSibling) {
+            var fakeFocusText = focusNode.textContent;
+        } else {
+            var fakeFocusText = fakeFocusNode.textContent.trim();
+        }
+        console.log(fakeAnchorNode);
+        // let fakeAnchorText = fakeAnchorNode.textContent.trim();
+        // let fakeFocusText = fakeFocusNode.textContent;
 
         let fakeAnchorLength = fakeAnchorText.length;
         console.log(fakeAnchorLength);
