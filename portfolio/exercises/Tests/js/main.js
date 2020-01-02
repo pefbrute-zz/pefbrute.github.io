@@ -132,47 +132,62 @@ $(document).ready(function () {
 
         var startPos = sel.anchorOffset;
         var endPos = sel.focusOffset;
-        console.log(sel.anchorNode.compareDocumentPosition(sel.focusNode));
+        // console.log(sel.anchorNode.compareDocumentPosition(sel.focusNode));
         if (sel.anchorNode.compareDocumentPosition(sel.focusNode) == 2) {
-        //if (sel.anchorNode.compareDocumentPosition(sel.focusNode) != 4) {
+            //if (sel.anchorNode.compareDocumentPosition(sel.focusNode) != 4) {
             // let z = sel.anchorNode;
             // sel.anchorNode = sel.focusNode;
             // sel.focusNode = z;
             // console.log(sel.anchorNode);
             // console.log(sel.focusrNode);
+
+            var anchorNode = sel.focusNode;
+            var focusNode = sel.anchorNode;
             let z = startPos;
             startPos = endPos;
             endPos = z;
+
+        } else {
+            anchorNode = sel.anchorNode;
+            focusNode = sel.focusNode;
         }
         console.log(startPos, ' ', endPos);
+        console.log('Anchor:', anchorNode);
+        console.log('Focus:', focusNode);
         // var range = sel.getRangeAt(0);
         // var ext = range.extractContents();
         // var b = document.createElement("b");
         // b.appendChild(ext);
 
-        let anchorNode = sel.anchorNode;
-        let focusNode = sel.focusNode;
+        // let anchorNode = sel.anchorNode;
+        // let focusNode = sel.focusNode;
+        
+        // ----> let anchorParentNode = anchorNode.parentNode;
+        //let focusParentNode = focusNode.parentNode; // <--- Finish it
         let fakeAnchorNode = anchorNode.parentNode.cloneNode(true);
         let fakeFocusNode = focusNode.parentNode.cloneNode(true);
         // console.log(anchorNode.parentNode == editor....);
         if (anchorNode.previousSibling || anchorNode.nextSibling) {
             var fakeAnchorText = anchorNode.textContent;
+            console.log('Anchor is a clear text');
         } else {
             var fakeAnchorText = fakeAnchorNode.textContent.trim();
         }
         if (focusNode.previousSibling || focusNode.nextSibling) {
             var fakeFocusText = focusNode.textContent;
+            console.log('Focus is a clear text');
         } else {
             var fakeFocusText = fakeFocusNode.textContent.trim();
         }
         console.log(fakeAnchorNode);
+        console.log(fakeFocusNode);
         // let fakeAnchorText = fakeAnchorNode.textContent.trim();
         // let fakeFocusText = fakeFocusNode.textContent;
 
-        let fakeAnchorLength = fakeAnchorText.length;
-        console.log(fakeAnchorLength);
-        console.log(fakeAnchorText);
-        console.log(fakeFocusText);
+        // let fakeAnchorLength = fakeAnchorText.length;
+        // console.log(fakeAnchorLength);
+        // console.log(fakeAnchorText);
+        // console.log(fakeFocusText);
 
         // if (startPos == fakeAnchorLength - 1) {
         //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength - 1);
@@ -209,6 +224,10 @@ $(document).ready(function () {
         console.log(fakeFocusText);
 
         let br = document.createElement("br");
+
+        if (f) {
+
+        }
 
         editor.appendChild(fakeAnchorNode);
         space();
