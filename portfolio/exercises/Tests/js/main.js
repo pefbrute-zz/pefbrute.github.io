@@ -162,10 +162,10 @@ $(document).ready(function () {
         // let anchorNode = sel.anchorNode;
         // let focusNode = sel.focusNode;
         
-        // ----> let anchorParentNode = anchorNode.parentNode;
-        //let focusParentNode = focusNode.parentNode; // <--- Finish it
-        let fakeAnchorNode = anchorNode.parentNode.cloneNode(true);
-        let fakeFocusNode = focusNode.parentNode.cloneNode(true);
+        let anchorParentNode = anchorNode.parentNode;
+        let focusParentNode = focusNode.parentNode;
+        let fakeAnchorNode = anchorParentNode.cloneNode(true);
+        let fakeFocusNode = focusParentNode.cloneNode(true);
         // console.log(anchorNode.parentNode == editor....);
         if (anchorNode.previousSibling || anchorNode.nextSibling) {
             var fakeAnchorText = anchorNode.textContent;
@@ -225,12 +225,20 @@ $(document).ready(function () {
 
         let br = document.createElement("br");
 
-        if (f) {
+        // if (f) {
 
-        }
+        // }
 
         editor.appendChild(fakeAnchorNode);
         space();
+        // var nextSibling = fakeAnchorNode.nextSibling;
+        // console.log(nextSibling.textContent.trim().length);
+        // while (nextSibling.textContent.trim() == 0) {
+        //     fakeAnchorNode = nextSibling;
+        //     nextSibling = fakeAnchorNode.nextSibling;
+        //     console.log(fakeAnchorNode);
+        // }
+        // editor.appendChild(fakeAnchorNode.nextSibling);
         editor.appendChild(fakeFocusNode);
         editor.appendChild(br);
 
