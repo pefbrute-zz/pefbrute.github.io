@@ -229,16 +229,21 @@ $(document).ready(function () {
 
         // }
 
+        console.log(" ".trim().length);
+
         editor.appendChild(fakeAnchorNode);
         space();
-        // var nextSibling = fakeAnchorNode.nextSibling;
-        // console.log(nextSibling.textContent.trim().length);
-        // while (nextSibling.textContent.trim() == 0) {
-        //     fakeAnchorNode = nextSibling;
-        //     nextSibling = fakeAnchorNode.nextSibling;
-        //     console.log(fakeAnchorNode);
-        // }
-        // editor.appendChild(fakeAnchorNode.nextSibling);
+        var nextSibling = fakeAnchorNode.nextSibling;
+        console.log(nextSibling);
+        console.log(nextSibling.textContent.trim().length);
+        while (nextSibling.textContent.trim().length == 0) {
+            fakeAnchorNode = nextSibling;
+            console.log(fakeAnchorNode);
+            nextSibling = fakeAnchorNode.nextSibling;
+            console.log(nextSibling);
+            //NEXT_SIBLING = 0 => ERROR <== Resolve this
+        }
+        editor.appendChild(fakeAnchorNode.nextSibling);
         editor.appendChild(fakeFocusNode);
         editor.appendChild(br);
 
