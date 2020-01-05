@@ -161,7 +161,7 @@ $(document).ready(function () {
 
         // let anchorNode = sel.anchorNode;
         // let focusNode = sel.focusNode;
-        
+
         let anchorParentNode = anchorNode.parentNode;
         let focusParentNode = focusNode.parentNode;
         let fakeAnchorNode = anchorParentNode.cloneNode(true);
@@ -229,22 +229,35 @@ $(document).ready(function () {
 
         // }
 
-        console.log(" ".trim().length);
+        // console.log(" ".trim().length);
+
+        // var b = document.createElement("b");
 
         editor.appendChild(fakeAnchorNode);
+       
         space();
         var nextSibling = fakeAnchorNode.nextSibling;
         console.log(nextSibling);
+
+        console.log(anchorParentNode.nextElementSibling);
         console.log(nextSibling.textContent.trim().length);
-        while (nextSibling.textContent.trim().length == 0) {
-            fakeAnchorNode = nextSibling;
-            console.log(fakeAnchorNode);
-            nextSibling = fakeAnchorNode.nextSibling;
-            console.log(nextSibling);
-            //NEXT_SIBLING = 0 => ERROR <== Resolve this
-        }
-        editor.appendChild(fakeAnchorNode.nextSibling);
+        // while (fakeAnchorNode.nextSibling != fakeFocusNode) {
+        //     if (anchorParentNode.nextElementSibling == nextSibling) {
+        //         editor.appendChild(anchorParentNode.nextElementSibling);
+        //     } else {
+        //         editor.appendChild(nextSibling);
+        //         editor.appendChild(anchorParentNode.nextElementSibling);
+        //     }
+        //     anchorParentNode.nextSibling = anchorParentNode.nextSibling.nextSibling;
+        // }
+        // while (nextSibling.textContent.trim().length == 0) {
+        //     fakeAnchorNode = nextSibling;
+        //     console.log(fakeAnchorNode);
+        //     nextSibling = fakeAnchorNode.nextSibling;
+        //     console.log(nextSibling);
+        // }
         editor.appendChild(fakeFocusNode);
+        // editor.appendChild(b);
         editor.appendChild(br);
 
 
