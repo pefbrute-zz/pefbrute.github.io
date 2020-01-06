@@ -235,27 +235,29 @@ $(document).ready(function () {
 
         editor.appendChild(fakeAnchorNode);
        
-        space();
-        var nextSibling = fakeAnchorNode.nextSibling;
+        // space();
+        var nextSibling = anchorParentNode.nextSibling;
+        var nextElementSibling = anchorParentNode.nextElementSibling;
         console.log(nextSibling);
-
-        console.log(anchorParentNode.nextElementSibling);
+        console.log(nextElementSibling);
         console.log(nextSibling.textContent.trim().length);
-        // while (fakeAnchorNode.nextSibling != fakeFocusNode) {
-        //     if (anchorParentNode.nextElementSibling == nextSibling) {
-        //         editor.appendChild(anchorParentNode.nextElementSibling);
+        // while (nextSibling != fakeFocusNode) {
+        //     if (fakeAnchorNode.nextElementSibling == nextSibling) {
+        //         editor.appendChild(fakeAnchorNode.nextElementSibling);
         //     } else {
         //         editor.appendChild(nextSibling);
-        //         editor.appendChild(anchorParentNode.nextElementSibling);
+        //         editor.appendChild(fakeAnchorNode.nextElementSibling);
         //     }
         //     anchorParentNode.nextSibling = anchorParentNode.nextSibling.nextSibling;
         // }
+
         // while (nextSibling.textContent.trim().length == 0) {
         //     fakeAnchorNode = nextSibling;
         //     console.log(fakeAnchorNode);
         //     nextSibling = fakeAnchorNode.nextSibling;
         //     console.log(nextSibling);
         // }
+
         editor.appendChild(fakeFocusNode);
         // editor.appendChild(b);
         editor.appendChild(br);
