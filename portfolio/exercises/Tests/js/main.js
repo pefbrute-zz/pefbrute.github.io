@@ -151,7 +151,7 @@ $(document).ready(function () {
             anchorNode = sel.anchorNode;
             focusNode = sel.focusNode;
         }
-        console.log(startPos, ' ', endPos);
+        // console.log(startPos, ' ', endPos);
         console.log('Anchor:', anchorNode);
         console.log('Focus:', focusNode);
         // var range = sel.getRangeAt(0);
@@ -234,13 +234,24 @@ $(document).ready(function () {
         // var b = document.createElement("b");
 
         editor.appendChild(fakeAnchorNode);
-       
+
         // space();
-        var nextSibling = anchorParentNode.nextSibling;
+
+        var nextSibling = anchorParentNode.nextSibling.cloneNode(true);
         var nextElementSibling = anchorParentNode.nextElementSibling;
         console.log(nextSibling);
         console.log(nextElementSibling);
-        console.log(nextSibling.textContent.trim().length);
+        console.log(nextSibling.textContent.trim());
+        console.log(nextSibling.nextSibling);
+        if (anchorParentNode.nextSibling == focusParentNode.nextSibling) {} else {
+            if (nextElementSibling == null) {
+                editor.append(nextSibling);
+            } else {
+                editor.append(nextSibling);
+                editor.append(nextElementSibling.cloneNode(true));
+            }
+        }
+
         // while (nextSibling != fakeFocusNode) {
         //     if (fakeAnchorNode.nextElementSibling == nextSibling) {
         //         editor.appendChild(fakeAnchorNode.nextElementSibling);
