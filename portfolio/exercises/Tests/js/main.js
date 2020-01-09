@@ -162,6 +162,8 @@ $(document).ready(function () {
         // let anchorNode = sel.anchorNode;
         // let focusNode = sel.focusNode;
 
+        console.log(Array.from(anchorNode.parentNode.childNodes).indexOf(anchorNode));
+
         let anchorParentNode = anchorNode.parentNode;
         let focusParentNode = focusNode.parentNode;
         let fakeAnchorNode = anchorParentNode.cloneNode(true);
