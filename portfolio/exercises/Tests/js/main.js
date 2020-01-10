@@ -121,6 +121,8 @@ $(document).ready(function () {
     document.getElementById("makeB").onclick = function () {
         console.clear();
         var editor = document.getElementById("editor");
+        console.log(editor.getElementsByTagName("*"));
+        console.log(editor.querySelector("*"));
         let space = function space() {
             editor.appendChild(document.createTextNode(" "));
         }
