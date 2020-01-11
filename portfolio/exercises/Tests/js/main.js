@@ -175,7 +175,10 @@ $(document).ready(function () {
             var fakeAnchorText = anchorNode.textContent;
             console.log('Anchor is a clear text');
         } else {
-            var fakeAnchorText = fakeAnchorNode.textContent.trim();
+            // var fakeAnchorText = fakeAnchorNode.textContent.trim();
+            var fakeAnchorText = fakeAnchorNode.textContent;
+            console.log(fakeAnchorText);
+            console.log("Anchor isn't a clear text");
         }
         if (focusNode.previousSibling || focusNode.nextSibling) {
             var fakeFocusText = focusNode.textContent;
@@ -227,7 +230,7 @@ $(document).ready(function () {
         fakeFocusNode.textContent = fakeFocusText;
         console.log(fakeFocusText);
 
-        let br = document.createElement("br");
+        var br = document.createElement("br");
 
         // if (f) {
 
@@ -236,7 +239,7 @@ $(document).ready(function () {
         // console.log(" ".trim().length);
 
         // var b = document.createElement("b");
-
+        editor.appendChild(br);
         editor.appendChild(fakeAnchorNode);
 
         // space();
@@ -247,7 +250,7 @@ $(document).ready(function () {
         console.log(nextElementSibling);
         console.log(nextSibling.textContent.trim());
         console.log(nextSibling.nextSibling);
-        if (anchorParentNode.nextSibling == focusParentNode.nextSibling) {} else {
+        if (anchorParentNode.nextSibling == focusParentNode.nextSibling || anchorParentNode.nextElementSibling == focusParentNode) {} else {
             if (nextElementSibling == null) {
                 editor.append(nextSibling);
             } else {
