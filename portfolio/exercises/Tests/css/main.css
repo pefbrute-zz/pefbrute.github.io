@@ -47,6 +47,10 @@ body {
   transition: all 0.2s ease;
 }
 
+mark {
+  background-color: #27FF00;
+}
+
 html {
   scroll-behavior: smooth;
 }

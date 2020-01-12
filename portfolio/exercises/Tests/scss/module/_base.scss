@@ -5,8 +5,11 @@ body {
     font-size: 100%;
     background: #fff;
     font-family: "", sans-serif;
-
     @include transition(.2s)
+}
+
+mark {
+    background-color: #27FF00;
 }
 
 html {
