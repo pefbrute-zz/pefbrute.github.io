@@ -163,6 +163,7 @@
         // var b = document.createElement("b");
         // b.appendChild(ext);
 
+
         // let anchorNode = sel.anchorNode;
         // let focusNode = sel.focusNode;
 
