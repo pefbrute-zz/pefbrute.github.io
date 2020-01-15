@@ -245,9 +245,9 @@ document.getElementById("makeB").onclick = function () {
 
     // var b = document.createElement("b");
     editor.appendChild(fakeAnchorNode);
-
+    
     // space();
-
+    
     var nextSibling = anchorParentNode.nextSibling.cloneNode(true);
     var nextElementSibling = anchorParentNode.nextElementSibling;
     console.log(nextSibling);
@@ -262,11 +262,24 @@ document.getElementById("makeB").onclick = function () {
             editor.append(nextElementSibling.cloneNode(true));
         }
     }
+    
+    console.log(Array.prototype.indexOf.call(editor.childNodes, sel.anchorNode.parentNode));
+    indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, sel.anchorNode.parentNode);
 
+    if (indexAnchorNode){
+        //
+    }
+    
+    while (Array.prototype.indexOf.call(editor.childNodes, editor.childNodes[indexAnchorNode]) != Array.prototype.indexOf.call(editor.childNodes, sel.focusNode.parentNode)) {
+        indexAnchorNode++;
+        editor.appendChild(editor.childNodes[indexAnchorNode].cloneNode(true));
+    }
+    i = null;
+    
     // while (nextSibling != fakeFocusNode) {
-    //     if (fakeAnchorNode.nextElementSibling == nextSibling) {
-    //         editor.appendChild(fakeAnchorNode.nextElementSibling);
-    //     } else {
+        //     if (fakeAnchorNode.nextElementSibling == nextSibling) {
+            //         editor.appendChild(fakeAnchorNode.nextElementSibling);
+            //     } else {
     //         editor.appendChild(nextSibling);
     //         editor.appendChild(fakeAnchorNode.nextElementSibling);
     //     }
