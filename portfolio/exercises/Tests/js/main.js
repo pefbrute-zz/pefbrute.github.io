@@ -121,6 +121,7 @@ for (const element of editables) {
 document.getElementById("makeB").onclick = function () {
     console.clear();
     var editor = document.getElementById("editor");
+    var editorChilds = editor.childNodes;
     console.log(editor.getElementsByTagName("*"));
     console.log(editor.querySelector("*"));
     console.log("Child nodes: ", editor.childNodes);
@@ -245,9 +246,9 @@ document.getElementById("makeB").onclick = function () {
 
     // var b = document.createElement("b");
     editor.appendChild(fakeAnchorNode);
-    
+
     // space();
-    
+
     var nextSibling = anchorParentNode.nextSibling.cloneNode(true);
     var nextElementSibling = anchorParentNode.nextElementSibling;
     console.log(nextSibling);
@@ -262,24 +263,32 @@ document.getElementById("makeB").onclick = function () {
             editor.append(nextElementSibling.cloneNode(true));
         }
     }
-    
-    console.log(Array.prototype.indexOf.call(editor.childNodes, sel.anchorNode.parentNode));
-    indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, sel.anchorNode.parentNode);
 
-    if (indexAnchorNode){
-        //
+    var indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, anchorNode.parentNode);
+    var indexFocusNode = Array.prototype.indexOf.call(editor.childNodes, focusNode.parentNode);
+    console.log('Index of anchor node: ', indexAnchorNode,
+        '\n', 'Index of focus node: ', indexFocusNode);
+
+    // function indexChildNodes (index){
+    //     return Array.prototype.indexOf.call(editor.childNodes, editor.childNodes[index]);
+    // }
+    // indexAnchorNode++;
+
+    console.log(editor.childNodes[++indexAnchorNode].textContent.trim());
+
+    // if (indexFocusNode - indexAnchorNode == 2 && editor.childNodes[indexAnchorNode++].textContent.trim() == 0) {
+
+    // }
+
+    while (Array.prototype.indexOf.call(editorChilds, editorChilds[indexAnchorNode]) != indexFocusNode) {
+        editor.appendChild(editorChilds[indexAnchorNode].cloneNode(true));
+        ++indexAnchorNode;
     }
-    
-    while (Array.prototype.indexOf.call(editor.childNodes, editor.childNodes[indexAnchorNode]) != Array.prototype.indexOf.call(editor.childNodes, sel.focusNode.parentNode)) {
-        indexAnchorNode++;
-        editor.appendChild(editor.childNodes[indexAnchorNode].cloneNode(true));
-    }
-    i = null;
-    
+
     // while (nextSibling != fakeFocusNode) {
-        //     if (fakeAnchorNode.nextElementSibling == nextSibling) {
-            //         editor.appendChild(fakeAnchorNode.nextElementSibling);
-            //     } else {
+    //     if (fakeAnchorNode.nextElementSibling == nextSibling) {
+    //         editor.appendChild(fakeAnchorNode.nextElementSibling);
+    //     } else {
     //         editor.appendChild(nextSibling);
     //         editor.appendChild(fakeAnchorNode.nextElementSibling);
     //     }
