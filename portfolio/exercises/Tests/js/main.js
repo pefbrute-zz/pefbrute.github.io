@@ -121,7 +121,6 @@ for (const element of editables) {
 document.getElementById("makeB").onclick = function () {
     console.clear();
     var editor = document.getElementById("editor");
-    var editorChilds = editor.childNodes;
     console.log(editor.getElementsByTagName("*"));
     console.log(editor.querySelector("*"));
     console.log("Child nodes: ", editor.childNodes);
@@ -264,11 +263,18 @@ document.getElementById("makeB").onclick = function () {
     //     }
     // }
 
-    var indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, anchorNode.parentNode);
-    // if (indexAnchorNode == -1){
-    //     indexAnchorNode = 
+
+    var anchorChilds = anchorNode.parentNode.parentNode.childNodes;
+    console.log(anchorChilds);
+    var indexAnchorNode = Array.prototype.indexOf.call(anchorChilds, anchorNode.parentNode);
+    // var indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, anchorNode.parentNode);
+    
+    // if (indexAnchorNode == -1) {
+    //     indexAnchorNode =
     // }
-    var indexFocusNode = Array.prototype.indexOf.call(editor.childNodes, focusNode.parentNode);
+    
+    var indexFocusNode = Array.prototype.indexOf.call(focusNode.parentNode.parentNode.childNodes, focusNode.parentNode);
+    // var indexFocusNode = Array.prototype.indexOf.call(editor.childNodes, focusNode.parentNode);
     console.log('Index of anchor node: ', indexAnchorNode,
         '\n', 'Index of focus node: ', indexFocusNode);
     // function indexChildNodes (index){
@@ -280,13 +286,14 @@ document.getElementById("makeB").onclick = function () {
     console.log(indexAnchorNode);
     // if (indexFocusNode - indexAnchorNode == 2 && editor.childNodes[indexAnchorNode++].textContent.trim() == 0) {
 
-    if (indexAnchorNode == indexFocusNode){} else{
+    if (indexAnchorNode == indexFocusNode) {} else {
         indexAnchorNode++;
     }
     // }
 
-    while (Array.prototype.indexOf.call(editorChilds, editorChilds[indexAnchorNode]) != indexFocusNode) {
-        editor.appendChild(editorChilds[indexAnchorNode].cloneNode(true));
+    while (Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode) {
+        // if(anchorChilds.length == indexAnchorNode){};
+        editor.appendChild(anchorChilds[indexAnchorNode].cloneNode(true));
         ++indexAnchorNode;
     }
 
