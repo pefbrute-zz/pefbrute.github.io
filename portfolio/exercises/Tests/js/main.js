@@ -157,7 +157,9 @@ document.getElementById("makeB").onclick = function () {
     }
     // console.log(startPos, ' ', endPos);
     console.log('Anchor:', anchorNode);
+    console.log("Anchor's Parent Node:", anchorNode.parentNode);
     console.log('Focus:', focusNode);
+    console.log("Focus's Parent Node:", focusNode.parentNode);
     // var range = sel.getRangeAt(0);
     // var ext = range.extractContents();
     // var b = document.createElement("b");
@@ -268,11 +270,11 @@ document.getElementById("makeB").onclick = function () {
     console.log(anchorChilds);
     var indexAnchorNode = Array.prototype.indexOf.call(anchorChilds, anchorNode.parentNode);
     // var indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, anchorNode.parentNode);
-    
+
     // if (indexAnchorNode == -1) {
     //     indexAnchorNode =
     // }
-    
+
     var indexFocusNode = Array.prototype.indexOf.call(focusNode.parentNode.parentNode.childNodes, focusNode.parentNode);
     // var indexFocusNode = Array.prototype.indexOf.call(editor.childNodes, focusNode.parentNode);
     console.log('Index of anchor node: ', indexAnchorNode,
@@ -292,7 +294,13 @@ document.getElementById("makeB").onclick = function () {
     // }
 
     while (Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode) {
-        // if(anchorChilds.length == indexAnchorNode){};
+        if (anchorChilds.length == indexAnchorNode) {
+            anchorNode = anchorNode.parentNode.parentNode.nextElementSibling;
+            anchorChilds = anchorNode.parentNode.parentNode.childNodes;
+            console.log(anchorNode.parentNode);
+            console.log(anchorChilds);
+
+        };
         editor.appendChild(anchorChilds[indexAnchorNode].cloneNode(true));
         ++indexAnchorNode;
     }
