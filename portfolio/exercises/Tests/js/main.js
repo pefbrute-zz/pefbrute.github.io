@@ -265,6 +265,15 @@ document.getElementById("makeB").onclick = function () {
     //     }
     // }
 
+    // var editorChilds = editor.childNodes;
+    // var fakeAnchorParentNode = anchorParentNode.cloneNode(true);
+    // var indexAnchorParentInEditor = Array.prototype.indexOf.call(editorChilds, fakeAnchorParentNode);
+    // while (indexAnchorParentInEditor == -1) {
+    //     console.log(fakeAnchorParentNode);
+    //     fakeAnchorParentNode = fakeAnchorParentNode.parentNode;
+    //     indexAnchorParentInEditor = Array.prototype.indexOf.call(editorChilds, fakeAnchorParentNode);
+    // };
+    // console.log("Index of anchor's parent node in editor: ",indexAnchorParentInEditor);
 
     var anchorChilds = anchorNode.parentNode.parentNode.childNodes;
     console.log(anchorChilds);
@@ -293,7 +302,7 @@ document.getElementById("makeB").onclick = function () {
     }
     // }
 
-    while (Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode) {
+    while (Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode && anchorChilds[indexAnchorNode].parentNode != focusNode.parentNode) {
         if (anchorChilds.length == indexAnchorNode) {
             anchorNode = anchorNode.parentNode.parentNode.nextElementSibling;
             anchorChilds = anchorNode.parentNode.parentNode.childNodes;
