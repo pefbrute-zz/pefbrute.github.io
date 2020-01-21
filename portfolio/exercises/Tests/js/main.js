@@ -273,6 +273,7 @@ document.getElementById("makeB").onclick = function () {
     //     fakeAnchorParentNode = fakeAnchorParentNode.parentNode;
     //     indexAnchorParentInEditor = Array.prototype.indexOf.call(editorChilds, fakeAnchorParentNode);
     // };
+    //
     // console.log("Index of anchor's parent node in editor: ",indexAnchorParentInEditor);
 
     var anchorChilds = anchorNode.parentNode.parentNode.childNodes;
