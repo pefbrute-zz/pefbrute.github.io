@@ -265,7 +265,8 @@ document.getElementById("makeB").onclick = function () {
     //     }
     // }
 
-    // var editorChilds = editor.childNodes;
+    var editorChilds = editor.childNodes;
+    console.log(editorChilds);
     // var fakeAnchorParentNode = anchorParentNode.cloneNode(true);
     // var indexAnchorParentInEditor = Array.prototype.indexOf.call(editorChilds, fakeAnchorParentNode);
     // while (indexAnchorParentInEditor == -1) {
@@ -280,7 +281,7 @@ document.getElementById("makeB").onclick = function () {
     console.log(anchorChilds);
     var indexAnchorNode = Array.prototype.indexOf.call(anchorChilds, anchorNode.parentNode);
     // var indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, anchorNode.parentNode);
-    
+
 
     // if (indexAnchorNode == -1) {
     //     indexAnchorNode =
@@ -305,15 +306,22 @@ document.getElementById("makeB").onclick = function () {
     // }
 
     while (Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode && anchorChilds[indexAnchorNode].parentNode != focusNode.parentNode) {
+        editor.appendChild(anchorChilds[indexAnchorNode].cloneNode(true));
+        console.log(anchorChilds[indexAnchorNode]);
+        ++indexAnchorNode;
         if (anchorChilds.length == indexAnchorNode) {
             anchorNode = anchorNode.parentNode.parentNode.nextElementSibling;
-            anchorChilds = anchorNode.parentNode.parentNode.childNodes;
-            console.log(anchorNode.parentNode);
+            anchorChilds = anchorNode.parentNode.childNodes;
+            indexAnchorNode = Array.prototype.indexOf.call(editorChilds, anchorNode);
+            console.log(indexAnchorNode);
+            console.log(anchorNode);
+            // console.log(editorChilds);
             console.log(anchorChilds);
+            console.log(anchorNode.parentNode);
+            console.log(anchorChilds[indexAnchorNode].parentNode);
 
         };
-        editor.appendChild(anchorChilds[indexAnchorNode].cloneNode(true));
-        ++indexAnchorNode;
+
     }
 
     // while (nextSibling != fakeFocusNode) {
