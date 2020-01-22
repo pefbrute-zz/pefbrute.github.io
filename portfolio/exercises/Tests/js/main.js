@@ -280,6 +280,7 @@ document.getElementById("makeB").onclick = function () {
     console.log(anchorChilds);
     var indexAnchorNode = Array.prototype.indexOf.call(anchorChilds, anchorNode.parentNode);
     // var indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, anchorNode.parentNode);
+    
 
     // if (indexAnchorNode == -1) {
     //     indexAnchorNode =
