@@ -303,6 +303,7 @@ document.getElementById("makeB").onclick = function () {
     if (indexAnchorNode == indexFocusNode) {} else {
         indexAnchorNode++;
     }
+    
     // }
 
     while (Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode && anchorChilds[indexAnchorNode].parentNode != focusNode.parentNode) {
