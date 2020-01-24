@@ -291,6 +291,7 @@ document.getElementById("makeB").onclick = function () {
     // var indexFocusNode = Array.prototype.indexOf.call(editor.childNodes, focusNode.parentNode);
     console.log('Index of anchor node: ', indexAnchorNode,
         '\n', 'Index of focus node: ', indexFocusNode);
+        
     // function indexChildNodes (index){
     //     return Array.prototype.indexOf.call(editor.childNodes, editor.childNodes[index]);
     // }
