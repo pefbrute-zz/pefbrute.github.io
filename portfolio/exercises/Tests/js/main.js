@@ -169,8 +169,6 @@ document.getElementById("makeB").onclick = function () {
     // let anchorNode = sel.anchorNode;
     // let focusNode = sel.focusNode;
 
-    console.log(Array.from(anchorNode.parentNode.childNodes).indexOf(anchorNode));
-
     let anchorParentNode = anchorNode.parentNode;
     let focusParentNode = focusNode.parentNode;
     let fakeAnchorNode = anchorParentNode.cloneNode(true);
@@ -291,7 +289,7 @@ document.getElementById("makeB").onclick = function () {
     // var indexFocusNode = Array.prototype.indexOf.call(editor.childNodes, focusNode.parentNode);
     console.log('Index of anchor node: ', indexAnchorNode,
         '\n', 'Index of focus node: ', indexFocusNode);
-        
+    //
     // function indexChildNodes (index){
     //     return Array.prototype.indexOf.call(editor.childNodes, editor.childNodes[index]);
     // }
@@ -307,7 +305,9 @@ document.getElementById("makeB").onclick = function () {
     
     // }
 
-    while (Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode && anchorChilds[indexAnchorNode].parentNode != focusNode.parentNode) {
+    while ((Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode) 
+            && (anchorChilds[indexAnchorNode].parentNode != focusNode.parentNode)
+            ) {
         editor.appendChild(anchorChilds[indexAnchorNode].cloneNode(true));
         console.log(anchorChilds[indexAnchorNode]);
         ++indexAnchorNode;
