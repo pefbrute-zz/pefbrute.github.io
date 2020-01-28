@@ -170,6 +170,7 @@ document.getElementById("makeB").onclick = function () {
     // let focusNode = sel.focusNode;
     //
     //
+    //
     let anchorParentNode = anchorNode.parentNode;
     let focusParentNode = focusNode.parentNode;
     let fakeAnchorNode = anchorParentNode.cloneNode(true);
