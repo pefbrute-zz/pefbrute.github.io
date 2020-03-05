@@ -213,6 +213,7 @@ document.getElementById("makeB").onclick = function () {
     //
     //
     //
+    //
     let anchorParentNode = anchorNode.parentNode;
     let focusParentNode = focusNode.parentNode;
     let fakeAnchorNode = anchorParentNode.cloneNode(true);
