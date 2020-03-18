@@ -119,20 +119,24 @@ for (const element of editables) {
 // }
 
 document.getElementById("makeB").onclick = function () {
+    debugger;
     console.clear();
     var editor = document.getElementById("editor");
+    /*
     console.log(editor.getElementsByTagName("*"));
     console.log(editor.querySelector("*"));
     console.log("Child nodes: ", editor.childNodes);
     console.log("Children: ", editor.children);
+    */
     let space = function space() {
         editor.appendChild(document.createTextNode(" "));
     }
     var allTxt = editor.textContent;
     var sel = document.getSelection();
+    /*
     console.log(sel);
     console.log(sel.anchorNode.parentNode);
-
+    */
 
     var startPos = sel.anchorOffset;
     var endPos = sel.focusOffset;
@@ -156,10 +160,12 @@ document.getElementById("makeB").onclick = function () {
         focusNode = sel.focusNode;
     }
     // console.log(startPos, ' ', endPos);
+    /*
     console.log('Anchor:', anchorNode);
     console.log("Anchor's Parent Node:", anchorNode.parentNode);
     console.log('Focus:', focusNode);
     console.log("Focus's Parent Node:", focusNode.parentNode);
+    */
     // var range = sel.getRangeAt(0);
     // var ext = range.extractContents();
     // var b = document.createElement("b");
@@ -229,64 +235,42 @@ document.getElementById("makeB").onclick = function () {
     // console.log(anchorNode.parentNode == editor....);
     if (anchorNode.previousSibling || anchorNode.nextSibling) {
         var fakeAnchorText = anchorNode.textContent;
-        console.log('Anchor is a clear text');
+        //console.log('Anchor is a clear text');
     } else {
         // var fakeAnchorText = fakeAnchorNode.textContent.trim();
         var fakeAnchorText = fakeAnchorNode.textContent;
+        /*
         console.log(fakeAnchorText);
         console.log("Anchor isn't a clear text");
+        */
     }
     if (focusNode.previousSibling || focusNode.nextSibling) {
         var fakeFocusText = focusNode.textContent;
-        console.log('Focus is a clear text');
+        //console.log('Focus is a clear text');
     } else {
         // var fakeFocusText = fakeFocusNode.textContent.trim();
         var fakeFocusText = fakeFocusNode.textContent;
-        console.log("Focus isn't a clear text");
+        //console.log("Focus isn't a clear text");
     }
+    /*
     console.log(fakeAnchorNode);
     console.log(fakeFocusNode);
-    // let fakeAnchorText = fakeAnchorNode.textContent.trim();
-    // let fakeFocusText = fakeFocusNode.textContent;
-
-    // let fakeAnchorLength = fakeAnchorText.length;
-    // console.log(fakeAnchorLength);
-    // console.log(fakeAnchorText);
-    // console.log(fakeFocusText);
-
-    // if (startPos == fakeAnchorLength - 1) {
-    //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength - 1);
-    // } else {
-    //     fakeAnchorText = fakeAnchorText.substring(startPos, fakeAnchorLength);
-    // }
-    // console.log(sel.anchorNode.nodeName);
-    // console.log(anchorNode.parentNode.localName);
-    // console.log(anchorNode.parentNode.previousSibling);
-    // console.log(anchorNode.nodeType, focusNode.nodeType, '\n',
-    //     anchorNode.parentNode.localName,focusNode.parentNode.localName, '\n',
-    //     anchorNode.data == focusNode.data, '\n',
-    //     anchorNode.parentNode.previousSibling, focusNode.parentNode.previousSibling, '\n',
-    //     anchorNode.parentNode.nextSibling, focusNode.parentNode.nextSibling);
-    // if (anchorNode.nodeType == focusNode.nodeType &&
-    //     anchorNode.parentNode.localName == focusNode.parentNode.localName &&
-    //     anchorNode.data == focusNode.data &&
-    //     anchorNode.parentNode.previousSibling == focusNode.parentNode.previousSibling &&
-    //     anchorNode.parentNode.nextSibling == focusNode.parentNode.nextSibling) {
+    */
 
     if (anchorNode.parentNode.nextSibling == focusNode.parentNode.nextSibling) {
         fakeAnchorText = fakeAnchorText.substring(startPos, endPos);
         fakeFocusText = '';
-        console.log('In the same node');
+        //console.log('In the same node');
     } else {
         fakeAnchorText = fakeAnchorText.substring(startPos);
         fakeFocusText = fakeFocusText.substring(0, endPos);
-        console.log('In different nodes');
+        //console.log('In different nodes');
     }
 
     fakeAnchorNode.textContent = fakeAnchorText;
-    console.log(fakeAnchorText);
+    //console.log(fakeAnchorText);
     fakeFocusNode.textContent = fakeFocusText;
-    console.log(fakeFocusText);
+    //console.log(fakeFocusText);
 
     var br = document.createElement("br");
     editor.appendChild(br);
@@ -317,7 +301,7 @@ document.getElementById("makeB").onclick = function () {
     // }
 
     var editorChilds = editor.childNodes;
-    console.log(editorChilds);
+    //console.log(editorChilds);
     // var fakeAnchorParentNode = anchorParentNode.cloneNode(true);
     // var indexAnchorParentInEditor = Array.prototype.indexOf.call(editorChilds, fakeAnchorParentNode);
     // while (indexAnchorParentInEditor == -1) {
@@ -329,7 +313,7 @@ document.getElementById("makeB").onclick = function () {
     // console.log("Index of anchor's parent node in editor: ",indexAnchorParentInEditor);
 
     var anchorChilds = anchorNode.parentNode.parentNode.childNodes;
-    console.log(anchorChilds);
+    //console.log(anchorChilds);
     var indexAnchorNode = Array.prototype.indexOf.call(anchorChilds, anchorNode.parentNode);
     // var indexAnchorNode = Array.prototype.indexOf.call(editor.childNodes, anchorNode.parentNode);
 
@@ -340,8 +324,10 @@ document.getElementById("makeB").onclick = function () {
 
     var indexFocusNode = Array.prototype.indexOf.call(focusNode.parentNode.parentNode.childNodes, focusNode.parentNode);
     // var indexFocusNode = Array.prototype.indexOf.call(editor.childNodes, focusNode.parentNode);
+    /*
     console.log('Index of anchor node: ', indexAnchorNode,
         '\n', 'Index of focus node: ', indexFocusNode);
+    */
     //
     // function indexChildNodes (index){
     //     return Array.prototype.indexOf.call(editor.childNodes, editor.childNodes[index]);
@@ -349,31 +335,33 @@ document.getElementById("makeB").onclick = function () {
     // indexAnchorNode++;
 
     // console.log(editor.childNodes[++indexAnchorNode].textContent.trim());
-    console.log(indexAnchorNode);
+    //console.log(indexAnchorNode);
     // if (indexFocusNode - indexAnchorNode == 2 && editor.childNodes[indexAnchorNode++].textContent.trim() == 0) {
 
     if (indexAnchorNode == indexFocusNode) {} else {
         indexAnchorNode++;
     }
-    
+
     // }
 
-    while ((Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode) 
-            && (anchorChilds[indexAnchorNode].parentNode != focusNode.parentNode)
-            ) {
+    while ((Array.prototype.indexOf.call(anchorChilds, anchorChilds[indexAnchorNode]) != indexFocusNode) &&
+        (anchorChilds[indexAnchorNode].parentNode != focusNode.parentNode)
+    ) {
         editor.appendChild(anchorChilds[indexAnchorNode].cloneNode(true));
-        console.log(anchorChilds[indexAnchorNode]);
+        //console.log(anchorChilds[indexAnchorNode]);
         ++indexAnchorNode;
         if (anchorChilds.length == indexAnchorNode) {
             anchorNode = anchorNode.parentNode.parentNode.nextElementSibling;
             anchorChilds = anchorNode.parentNode.childNodes;
             indexAnchorNode = Array.prototype.indexOf.call(editorChilds, anchorNode);
+            /*
             console.log(indexAnchorNode);
             console.log(anchorNode);
             // console.log(editorChilds);
             console.log(anchorChilds);
             console.log(anchorNode.parentNode);
             console.log(anchorChilds[indexAnchorNode].parentNode);
+            */
 
         };
 
