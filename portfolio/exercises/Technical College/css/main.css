@@ -1,6 +1,6 @@
 header{
     width: 100%;
-    height: 45px;
+    height: 2.9rem;
     background-color: #2e8b56;
 }
 a {
@@ -11,14 +11,14 @@ nav {
     font-family: monospace;
 }
 
-ul {
+header ul {
     background: red;
     list-style: none;
     margin: 0;
     padding-left: 0;
 }
 
-li {
+header li {
     color: #fff;
     background: #2e8b56;
     display: block;
@@ -29,16 +29,16 @@ li {
     transition-duration: 0.5s;
 }
 
-li a {
+header li a {
     color: #fff;
 }
 
-li:hover {
+header li:hover {
     background: #a52a2a;
     cursor: pointer;
 }
 
-ul li ul {
+header ul li ul {
     background: orange;
     visibility: hidden;
     opacity: 0;
@@ -50,32 +50,39 @@ ul li ul {
     display: none;
 }
 
-ul li:hover>ul,
-ul li ul:hover {
+header ul li:hover>ul,
+header ul li ul:hover {
     visibility: visible;
     opacity: 1;
     display: block;
 }
 
-ul li ul li {
+header ul li ul li {
     clear: both;
     width: 100%;
 }
 
+.contacts{
+    margin-left: 2rem;
+}
+
+.contacts .email, .telnum{
+    line-height: 5px;
+}
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #228b22;
-    height: 5%;
+    height: 5rem;
     width: 100%;
     position: absolute;
     bottom: 0;
 }
 
-footer p{
+footer p p{
     padding: 5px;
     color: #ffffff;
-
 }
