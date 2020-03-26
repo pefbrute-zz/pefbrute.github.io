@@ -96,7 +96,7 @@ header ul li ul li {
     max-width: 90vw;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .line-break{
