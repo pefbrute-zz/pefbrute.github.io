@@ -8,6 +8,7 @@ body{
     flex-direction: column;
     height: 100%;
     width: 100%;
+    font-family: sans-serif;
 }
 header{
     flex: none;
@@ -17,6 +18,11 @@ header{
 }
 a {
     text-decoration: none;
+    color: red;
+}
+
+a:visited{
+    color: white;
 }
 
 .arrow-down{
@@ -82,11 +88,37 @@ header ul li ul li {
     width: 100%;
 }
 
+.heading{
+    color: #ffffff;
+}
+
 
 .content{
     flex: 1 0 auto;
 }
 
+.hot-label {
+    color: #ff0000;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    padding: 2px;
+}
+
+.line-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.add-space {
+    max-width: 10%;
+    height: 0;
+}
+
+.content img {
+    width: 100%;
+    height: 12.5rem;
+}
 
 
 
@@ -97,7 +129,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     /* margin-top: 2rem; */
-    height: 5rem;
+    height: 5.6rem;
     max-width: 100%;
     background-color: #000000;
 }
